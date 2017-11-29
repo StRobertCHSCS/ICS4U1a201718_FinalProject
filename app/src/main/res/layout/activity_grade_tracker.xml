@@ -16,4 +16,53 @@
         tools:layout_editor_absoluteX="61dp"
         tools:layout_editor_absoluteY="106dp" />
 
+    <Button
+        android:id="@+id/Club Meetings"
+        android:layout_width="100"
+        android:layout_height="60"
+        android:text="Club Meetings"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="322dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="100"
+        android:layout_height="60"
+        android:text="Button"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <Button
+        android:id="@+id/Schedule"
+        android:layout_width="100"
+        android:layout_height="60"
+        android:text="Schedule"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="225dp" />
+
+    <Button
+        android:id="@+id/Civies / Homework"
+        android:layout_width="100"
+        android:layout_height="60"
+        android:text="Reminders"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <Button
+        android:id="@+id/gradetracker"
+        android:layout_width="100"
+        android:layout_height="60"
+        android:text="Button"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="225dp"
+        tools:text="Grade Tracker" />
+
+    <Button
+        android:id="@+id/School Map"
+        android:layout_width="100"
+        android:layout_height="60"
+        android:text="School Map"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="322dp" />
+
 </android.support.constraint.ConstraintLayout>
