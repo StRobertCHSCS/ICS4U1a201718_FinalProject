@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EDUssentials.iml" filepath="$PROJECT_DIR$/EDUssentials.iml" />
+      <module fileurl="file://D:\AndroidStudioProjects\ICS4U1a201718_FinalProject\EDUssentials.iml" filepath="D:\AndroidStudioProjects\ICS4U1a201718_FinalProject\EDUssentials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ICS4U1a201718_FinalProject.iml" filepath="$PROJECT_DIR$/ICS4U1a201718_FinalProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
