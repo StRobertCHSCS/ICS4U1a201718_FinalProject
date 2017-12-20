@@ -19,7 +19,7 @@
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FRC Scouting App"
+                android:text="@string/frc_scouting_app"
                 android:textAppearance="@android:style/TextAppearance.Material.Large" />
         </android.support.v7.widget.Toolbar>
 
@@ -30,22 +30,22 @@
             app:tabMode="scrollable">
 
             <android.support.design.widget.TabItem
-                android:id="@+id/Home_Tab"
+                android:id="@+id/Info_Tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Home" />
+                android:text="Alliance Information" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/Field_Tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Field" />
+                android:text="@string/field" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/Pit_Tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pit" />
+                android:text="@string/pit" />
         </android.support.design.widget.TabLayout>
     </android.support.design.widget.AppBarLayout>
 
@@ -54,11 +54,5 @@
         android:layout_height="wrap_content"
         app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context="com.strobertchs.frcscoutingapp.MainActivity">
-
-        </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>

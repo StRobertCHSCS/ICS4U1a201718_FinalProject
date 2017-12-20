@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FRCScoutingApp</string>
+    <string name="frc_scouting_app">FRC Scouting App</string>
+    <string name="home">Home</string>
+    <string name="pit">Pit</string>
+    <string name="field">Field</string>
 </resources>
