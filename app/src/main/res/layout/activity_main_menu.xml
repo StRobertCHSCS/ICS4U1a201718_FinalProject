@@ -7,30 +7,12 @@
     tools:context="team_infinity.boundless_manifest.MainMenuActivity">
 
     <Button
-        android:id="@+id/button_play"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="134dp"
-        tools:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/button_mode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mode"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="193dp"
-        tools:textAllCaps="false" />
-
-    <Button
         android:id="@+id/button_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Exit"
-        tools:layout_editor_absoluteX="294dp"
-        tools:layout_editor_absoluteY="518dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:textAllCaps="false" />
 
     <ImageButton
@@ -39,8 +21,35 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
         android:tint="@android:color/background_dark"
-        app:srcCompat="@android:drawable/ic_menu_compass"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="518dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_compass" />
+
+    <ImageButton
+        android:id="@+id/imageButton_play"
+        android:layout_width="170dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/button_template2_play" />
+
+    <ImageButton
+        android:id="@+id/imageButton_mode"
+        android:layout_width="170dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="272dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/button_template2_mode" />
 
 </android.support.constraint.ConstraintLayout>
