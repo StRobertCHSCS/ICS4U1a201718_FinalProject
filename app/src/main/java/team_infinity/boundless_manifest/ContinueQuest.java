@@ -18,8 +18,11 @@ import android.widget.TextView;
 
 public class ContinueQuest extends DialogFragment {
 
+    private Context mContext;
+
     public Dialog onCreateDialog (Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.continuequest, null);
 
@@ -43,6 +46,24 @@ public class ContinueQuest extends DialogFragment {
             }
         });
 
+        continueBtn.setText("Continue Game");
+        newGameBtn.setText("New Game");
+        exitBtn.setText("Exit");
+
         return builder.create();
+    }
+
+    public void setContext(Context c){
+        mContext = c;
+    }
+
+    public View getView(View view, ViewGroup viewGroup){
+
+        if(view == null){
+            LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = inflater.inflate(R.layout.continuequest, viewGroup, false);
+        }
+
+        return view;
     }
 }

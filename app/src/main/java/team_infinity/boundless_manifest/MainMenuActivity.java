@@ -1,5 +1,7 @@
 package team_infinity.boundless_manifest;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,12 +17,14 @@ public class MainMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
+        final Context context = this;
         playGame = (ImageButton) findViewById(R.id.playButton);
         playGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent continueOrNot = new Intent(MainMenuActivity.this,ContinueQuest.class);
-                startActivity(continueOrNot);
+                ContinueQuest newQuest = new ContinueQuest();
+                newQuest.setContext(context);
+                newQuest.show(getFragmentManager(), "1");
             }
         });
     }
