@@ -31,5 +31,6 @@ public class GameController
         return controller;
     }
 
+    public void setCurrentSelectedHero(int i){this.currentSelectedHero = i;}
     public int getCurrentSelectedHero(){return this.currentSelectedHero;}
 }

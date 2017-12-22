@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/BoundlessManifest.iml" filepath="$PROJECT_DIR$/BoundlessManifest.iml" />
       <module fileurl="file://E:\AndroidStudioProjects\ICS4U1a201718_FinalProject\BoundlessManifest.iml" filepath="E:\AndroidStudioProjects\ICS4U1a201718_FinalProject\BoundlessManifest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ICS4U1a201718_FinalProject.iml" filepath="$PROJECT_DIR$/ICS4U1a201718_FinalProject.iml" />
+      <module fileurl="file://C:\Users\Acer\AndroidStudioProjects\BoundlessManifest\ICS4U1a201718_FinalProject.iml" filepath="C:\Users\Acer\AndroidStudioProjects\BoundlessManifest\ICS4U1a201718_FinalProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

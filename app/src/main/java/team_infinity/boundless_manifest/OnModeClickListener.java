@@ -5,7 +5,11 @@ import android.text.Layout;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
+import android.widget.TableLayout;
+import java.util.*;
 
 /**
  * Created by Acer on 2017-12-21.
@@ -30,6 +34,30 @@ public class OnModeClickListener implements View.OnClickListener
         LayoutInflater inflater = (LayoutInflater) parent.getSystemService(parent.LAYOUT_INFLATER_SERVICE);
         //create a view by inflating from inflater
         View popupView = inflater.inflate(R.layout.popup_choose, null);
+
+        //get the table from the view
+        TableLayout table = (TableLayout) popupView.findViewById(R.id.tableLayout_heros);
+
+        //get the set of all available characters
+        Set<Integer> keySet = GlobalAttributes.characters.keySet();
+        int numCharacters = keySet.size();
+
+        //the characters that can be selected
+        ImageButton[] buttons = new ImageButton[numCharacters];
+        //counter for the loop below
+        int ct = 0;
+
+        //get all the sprites of characters
+        for(Integer i : keySet)
+        {
+            Character chara = GlobalAttributes.characters.get(i);
+            //buttons[ct] = new ImageButton();
+
+            ct++;
+        }
+
+
+        //table.addView();
 
         //settings of popup window
         int width = 250;
