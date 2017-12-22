@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team_infinity.boundless_manifest.QuestionActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <Button
+        android:id="@+id/Choice1"
+        android:layout_width="105dp"
+        android:layout_height="64dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="289dp" />
+
+    <Button
+        android:id="@+id/Choice2"
+        android:layout_width="105dp"
+        android:layout_height="64dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="289dp" />
+
+    <Button
+        android:id="@+id/Choice3"
+        android:layout_width="105dp"
+        android:layout_height="64dp"
+        android:text="test"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="390dp" />
+
+    <Button
+        android:id="@+id/Choice4"
+        android:layout_width="105dp"
+        android:layout_height="64dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="390dp" />
+
+    <TextView
+        android:id="@+id/Question"
+        android:layout_width="304dp"
+        android:layout_height="73dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="150dp" />
+</android.support.constraint.ConstraintLayout>
