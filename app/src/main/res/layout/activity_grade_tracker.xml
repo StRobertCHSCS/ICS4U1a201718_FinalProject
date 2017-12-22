@@ -9,12 +9,12 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="EDUssentials"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:textSize="45sp"
         tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="106dp" />
+        tools:layout_editor_absoluteY="64dp" />
 
     <Button
         android:id="@+id/ClubMeetings"
