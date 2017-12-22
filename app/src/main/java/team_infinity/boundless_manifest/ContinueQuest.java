@@ -10,15 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 /**
  * Created by Vallyath on 2017-12-21.
  */
 
-public class ContinueQuest extends DialogFragment {
-
-    private Context mContext;
+public class ContinueQuest extends android.support.v4.app.DialogFragment {
 
     public Dialog onCreateDialog (Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -50,17 +49,14 @@ public class ContinueQuest extends DialogFragment {
         newGameBtn.setText("New Game");
         exitBtn.setText("Exit");
 
+        builder.setView(dialogView).setMessage("");
         return builder.create();
-    }
-
-    public void setContext(Context c){
-        mContext = c;
     }
 
     public View getView(View view, ViewGroup viewGroup){
 
         if(view == null){
-            LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) view.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.continuequest, viewGroup, false);
         }
 
