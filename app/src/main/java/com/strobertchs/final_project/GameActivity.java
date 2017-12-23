@@ -28,7 +28,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Event partTimeJob = new Event("part time job", 30, 10, -15, -10);
 
     //Initializing Student
-    Student gabe = new Student("Gabe-kun", 1, true);
+    Student student = new Student("Gabe-kun", 1, true);
 
     //Linking Student to the Event
     //Turn turn = new Turn(gabe);
@@ -53,6 +53,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         buttonObjectYes.setOnClickListener(this);
         buttonObjectNo.setOnClickListener(this);
 
+        makeTurn();
+        updateStatusBars();
+        updateEvent();
     }//onCreate ends here
 
     //TESTING
@@ -64,7 +67,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.buttonYes:
-
+                student.setMoney(student.getMoney() + event.getMoneyAdder());
+                student.setSocial(student.getSocial() + event.getSocialAdder());
+                student.setGrades(student.getGrades() + event.getGradesAdder());
+                student.setSleep(student.getSleep() + event.getSleepAdder());
                 break;
 
             case R.id.buttonNo:
@@ -72,13 +78,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
         updateStatusBars();
+        updateEvent();
     }
 
     void updateStatusBars() {
-        textObjectMoney.setText("Money: " + gabe.getMoney());
-        textObjectSocial.setText("Social: " + gabe.getSocial());
-        textObjectGrades.setText("Grades: " + gabe.getGrades());
-        textObjectSleep.setText("Sleep: " + gabe.getSleep());
+        textObjectMoney.setText("Money: " + student.getMoney());
+        textObjectSocial.setText("Social: " + student.getSocial());
+        textObjectGrades.setText("Grades: " + student.getGrades());
+        textObjectSleep.setText("Sleep: " + student.getSleep());
     }
 
     void updateEvent() {

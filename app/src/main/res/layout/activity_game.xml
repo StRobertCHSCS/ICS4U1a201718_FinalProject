@@ -17,8 +17,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214"
-        tools:text="Event:" />
+        app:layout_constraintVertical_bias="0.214" />
 
     <TextView
         android:id="@+id/textMoney"
@@ -33,8 +32,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051"
-        tools:text="Money: 50" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <TextView
         android:id="@+id/textSleep"
@@ -49,22 +47,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051"
-        tools:text="Sleep: 50" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <TextView
         android:id="@+id/textSocial"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginBottom="272dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
         android:text="Social: 50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textMoney"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051"
-        tools:text="Social: 50" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <TextView
         android:id="@+id/textGrades"
@@ -80,8 +76,7 @@
         app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toEndOf="@+id/textSocial"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051"
-        tools:text="Grades: 50" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <Button
         android:id="@+id/buttonYes"
