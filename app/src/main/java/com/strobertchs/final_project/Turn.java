@@ -50,6 +50,7 @@ public class Turn
                 System.out.println("Sleep: " + student.getSleep() + "\n");
 
                 event = random.pickEvent(allNighter, doYourHomework, extraCurricular, partTimeJob);
+
             } else {
                 //Prints Student values
                 System.out.println("Money: " + student.getMoney());
