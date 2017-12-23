@@ -7,7 +7,7 @@
     tools:context="com.strobertchs.final_project.GameActivity">
 
     <TextView
-        android:id="@+id/textViewEvent"
+        android:id="@+id/textEvent"
         android:layout_width="336dp"
         android:layout_height="52dp"
         android:layout_marginBottom="8dp"
@@ -17,11 +17,11 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.018"
+        app:layout_constraintVertical_bias="0.214"
         tools:text="Event:" />
 
     <TextView
-        android:id="@+id/textViewMoney"
+        android:id="@+id/textMoney"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginBottom="272dp"
@@ -33,11 +33,11 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66"
+        app:layout_constraintVertical_bias="0.051"
         tools:text="Money: 50" />
 
     <TextView
-        android:id="@+id/textViewSleep"
+        android:id="@+id/textSleep"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginBottom="272dp"
@@ -49,11 +49,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66"
+        app:layout_constraintVertical_bias="0.051"
         tools:text="Sleep: 50" />
 
     <TextView
-        android:id="@+id/textViewSocial"
+        android:id="@+id/textSocial"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginBottom="272dp"
@@ -61,13 +61,13 @@
         android:layout_marginTop="8dp"
         android:text="Social: 50"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewMoney"
+        app:layout_constraintStart_toEndOf="@+id/textMoney"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66"
+        app:layout_constraintVertical_bias="0.051"
         tools:text="Social: 50" />
 
     <TextView
-        android:id="@+id/textViewGrades"
+        android:id="@+id/textGrades"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginBottom="272dp"
@@ -76,10 +76,43 @@
         android:layout_marginTop="8dp"
         android:text="Grades: 50"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textViewSleep"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toEndOf="@+id/textViewSocial"
+        app:layout_constraintEnd_toStartOf="@+id/textSleep"
+        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintStart_toEndOf="@+id/textSocial"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66"
+        app:layout_constraintVertical_bias="0.051"
         tools:text="Grades: 50" />
+
+    <Button
+        android:id="@+id/buttonYes"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Yes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNo"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Yes" />
+
+    <Button
+        android:id="@+id/buttonNo"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        android:text="No"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="No" />
 </android.support.constraint.ConstraintLayout>

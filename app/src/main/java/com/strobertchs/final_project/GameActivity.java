@@ -11,31 +11,29 @@ import java.util.Random;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
-//    int correctAnswer;
-//    Button buttonObjectChoice1;
-//    Button buttonObjectChoice2;
-//    Button buttonObjectChoice3;
-//    TextView textObjectPartA;
-//    TextView textObjectPartB;
-//    TextView textObjectScore;
-//    TextView textObjectLevel;
+    TextView textObjectMoney;
+    TextView textObjectSocial;
+    TextView textObjectGrades;
+    TextView textObjectSleep;
+    TextView textObjectEvent;
+    Button buttonObjectYes;
+    Button buttonObjectNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-//        textObjectPartA = (TextView)findViewById(R.id.textPartA);
-//        textObjectPartB = (TextView)findViewById(R.id.textPartB);
-//        textObjectScore = (TextView)findViewById(R.id.textScore);
-//        textObjectLevel = (TextView)findViewById(R.id.textLevel);
-//        buttonObjectChoice1 = (Button)findViewById(R.id.buttonChoice1);
-//        buttonObjectChoice2 = (Button)findViewById(R.id.buttonChoice2);
-//        buttonObjectChoice3 = (Button)findViewById(R.id.buttonChoice3);
-//
-//        buttonObjectChoice1.setOnClickListener(this);
-//        buttonObjectChoice2.setOnClickListener(this);
-//        buttonObjectChoice3.setOnClickListener(this);
+        textObjectMoney = (TextView)findViewById(R.id.textMoney);
+        textObjectSocial = (TextView)findViewById(R.id.textSocial);
+        textObjectGrades = (TextView)findViewById(R.id.textGrades);
+        textObjectSleep = (TextView)findViewById(R.id.textSleep);
+        textObjectEvent = (TextView)findViewById(R.id.textEvent);
+        buttonObjectYes = (Button)findViewById(R.id.buttonYes);
+        buttonObjectNo = (Button)findViewById(R.id.buttonNo);
+
+        buttonObjectYes.setOnClickListener(this);
+        buttonObjectNo.setOnClickListener(this);
 
     }//onCreate ends here
 
