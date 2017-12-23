@@ -18,11 +18,20 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonObjectYes;
     Button buttonObjectNo;
 
+    //TESTING
+    Event event;
+    Randomizer random = new Randomizer();
+
+    Event allNighter = new Event("all Nighter", -5, 30, -5, -30);
+    Event doYourHomework = new Event("homework assignment", -5, -20, 25, -5);
+    Event extraCurricular = new Event("extra curricular", -5, 15, 5, -5);
+    Event partTimeJob = new Event("part time job", 30, 10, -15, -10);
+
     //Initializing Student
     Student gabe = new Student("Gabe-kun", 1, true);
 
     //Linking Student to the Event
-    Turn turn = new Turn(gabe);
+    //Turn turn = new Turn(gabe);
 
     //testing
     //turn.makeTurn();
@@ -46,6 +55,11 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     }//onCreate ends here
 
+    //TESTING
+    void makeTurn(){
+        event = random.pickEvent(allNighter, doYourHomework, extraCurricular, partTimeJob);
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -68,6 +82,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     void updateEvent() {
-        textObjectEvent.setText("Event: " + "Do you want to perform a/an " + turn.getEvent());
+        textObjectEvent.setText("Event: " + "Do you want to perform a/an " + event.getEventName());
     }
+
+
 }
