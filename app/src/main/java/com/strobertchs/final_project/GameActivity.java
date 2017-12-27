@@ -30,13 +30,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     //Initializing Student
     Student student = new Student("Gabe-kun", 1, true);
 
-    //Linking Student to the Event
-    //Turn turn = new Turn(gabe);
-
-    //testing
-    //turn.makeTurn();
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,6 +70,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
         }
+        makeTurn();
         updateStatusBars();
         updateEvent();
     }
