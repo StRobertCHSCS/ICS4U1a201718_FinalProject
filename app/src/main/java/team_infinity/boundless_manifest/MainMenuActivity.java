@@ -32,20 +32,18 @@ public class MainMenuActivity extends AppCompatActivity
         setContentView(R.layout.activity_main_menu);
 
         final Context context = this;
+
         playGame = (ImageButton) findViewById(R.id.playButton);
         playGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ContinueQuest continueQ = new ContinueQuest();
-                continueQ.show(fm, "123");
+                continueQ.show(fm, "First Pop-up");
             }
         });
+
         mode = (ImageButton) findViewById(R.id.imageButton_mode);
         mode.setOnClickListener(new OnModeClickListener(this));
 
     }
-
-
-
-
 }
