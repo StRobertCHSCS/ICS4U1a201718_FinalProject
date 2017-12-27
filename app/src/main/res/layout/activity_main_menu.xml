@@ -44,6 +44,7 @@
 
     <ImageButton
         android:id="@+id/playButton"
+        style="@style/selectionButtonTheme"
         android:layout_width="170dp"
         android:layout_height="85dp"
         android:layout_marginEnd="8dp"
@@ -58,6 +59,7 @@
 
     <ImageButton
         android:id="@+id/imageButton_mode"
+        style="@style/selectionButtonTheme"
         android:layout_width="170dp"
         android:layout_height="85dp"
         android:layout_marginBottom="272dp"
