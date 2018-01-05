@@ -36,6 +36,7 @@ public class MainMenuActivity extends AppCompatActivity
 
         final Context context = this;
 
+        //the 'play' button
         playGame = (ImageButton) findViewById(R.id.playButton);
         playGame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,16 +44,12 @@ public class MainMenuActivity extends AppCompatActivity
 
                 ContinueQuest continueQ = new ContinueQuest();
                 continueQ.show(fm, "First Pop-up");
-
-                Log.d("tag", "playGame.onClickListener.handle() called");
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                android.app.DialogFragment choose = ChooseCharacter.newInstance();
-                choose.show(ft, "apa");
             }
         });
 
+        //the 'mode' button
         mode = (ImageButton) findViewById(R.id.imageButton_mode);
-        mode.setOnClickListener(new OnModeClickListener(this));
+        mode.setOnClickListener(new OnModeClickListener2(this));
 
     }
 }

@@ -14,7 +14,7 @@ import java.util.*;
 /**
  * Created by Acer on 2017-12-21.
  */
-
+@Deprecated
 public class OnModeClickListener implements View.OnClickListener
 {
     MainMenuActivity parent;
