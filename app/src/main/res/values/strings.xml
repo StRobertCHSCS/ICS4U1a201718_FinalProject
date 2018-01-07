@@ -4,4 +4,7 @@
     <string name="home">Home</string>
     <string name="pit">Pit</string>
     <string name="field">Field</string>
+    <string name="alliance_information">Alliance Information</string>
+    <string name="frc_scouting_app">FRC Scouting App</string>
+
 </resources>
