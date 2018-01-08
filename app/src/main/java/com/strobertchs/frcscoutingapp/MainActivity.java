@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private NavigationView navDrawer;
 
-    private ActionBarDrawerToggle drawerToggle;
+    private ActionBarDrawerToggle mToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
 
         // Sets up the Hamburger Menu
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Sets up drawer
         navDrawer = (NavigationView)findViewById(R.id.navView);
@@ -84,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if(mToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
         //Opens/closes the menu
         switch (item.getItemId()) {
             case android.R.id.home:
