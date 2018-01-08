@@ -26,51 +26,61 @@
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginBottom="80dp"
+        android:layout_marginEnd="60dp"
         android:text="Club Meetings"
         app:layout_constraintBottom_toTopOf="@+id/CiviesAndHomework"
-        tools:layout_editor_absoluteX="224dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button10"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="61dp" />
+        app:layout_constraintEnd_toStartOf="@+id/CiviesAndHomework"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Schedule"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Schedule"
         app:layout_constraintBottom_toTopOf="@+id/SchoolMap"
+        app:layout_constraintEnd_toStartOf="@+id/gradetracker"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66"
-        tools:layout_editor_absoluteX="61dp" />
+        app:layout_constraintVertical_bias="0.663" />
 
     <Button
         android:id="@+id/CiviesAndHomework"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="60dp"
         android:text="Reminders"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="224dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/gradetracker"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="60dp"
         android:layout_marginTop="8dp"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/ClubMeetings"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.663"
-        tools:layout_editor_absoluteX="224dp"
         tools:text="Grade Tracker" />
 
     <Button
@@ -78,8 +88,11 @@
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginBottom="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="School Map"
         app:layout_constraintBottom_toTopOf="@+id/button10"
-        tools:layout_editor_absoluteX="61dp" />
+        app:layout_constraintEnd_toStartOf="@+id/ClubMeetings"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
