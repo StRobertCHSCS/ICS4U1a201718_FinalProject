@@ -11,7 +11,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        String savedExtra = getIntent().getStringExtra("info");
+        String savedExtra = getIntent().getStringExtra("information");
         TextView myText = (TextView) findViewById(R.id.textID);
         myText.setText(savedExtra);
     }

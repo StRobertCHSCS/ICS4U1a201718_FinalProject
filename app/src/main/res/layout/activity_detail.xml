@@ -8,11 +8,17 @@
 
     <TextView
         android:id="@+id/textID"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="275dp"
+        android:layout_height="174dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"
-        android:text="text"
-        android:textSize="12sp"
-        android:textStyle="bold" />
+        android:text="Period "
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.124"
+        tools:layout_editor_absoluteX="55dp" />
 
 </android.support.constraint.ConstraintLayout>

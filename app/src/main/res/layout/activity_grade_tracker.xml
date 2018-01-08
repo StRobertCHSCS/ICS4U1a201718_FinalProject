@@ -6,63 +6,80 @@
     android:layout_height="match_parent"
     tools:context="com.strobertchs.edussentials.GradeTracker">
 
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:text="EDUssentials"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:textSize="45sp"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="64dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="61dp" />
 
     <Button
         android:id="@+id/ClubMeetings"
         android:layout_width="100dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="80dp"
         android:text="Club Meetings"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="322dp" />
+        app:layout_constraintBottom_toTopOf="@+id/CiviesAndHomework"
+        tools:layout_editor_absoluteX="224dp" />
 
     <Button
         android:id="@+id/button10"
         android:layout_width="100dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="24dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="423dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="61dp" />
 
     <Button
         android:id="@+id/Schedule"
         android:layout_width="100dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:text="Schedule"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="225dp" />
+        app:layout_constraintBottom_toTopOf="@+id/SchoolMap"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66"
+        tools:layout_editor_absoluteX="61dp" />
 
     <Button
         android:id="@+id/CiviesAndHomework"
         android:layout_width="100dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="24dp"
         android:text="Reminders"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="423dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="224dp" />
 
     <Button
         android:id="@+id/gradetracker"
         android:layout_width="100dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/ClubMeetings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663"
         tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="225dp"
         tools:text="Grade Tracker" />
 
     <Button
         android:id="@+id/SchoolMap"
         android:layout_width="100dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="80dp"
         android:text="School Map"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="322dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button10"
+        tools:layout_editor_absoluteX="61dp" />
 
 </android.support.constraint.ConstraintLayout>

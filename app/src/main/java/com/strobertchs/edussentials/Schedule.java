@@ -29,7 +29,7 @@ public class Schedule extends AppCompatActivity {
                                     long id) {
                 Intent intent = new Intent(Schedule.this, DetailActivity.class);
                 String message = periodArray[position];
-                intent.putExtra("info", message);
+                intent.putExtra("information", message);
                 startActivity(intent);
 
             }
