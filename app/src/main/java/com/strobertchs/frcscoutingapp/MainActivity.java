@@ -1,6 +1,7 @@
 package com.strobertchs.frcscoutingapp;
 
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -30,6 +31,55 @@ public class MainActivity extends AppCompatActivity {
 
         // Sets up the Hamburger Menu
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        //Sets up drawer
+        navDrawer = (NavigationView)findViewById(R.id.navView);
+        setDrawerContent(navDrawer);
+    }
+
+    private void setDrawerContent(NavigationView navigationView) {
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                        selectDrawerItem(menuItem);
+                        return true;
+                    }
+                }
+        );
+    }
+
+    public void selectDrawerItem(MenuItem menuItem) {
+        //Create a new fragment and show the correct fragment based off of the item that is clicked
+        android.support.v4.app.Fragment fragment = null;
+        Class fragmentClass;
+        switch(menuItem.getItemId()){
+            case R.id.home_screen:
+                fragmentClass = HomeScreen.class;
+                break;
+            case R.id.nav_robotscouting:
+                fragmentClass = FieldScoutingSheet.class;
+                break;
+            default:
+                fragmentClass = HomeScreen.class;
+        }
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //Insert the fragment by replacing any existing fragment
+        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.fragmentContent, fragment).commit();
+
+        //Highlight the selected item
+        menuItem.setChecked(true);
+
+        //Sets Action Bar Title
+        setTitle(menuItem.getTitle());
+
+        //Close the navigation drawer
+        mDrawerLayout.closeDrawers();
     }
 
     @Override
