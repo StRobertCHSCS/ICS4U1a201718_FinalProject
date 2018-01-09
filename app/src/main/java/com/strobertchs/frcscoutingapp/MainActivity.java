@@ -2,6 +2,7 @@ package com.strobertchs.frcscoutingapp;
 
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -57,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void selectDrawerItem(MenuItem menuItem) {
         //Create a new fragment and show the correct fragment based off of the item that is clicked
-        android.support.v4.app.Fragment fragment = null;
+        Fragment fragment = new Fragment();
         Class fragmentClass;
+
         switch(menuItem.getItemId()){
             case R.id.home_screen:
                 fragmentClass = HomeScreen.class;
@@ -75,11 +77,8 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         //Insert the fragment by replacing any existing fragment
-        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.fragmentContent, fragment).commit();
-
-        //Highlight the selected item
-        menuItem.setChecked(true);
 
         //Sets Action Bar Title
         setTitle(menuItem.getTitle());
