@@ -6,8 +6,8 @@ import android.view.View;
 
 /**
  * Created by Acer on 2018-01-05.
+ * the newer onClickListener for the mode button
  */
-
 public class OnModeClickListener2 implements View.OnClickListener
 {
     MainMenuActivity parent;

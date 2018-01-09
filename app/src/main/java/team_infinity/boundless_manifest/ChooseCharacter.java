@@ -65,13 +65,25 @@ public class ChooseCharacter extends android.app.DialogFragment
         {
             Character chara = GlobalAttributes.characters.get(i);
             //create a ImageButton and give it a theme
-            buttons[ct] = new ImageButton(getContext(), null, R.style.characterButtonTheme);
+            //buttons[ct] = new ImageButton(getContext(), null, R.style.characterButtonTheme);
+            buttons[ct] = new ImageButton(getContext());
 
             //the id is already put in the object's characterSprite
             buttons[ct].setImageResource(chara.characterSprite);
 
             //give the button the event handler
             buttons[ct].setOnClickListener(chara.eventHandle);
+
+            //modify the buttons' size using LayoutParams
+            /*
+            ViewGroup.LayoutParams param = buttons[ct].getLayoutParams();
+            param.height = GlobalAttributes.ChooseCharacterButtonHeight;
+            param.width = GlobalAttributes.ChooseCharacterButtonWidth;
+            buttons[ct].setLayoutParams(param);
+
+            buttons[ct].getLayoutParams().height = GlobalAttributes.ChooseCharacterButtonHeight;
+            buttons[ct].getLayoutParams().width = GlobalAttributes.ChooseCharacterButtonWidth;
+            */
 
             ct++;
         }
