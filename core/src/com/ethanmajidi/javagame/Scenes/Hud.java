@@ -47,7 +47,7 @@ public class Hud {
         timeLabel = new Label("TIME", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         levelLabel = new Label("1-1", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         worldLabel = new Label("WORLD", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        javaLabel = new Label("Java", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        javaLabel = new Label("GAME", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
 
         table.add(javaLabel).expandX().padTop(10);
         table.add(worldLabel).expandX().padTop(10);
@@ -60,5 +60,4 @@ public class Hud {
         stage.addActor(table);
 
     }
-
 }
