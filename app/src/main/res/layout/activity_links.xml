@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.strobertchs.finalproject.links">
+
+    <TextView
+        android:id="@+id/YCDSB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stro.ycdsb.ca"
+        android:textSize="30sp"
+        android:autoLink="web"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <ImageView
+        android:id="@+id/SiteIcon"
+        android:layout_width="67dp"
+        android:layout_height="65dp"
+        app:srcCompat="@drawable/www"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="15dp" />
+
+    <ImageView
+        android:id="@+id/FacebookIcon"
+        android:layout_width="102dp"
+        android:layout_height="72dp"
+        app:srcCompat="@drawable/facebook_icon2"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <TextView
+        android:id="@+id/Facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="facebook.com/strostudentcouncil/"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <ImageView
+        android:id="@+id/InstagramIcon"
+        android:layout_width="94dp"
+        android:layout_height="89dp"
+        app:srcCompat="@drawable/instagram_icon"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="400dp" />
+
+    <ImageView
+        android:id="@+id/TwitterIcon"
+        android:layout_width="82dp"
+        android:layout_height="184dp"
+        app:srcCompat="@drawable/twitter_icon"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="86dp" />
+
+    <TextView
+        android:id="@+id/Twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="twitter.com/StRobertCHS"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="145dp" />
+
+    <TextView
+        android:id="@+id/Instagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="instagram.com/strobsstuco/"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="436dp" />
+
+    <TextView
+        android:id="@+id/Stuco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STUCO Social Media"
+        android:textSize="35sp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="243dp" />
+
+</android.support.constraint.ConstraintLayout>
