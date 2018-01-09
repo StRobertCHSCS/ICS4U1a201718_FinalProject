@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 
@@ -59,18 +60,19 @@ public class MainActivity extends AppCompatActivity {
     public void selectDrawerItem(MenuItem menuItem) {
         //Create a new fragment and show the correct fragment based off of the item that is clicked
         Fragment fragment = new Fragment();
-        Class fragmentClass;
+        Class fragmentClass = null;
 
-        switch(menuItem.getItemId()){
-            case R.id.home_screen:
-                fragmentClass = HomeScreen.class;
-                break;
-            case R.id.nav_robotscouting:
-                fragmentClass = FieldScoutingSheet.class;
-                break;
-            default:
-                fragmentClass = HomeScreen.class;
+        Log.d("ADebugTag", "Value:" + menuItem.getItemId());
+        if(menuItem.getItemId() == 2131230802){
+            fragmentClass = HomeScreen.class;
         }
+        else if(menuItem.getItemId() == 2131230824) {
+            fragmentClass = FieldScoutingSheet.class;
+        }
+        else{
+            fragmentClass = HomeScreen.class;
+        }
+
         try {
             fragment = (Fragment) fragmentClass.newInstance();
         } catch (Exception e) {

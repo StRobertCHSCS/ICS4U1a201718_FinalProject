@@ -17,7 +17,7 @@ public class FieldScoutingSheet extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstancestate){
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_home_screen, null);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_field_scouting_sheet, null);
         return root;
     }
 
