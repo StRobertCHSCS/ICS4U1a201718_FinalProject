@@ -2,25 +2,39 @@ package com.strobertchs.final_project;
 
 public class Event
 {
+    //Adder variables
     private int moneyAdder;
     private int socialAdder;
     private int gradesAdder;
     private int sleepAdder;
-    private static int eventNum = 0;
-    private int eventID;
+
+    //Reducer Variables
+    private int moneyReducer;
+    private int socialReducer;
+    private int gradesReducer;
+    private int sleepReducer;
+
     private String eventName;
 
-    public Event(String theEventName, int nMoney, int nSocial, int nGrades, int nSleep){
-        eventNum ++;
-        eventID = eventNum;
+    public Event(String theEventName, int aMoney, int aSocial, int aGrades, int aSleep, int rMoney, int rSocial, int rGrades, int rSleep){
         eventName = theEventName;
 
-        moneyAdder = nMoney;
-        socialAdder = nSocial;
-        gradesAdder = nGrades;
-        sleepAdder = nSleep;
+        moneyAdder = aMoney;
+        socialAdder = aSocial;
+        gradesAdder = aGrades;
+        sleepAdder = aSleep;
+
+        moneyReducer = rMoney;
+        socialReducer = rSocial;
+        gradesReducer = rGrades;
+        sleepReducer = rSleep;
     }
 
+    public String getEventName(){
+        return eventName;
+    }
+
+    //Adder Getters
     public int getMoneyAdder(){
         return moneyAdder;
     }
@@ -37,7 +51,21 @@ public class Event
         return sleepAdder;
     }
 
-    public String getEventName(){
-        return eventName;
+
+    //Reducer Getters
+    public int getMoneyReducer() {
+        return moneyReducer;
+    }
+
+    public int getSocialReducer() {
+        return socialReducer;
+    }
+
+    public int getGradesReducer() {
+        return gradesReducer;
+    }
+
+    public int getSleepReducer() {
+        return sleepReducer;
     }
 }
