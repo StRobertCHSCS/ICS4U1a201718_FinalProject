@@ -8,7 +8,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="todo">TODO</string>
-    <string name="cubes_in_switch"># Cubes in Switch</string>
     <string name="cube_1">1</string>
     <string name="cube_2">2</string>
     <string name="cube_3">3</string>
@@ -16,4 +15,9 @@
     <string name="cube_5">5</string>
     <string name="cube_6">6</string>
     <string name="cubes_in_scale"># Cubes in Scale</string>
+    <string name="_6">6+</string>
+    <string name="cubes_in_switch"># Cubes in Switch</string>
+    <string name="next">Next</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
 </resources>
