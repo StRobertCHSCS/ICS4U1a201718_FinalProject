@@ -22,10 +22,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Event event;
     Randomizer random = new Randomizer();
 
-    Event allNighter = new Event("all Nighter", -5, 30, -5, -30);
-    Event doYourHomework = new Event("homework assignment", -5, -20, 25, -5);
-    Event extraCurricular = new Event("extra curricular", -5, 15, 5, -5);
-    Event partTimeJob = new Event("part time job", 30, 10, -15, -10);
+    Event allNighter = new Event("all Nighter playing videogames", 0, 30, -10, -30, 0, -15, 10, 20);
+    Event doYourHomework = new Event("homework assignment", 0, -20, 25, -5, 0, 20, -25, 5);
+    Event extraCurricular = new Event("extra curricular", 0, 15, 5, -5, 0, -15, 5, 5);
+    Event partTimeJob = new Event("part time job", 30, 10, -15, -10, 0, -10, 5, 5);
 
     //Initializing Student
     Student student = new Student("Gabe-kun", 1, true);
@@ -67,7 +67,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.buttonNo:
-
+                student.setMoney(student.getMoney() + event.getMoneyReducer());
+                student.setSocial(student.getSocial() + event.getSocialReducer());
+                student.setGrades(student.getGrades() + event.getGradesReducer());
+                student.setSleep(student.getSleep() + event.getSleepReducer());
                 break;
         }
         makeTurn();
