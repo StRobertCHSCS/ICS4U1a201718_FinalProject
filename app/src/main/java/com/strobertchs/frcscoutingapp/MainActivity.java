@@ -69,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
         else if(menuItem.getItemId() == 2131230841) {
             fragmentClass = FieldScoutingSheet.class;
         }
+        else if(menuItem.getItemId() == 2131230842){
+            fragmentClass = PitScoutingSheet.class;
+        }
         else{
             fragmentClass = HomeScreen.class;
         }
