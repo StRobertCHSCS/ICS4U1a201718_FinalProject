@@ -3,6 +3,7 @@ package com.strobertchs.finalproject;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+
 public class tips extends AppCompatActivity {
 
     @Override

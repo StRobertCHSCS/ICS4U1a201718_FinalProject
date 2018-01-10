@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.strobertchs.finalproject.tips">
 
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxDate="01/01/2020"
+        android:minDate="01/01/2018"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="5dp" />
 </android.support.constraint.ConstraintLayout>

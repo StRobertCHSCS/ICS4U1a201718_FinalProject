@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,11 +19,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        TextView textView = (TextView)findViewById(R.id.CurrentDay);
+
+//        Thread t = new Thread(){
+//            public void run(){
+//                while(!isInterrupted()){
+//
+ //                   try{
+ //                       Thread.sleep(86400000);
+//
+ //                       runOnUiThread(new Runnable() {
+//                              });
+//                        } catch (InterruptedException e){
+//                        e.printStackTrace()
+//                    }
+//                }
+//            }
+//        }
+
         buttonObjectChoice1 =
                 (Button) findViewById(R.id.TeacherButton);
 
         buttonObjectChoice2 =
-                (Button) findViewById(R.id.TipsButton);
+                (Button) findViewById(R.id.EventsButton);
 
         buttonObjectChoice3 =
                 (Button) findViewById(R.id.MapButton);
@@ -47,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     startActivity(i);
                 break;
 
-            case R.id.TipsButton:
+            case R.id.EventsButton:
                 i = new Intent(this, tips.class);
                     startActivity(i);
                 break;

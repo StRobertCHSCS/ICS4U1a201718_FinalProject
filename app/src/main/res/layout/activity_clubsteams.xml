@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.strobertchs.finalproject.teachers">
+    tools:context="com.strobertchs.finalproject.clubsteams">
 
     <ListView
-        android:id="@+id/listViewTeachers"
+        android:id="@+id/listViewClubsTeams"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="26dp"
-        android:entries="@array/array_teachers"/>
+        android:entries="@array/array_clubsteams"/>
 
 </RelativeLayout>
