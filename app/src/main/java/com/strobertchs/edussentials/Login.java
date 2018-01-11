@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class LoginActivity extends AppCompatActivity {
+class LoginActivity extends AppCompatActivity {
 
     public Button signIn;
 
