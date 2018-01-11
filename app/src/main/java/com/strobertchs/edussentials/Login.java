@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-class LoginActivity extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     public Button signIn;
 
@@ -16,7 +16,7 @@ class LoginActivity extends AppCompatActivity {
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent login = new Intent(LoginActivity.this,GradeTracker.class);
+                Intent login = new Intent(Login.this,GradeTracker.class);
             }
         });
     }
