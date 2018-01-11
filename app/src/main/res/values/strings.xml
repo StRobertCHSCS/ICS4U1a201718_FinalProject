@@ -126,10 +126,6 @@
     </string-array>
     <string name="large_text">
 
-        <string-array name="array_clubsteams">
-            <item>test</item>
-        </string-array>
-
     </string>
     <string name="action_settings">Settings</string>
 </resources>

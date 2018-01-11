@@ -14,7 +14,7 @@ import java.util.Arrays;
 
 public class clubsteams extends AppCompatActivity {
 
-//    ArrayAdapter<String> adapter;
+    //    ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,5 +54,5 @@ public class clubsteams extends AppCompatActivity {
 //        });
 //
 //        return super.onCreateOptionsMenu(menu);
-//    }
-//}
+    }
+}
