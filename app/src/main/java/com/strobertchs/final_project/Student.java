@@ -6,6 +6,7 @@ public class Student
     private int social;
     private int grades;
     private int sleep;
+    private int currentEventNum = 0;
 
     //0 = 9ner 1 = 12er 2 = Mr.Servidio
     private int difficulty;
@@ -32,6 +33,9 @@ public class Student
     }
 
     //Getters
+    public int getCurrentEventNum() {
+        return currentEventNum;
+    }
     public int getMoney(){
         return money;
     }
@@ -46,6 +50,9 @@ public class Student
     }
 
     //Setters
+    public void increaseCurrentEventNum() {
+        currentEventNum ++;
+    }
     public void setMoney(int nMoney){
         money = nMoney;
     }

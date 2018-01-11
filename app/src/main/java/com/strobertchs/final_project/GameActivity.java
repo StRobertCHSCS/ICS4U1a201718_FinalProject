@@ -15,20 +15,20 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     TextView textObjectGrades;
     TextView textObjectSleep;
     TextView textObjectEvent;
+    TextView textObjectCurrentGrade;
     Button buttonObjectYes;
     Button buttonObjectNo;
 
-    //TESTING
+    Student student = new Student(1);
     Event event;
     Randomizer random = new Randomizer();
+    int currentGradeLevel = 9;
 
     Event allNighter = new Event("all Nighter playing videogames", 0, 30, -10, -30, 0, -15, 10, 20);
     Event doYourHomework = new Event("homework assignment", 0, -20, 25, -5, 0, 20, -25, 5);
     Event extraCurricular = new Event("extra curricular", 0, 15, 5, -5, 0, -15, 5, 5);
     Event partTimeJob = new Event("part time job", 30, 10, -15, -10, 0, -10, 5, 5);
 
-    //Initializing Student
-    Student student = new Student(1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         textObjectGrades = (TextView) findViewById(R.id.textGrades);
         textObjectSleep = (TextView) findViewById(R.id.textSleep);
         textObjectEvent = (TextView) findViewById(R.id.textEvent);
+        textObjectCurrentGrade = (TextView) findViewById(R.id.textCurrentGrade);
         buttonObjectYes = (Button) findViewById(R.id.buttonYes);
         buttonObjectNo = (Button) findViewById(R.id.buttonNo);
 
@@ -51,7 +52,17 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         updateEvent();
     }//onCreate ends here
 
-    //TESTING
+    void calculateCurrentGrade() {
+        if(student.getCurrentEventNum() >= 2 && student.getCurrentEventNum() <= 3) {
+            currentGradeLevel = 10;
+        } else if(student.getCurrentEventNum() >= 4 && student.getCurrentEventNum() <= 5) {
+            currentGradeLevel = 11;
+        } else if(student.getCurrentEventNum() >= 6 && student.getCurrentEventNum() <= 7) {
+            currentGradeLevel = 12;
+        }
+    }
+
+
     void makeTurn(){
         event = random.pickEvent(allNighter, doYourHomework, extraCurricular, partTimeJob);
     }
@@ -64,6 +75,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 student.setSocial(student.getSocial() + event.getSocialAdder());
                 student.setGrades(student.getGrades() + event.getGradesAdder());
                 student.setSleep(student.getSleep() + event.getSleepAdder());
+                student.increaseCurrentEventNum();
+                calculateCurrentGrade();
                 break;
 
             case R.id.buttonNo:
@@ -71,6 +84,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 student.setSocial(student.getSocial() + event.getSocialReducer());
                 student.setGrades(student.getGrades() + event.getGradesReducer());
                 student.setSleep(student.getSleep() + event.getSleepReducer());
+                student.increaseCurrentEventNum();
+                calculateCurrentGrade();
                 break;
         }
         makeTurn();
@@ -83,6 +98,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         textObjectSocial.setText("Social: " + student.getSocial());
         textObjectGrades.setText("Grades: " + student.getGrades());
         textObjectSleep.setText("Sleep: " + student.getSleep());
+        textObjectCurrentGrade.setText("Current Grade Level: " + currentGradeLevel);
     }
 
     void updateEvent() {
