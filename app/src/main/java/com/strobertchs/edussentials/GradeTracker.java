@@ -9,6 +9,7 @@ import android.widget.Button;
 public class GradeTracker extends AppCompatActivity {
 
     private Button scheduleOpen;
+    private Button mapOpen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +23,23 @@ public class GradeTracker extends AppCompatActivity {
                 openSchedule();
             }
         });
+
+        mapOpen = (Button) findViewById(R.id.SchoolMap);
+        mapOpen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMap();
+            }
+        });
     }
 
     public void openSchedule() {
-        Intent intent = new Intent(this, Schedule.class);
-        startActivity(intent);
+        Intent sched = new Intent(this, Schedule.class);
+        startActivity(sched);
+    }
+
+    public void openMap() {
+        Intent mapOp = new Intent(this, map.class);
+        startActivity(mapOp);
     }
 }
