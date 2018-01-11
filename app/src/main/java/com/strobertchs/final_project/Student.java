@@ -2,21 +2,16 @@ package com.strobertchs.final_project;
 
 public class Student
 {
-    private String name;
     private int money;
     private int social;
     private int grades;
     private int sleep;
 
-    private boolean choice;
-
     //0 = 9ner 1 = 12er 2 = Mr.Servidio
     private int difficulty;
 
-    public Student(String nName, int nDifficulty, boolean nChoice){
-        name = nName;
+    public Student(int nDifficulty){
         difficulty = nDifficulty;
-        choice = nChoice;
 
         if(difficulty == 0){
             money = 75;
@@ -49,9 +44,6 @@ public class Student
     public int getSleep(){
         return sleep;
     }
-    public boolean getChoice(){
-        return choice;
-    }
 
     //Setters
     public void setMoney(int nMoney){
@@ -65,8 +57,5 @@ public class Student
     }
     public void setSleep(int nSleep){
         sleep = nSleep;
-    }
-    public void setChoice(boolean nChoice){
-        choice = nChoice;
     }
 }

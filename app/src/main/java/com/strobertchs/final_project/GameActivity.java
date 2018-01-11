@@ -28,7 +28,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Event partTimeJob = new Event("part time job", 30, 10, -15, -10, 0, -10, 5, 5);
 
     //Initializing Student
-    Student student = new Student("Gabe-kun", 1, true);
+    Student student = new Student(1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
