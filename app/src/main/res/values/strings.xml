@@ -18,6 +18,7 @@
     <string name="_6">6+</string>
     <string name="cubes_in_switch"># Cubes in Switch</string>
     <string name="next">Next</string>
-    <string name="next">Next</string>
     <string name="back">Back</string>
+    <string name="scouting_sheet_name">Scouting Sheet Name</string>
+    <string name="example_team_1234">Example Team #1234</string>
 </resources>
