@@ -15,4 +15,5 @@ public class GradeTracker extends AppCompatActivity {
         Intent menuIntent = new Intent(this, Schedule.class);
         startActivity(menuIntent);
     }
+
 }

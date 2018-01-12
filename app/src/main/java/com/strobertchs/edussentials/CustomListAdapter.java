@@ -16,14 +16,17 @@ public class CustomListAdapter extends ArrayAdapter {
     //to reference the Activity
     private final Activity context;
 
-    //to store the list of countries
+    //to store the list of periods
     private final String[] periodArray;
+    //to store the list of times
+    private final String[] timeArray;
 
-    public CustomListAdapter(Activity context, String[] periodArrayParam){
+    public CustomListAdapter(Activity context, String[] periodArrayParam, String[] timeArrayParam){
 
-        super(context,R.layout.listview_row , periodArrayParam);
+        super(context,R.layout.listview_row , periodArrayParam, timeArrayParam);
         this.context=context;
         this.periodArray = periodArrayParam;
+        this.timeArray = timeArrayParam;
     }
 
     public View getView(int position, View view, ViewGroup parent) {
@@ -32,9 +35,11 @@ public class CustomListAdapter extends ArrayAdapter {
 
         //this code gets references to objects in the listview_row.xml file
         TextView periodTextField = (TextView) rowView.findViewById(R.id.PeriodTextViewID);
+        TextView timeTextField = (TextView) rowView.findViewById(R.id.TimeTextViewID);
 
         //this code sets the values of the objects to values from the arrays
         periodTextField.setText(periodArray[position]);
+        periodTextField.setText(timeArray[position]);
 
         return rowView;
 

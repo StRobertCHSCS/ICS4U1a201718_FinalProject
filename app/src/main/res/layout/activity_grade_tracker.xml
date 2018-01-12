@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/Schedule"
+        android:id="@+id/schedulebutton"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
