@@ -15,10 +15,16 @@
     <string name="cube_5">5</string>
     <string name="cube_6">6</string>
     <string name="cubes_in_scale"># Cubes in Scale</string>
-    <string name="_6">6+</string>
+    <string name="cube_6plus">6+</string>
     <string name="cubes_in_switch"># Cubes in Switch</string>
     <string name="next">Next</string>
     <string name="back">Back</string>
     <string name="scouting_sheet_name">Scouting Sheet Name</string>
     <string name="example_team_1234">Example Team #1234</string>
+    <string name="oui">Yes</string>
+    <string name="non">No</string>
+    <string name="time_taken_to_climb">Time taken to climb</string>
+    <string name="climb">Climb</string>
+    <string name="gives_assistance">Gives Assistance</string>
+    <string name="with_assistance">With Assistance</string>
 </resources>

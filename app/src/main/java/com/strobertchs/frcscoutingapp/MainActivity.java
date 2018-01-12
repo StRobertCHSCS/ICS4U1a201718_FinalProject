@@ -63,13 +63,13 @@ public class MainActivity extends AppCompatActivity {
         Class fragmentClass = null;
 
         Log.d("ADebugTag", "Value:" + menuItem.getItemId());
-        if(menuItem.getItemId() == 2131230820){
+        if(menuItem.getItemId() == 2131230822){
             fragmentClass = HomeScreen.class;
         }
-        else if(menuItem.getItemId() == 2131230842) {
+        else if(menuItem.getItemId() == 2131230844) {
             fragmentClass = FieldScoutingSheet.class;
         }
-        else if(menuItem.getItemId() == 2131230843) {
+        else if(menuItem.getItemId() == 2131230845) {
             fragmentClass = PitScoutingSheet.class;
         }
         else{

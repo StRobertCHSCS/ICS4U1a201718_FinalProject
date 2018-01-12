@@ -7,7 +7,7 @@
     tools:context="com.strobertchs.frcscoutingapp.FieldScoutingSheet">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/exampleTeam"
         android:layout_width="276dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.079" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/buttonNext1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -41,7 +41,7 @@
         app:layout_constraintVertical_bias="0.952" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/scoutingSheetName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
