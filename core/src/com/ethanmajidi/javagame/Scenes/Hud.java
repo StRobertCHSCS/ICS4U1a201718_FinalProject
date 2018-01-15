@@ -60,4 +60,17 @@ public class Hud {
         stage.addActor(table);
 
     }
+
+    public void update (float dt)
+    {
+        timeCount += dt;
+
+        if (timeCount >= 1)
+        {
+            worldTimer --;
+            countdownLabel.setText(String.format("%3d", worldTimer));
+            timeCount = 0;
+        }
+    }
+
 }
