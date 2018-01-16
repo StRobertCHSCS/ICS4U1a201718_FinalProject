@@ -20,7 +20,12 @@
         <activity android:name=".tips" />
         <activity android:name=".maps" />
         <activity android:name=".links" />
-        <activity android:name=".clubsteams"></activity>
+        <activity android:name=".clubsteams" />
+        <activity android:name=".Axiom" />
+        <activity android:name=".examschedule" />
+        <activity android:name=".classsites"></activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

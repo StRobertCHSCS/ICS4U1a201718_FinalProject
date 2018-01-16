@@ -13,6 +13,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonObjectChoice2;
     Button buttonObjectChoice3;
     Button buttonObjectChoice4;
+    Button buttonObjectChoice5;
+    Button buttonObjectChoice6;
+    Button buttonObjectChoice7;
+    Button buttonObjectChoice8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +53,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonObjectChoice4 =
                 (Button) findViewById(R.id.LinksButton);
 
+        buttonObjectChoice5 =
+                (Button) findViewById(R.id.ClubsTeamsButton);
+
+        buttonObjectChoice6 =
+                (Button) findViewById(R.id.AxiomButton);
+
+        buttonObjectChoice7 =
+                (Button) findViewById(R.id.ExamScheduleButton);
+
+        buttonObjectChoice8 =
+                (Button) findViewById(R.id.ClassSitesButton);
+
         buttonObjectChoice1.setOnClickListener(this);
         buttonObjectChoice2.setOnClickListener(this);
         buttonObjectChoice3.setOnClickListener(this);
         buttonObjectChoice4.setOnClickListener(this);
+        buttonObjectChoice5.setOnClickListener(this);
+        buttonObjectChoice6.setOnClickListener(this);
+        buttonObjectChoice7.setOnClickListener(this);
+        buttonObjectChoice8.setOnClickListener(this);
     }
 
     @Override
@@ -78,6 +98,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.LinksButton:
                 i = new Intent(this, links.class);
+                    startActivity(i);
+                break;
+
+            case R.id.AxiomButton:
+                i = new Intent(this, Axiom.class);
+                    startActivity(i);
+                break;
+
+            case R.id.ExamScheduleButton:
+                i = new Intent(this, examschedule.class);
                     startActivity(i);
                 break;
         }
