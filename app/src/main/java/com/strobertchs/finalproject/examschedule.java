@@ -12,12 +12,9 @@ public class examschedule extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_examschedule);
 
-        String doc="<src='http://docs.google.com/viewer?url=http://stro.ycdsb.ca/wp-content/uploads/sites/104/2017/12/Exam-Schedule-29Nov17.pdf"
-
         WebView mWebView= findViewById(R.id.webView);
         mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.getSettings().setPluginState(WebSettings.PluginState.ON);
-        mWebView.loadUrl(doc);
-        setContentView(mWebView);
+        // mWebView.getSettings().setPluginState(WebSettings.PluginState.ON);
+        mWebView.loadUrl("http://docs.google.com/viewer?url=http://stro.ycdsb.ca/wp-content/uploads/sites/104/2017/12/Exam-Schedule-29Nov17.pdf");
     }
 }
