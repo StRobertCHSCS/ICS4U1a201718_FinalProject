@@ -7,9 +7,32 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="example_team_4001">Example Team #4001</string>
+    <string name="auto">Auto</string>
+    <string name="teleop">Teleop</string>
+    <string name="match_number">Match Number</string>
+    <string name="alliance_colour">Alliance Colour</string>
+    <string name="match_results">Match Results</string>
     <string name="robot_height">Robot Height</string>
     <string name="robot_height_inches">Robot Height (inches)</string>
+    <string name="robot_weight">Robot Weight: </string>
+    <string name="robot_weight_lbs">Robot Weight(lbs)</string>
+    <string name="insert_match_num">Insert Match #</string>
+    <string name="insert_alliance_colour">Insert Alliance Colour</string>
+    <string name="cross_the_line">Cross the Line</string>
+    <string name="score">Score</string>
+    <string name="penalties">Penalties </string>
+    <string name="penalty_points">Insert Penalty Points</string>
+    <string name="ranking_points">Ranking Points</string>
+    <string name="ranking_point_1">RP 1</string>
+    <string name="ranking_point_2">RP 2</string>
+    <string name="ranking_point_3">RP 3</string>
+    <string name="ranking_point_4">RP 4</string>
+    <string name="win_loss">Win or Loss?</string>
+    <string name="win">WIN</string>
+    <string name="loss">LOSS</string>
     <string name="todo">TODO</string>
+    <string name="how_many">How many? </string>
     <string name="cube_1">1</string>
     <string name="cube_2">2</string>
     <string name="cube_3">3</string>
@@ -18,21 +41,18 @@
     <string name="cube_6">6</string>
     <string name="cube_6plus">6+</string>
     <string name="scale_cubes">Cubes in Scale?</string>
-    <string name="how_many">How many? </string>
     <string name="switch_cubes">Cubes in Switch?</string>
     <string name="cubes_in_scale"># Cubes in Scale</string>
     <string name="cubes_in_switch"># Cubes in Switch</string>
     <string name="next">Next</string>
     <string name="back">Back</string>
-    <string name="scouting_sheet_name">Scouting Sheet Name</string>
-    <string name="example_team_4001">Example Team #4001</string>
     <string name="oui">YES</string>
     <string name="non">NO</string>
     <string name="pit_scouting">Pit Scouting</string>
-    <string name="robot_weight">Robot Weight: </string>
-    <string name="robot_weight_lbs">Robot Weight(lbs)</string>
+    <string name="scouting_sheet_name"> Field Scouting Sheet</string>
     <string name="time_taken_to_climb">Time taken to climb</string>
     <string name="climb">Climb</string>
+    <string name="can_climb">Can Climb</string>
     <string name="gives_assistance">Gives Assistance</string>
     <string name="with_assistance">With Assistance</string>
 </resources>
