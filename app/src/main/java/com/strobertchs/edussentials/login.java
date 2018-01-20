@@ -6,23 +6,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class LoginActivity extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
-    public Button signIn;
+    private Button log_in;
 
-    public void logIn() {
-        signIn = (Button)findViewById(R.id.signin);
-        signIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent login = new Intent(LoginActivity.this,GradeTracker.class);
-            }
-        });
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
-        logIn();
+        setContentView(R.layout.activity_login);
+
+        log_in = (Button) findViewById(R.id.signin);
+        log_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMenu();
+            }
+        });
+    }
+
+    public void openMenu() {
+        Intent intent = new Intent(this, GradeTracker.class);
+        startActivity(intent);
+
     }
 }

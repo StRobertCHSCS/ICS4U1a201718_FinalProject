@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GradeTracker">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +18,14 @@
         </activity>
         <activity android:name=".Schedule" />
         <activity android:name=".DetailActivity" />
-        <activity android:name=".LoginActivity"></activity>
+
+        <activity android:name=".GradeTracker" />
+        <activity android:name=".map" />
+        <activity
+            android:name=".toDo"
+            android:label="@string/title_activity_to_do"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>

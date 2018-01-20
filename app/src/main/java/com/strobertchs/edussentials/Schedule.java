@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.AdapterView.OnItemClickListener
+import android.widget.AdapterView.OnItemClickListener;
 
 public class Schedule extends AppCompatActivity {
     String[] periodArray = {"Computer Science","Physics","Morality","Business Leadership"};
