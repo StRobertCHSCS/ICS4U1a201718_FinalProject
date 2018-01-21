@@ -33,9 +33,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
-//    public void onClick(View view) {
-//        Intent i;
-//        i = new Intent(this, GameActivity.class);
-//        startActivity(i);
-//    }
 }

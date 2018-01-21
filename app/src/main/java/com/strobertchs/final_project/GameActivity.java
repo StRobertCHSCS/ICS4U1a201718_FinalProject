@@ -1,5 +1,6 @@
 package com.strobertchs.final_project;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -66,6 +67,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         updateEvent();
     }//onCreate ends here
 
+    Intent i;
     void calculateCurrentGrade() {
         if(student.getCurrentEventNum() >= 4 && student.getCurrentEventNum() <= 7) {
             currentGradeLevel = 10;
@@ -73,6 +75,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             currentGradeLevel = 11;
         } else if(student.getCurrentEventNum() >= 12 && student.getCurrentEventNum() <= 15) {
             currentGradeLevel = 12;
+        } else if(student.getCurrentEventNum() >= 16){
+            i = new Intent(this, GameOverActivity.class);
+            startActivity(i);
         }
     }
 
@@ -105,16 +110,34 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 }else {
                     student.setSleep(100);
                 }
+                checkIfLose();
                 student.increaseCurrentEventNum();
                 updateStudentStatusBars();
                 calculateCurrentGrade();
                 break;
 
             case R.id.buttonNo:
-                student.setMoney(student.getMoney() + event.getMoneyReducer());
-                student.setSocial(student.getSocial() + event.getSocialReducer());
-                student.setGrades(student.getGrades() + event.getGradesReducer());
-                student.setSleep(student.getSleep() + event.getSleepReducer());
+                if(student.getMoney() + event.getMoneyReducer() <= 100){
+                    student.setMoney(student.getMoney() + event.getMoneyReducer());
+                }else {
+                    student.setMoney(100);
+                }
+                if(student.getSocial() + event.getSocialReducer() <= 100){
+                    student.setSocial(student.getSocial() + event.getSocialReducer());
+                }else {
+                    student.setSocial(100);
+                }
+                if(student.getGrades() + event.getGradesReducer() <= 100){
+                    student.setGrades(student.getGrades() + event.getGradesReducer());
+                }else {
+                    student.setGrades(100);
+                }
+                if(student.getSleep() + event.getSleepReducer() <= 100){
+                    student.setSleep(student.getSleep() + event.getSleepReducer());
+                }else {
+                    student.setSleep(100);
+                }
+                checkIfLose();
                 student.increaseCurrentEventNum();
                 updateStudentStatusBars();
                 calculateCurrentGrade();
@@ -125,6 +148,21 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         updateEvent();
     }
 
+    void checkIfLose(){
+        if(student.getMoney() <= 0){
+            i = new Intent(this, GameOverActivity.class);
+            startActivity(i);
+        }else if(student.getSocial() <= 0){
+            i = new Intent(this, GameOverActivity.class);
+            startActivity(i);
+        }else if(student.getGrades() <= 0){
+            i = new Intent(this, GameOverActivity.class);
+            startActivity(i);
+        }else if(student.getSleep() <= 0){
+            i = new Intent(this, GameOverActivity.class);
+            startActivity(i);
+        }
+    }
     void updateStudentStatus() {
         textObjectMoney.setText("Money: " + student.getMoney());
         textObjectSocial.setText("Social: " + student.getSocial());

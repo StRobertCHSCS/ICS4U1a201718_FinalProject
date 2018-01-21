@@ -33,11 +33,11 @@ public class Randomizer
         roll();
         if(getValue() == 1){
             return event1;
-        } else if(getValue() == 2){
+        }else if(getValue() == 2){
             return event2;
-        } else if(getValue() == 3){
+        }else if(getValue() == 3){
             return event3;
-        } else {
+        }else {
             return event4;
         }
     }
