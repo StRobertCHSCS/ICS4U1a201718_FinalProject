@@ -33,7 +33,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Event allNighter = new Event("all Nighter playing videogames", 0, 30, -20, -20, 0, -30, 20, 20);
     Event doYourHomework = new Event("homework assignment", 0, -20, 20, -10, 0, 20, -20, 10);
     Event extraCurricular = new Event("extra curricular", -10, 20, 10, -10, 10, -20, -10, 10);
-    Event partTimeJob = new Event("part time job", 30, 20, -25, -20, -30, -20, 20, 20);
+    Event partTimeJob = new Event("part time job", 30, 20, -20, -20, -30, -20, 20, 20);
     Event attendFamilyDinner = new Event("family dinner", 10, 20, -10, -10, -10, -20, 10, 10);
 
 
@@ -62,6 +62,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         makeTurn();
         updateStudentStatus();
+        updateStudentStatusBars();
         updateEvent();
     }//onCreate ends here
 
@@ -84,10 +85,26 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.buttonYes:
-                student.setMoney(student.getMoney() + event.getMoneyAdder());
-                student.setSocial(student.getSocial() + event.getSocialAdder());
-                student.setGrades(student.getGrades() + event.getGradesAdder());
-                student.setSleep(student.getSleep() + event.getSleepAdder());
+                if(student.getMoney() + event.getMoneyAdder() <= 100){
+                    student.setMoney(student.getMoney() + event.getMoneyAdder());
+                }else {
+                    student.setMoney(100);
+                }
+                if(student.getSocial() + event.getSocialAdder() <= 100){
+                    student.setSocial(student.getSocial() + event.getSocialAdder());
+                }else {
+                    student.setSocial(100);
+                }
+                if(student.getGrades() + event.getGradesAdder() <= 100){
+                    student.setGrades(student.getGrades() + event.getGradesAdder());
+                }else {
+                    student.setGrades(100);
+                }
+                if(student.getSleep() + event.getSleepAdder() <= 100){
+                    student.setSleep(student.getSleep() + event.getSleepAdder());
+                }else {
+                    student.setSleep(100);
+                }
                 student.increaseCurrentEventNum();
                 updateStudentStatusBars();
                 calculateCurrentGrade();
