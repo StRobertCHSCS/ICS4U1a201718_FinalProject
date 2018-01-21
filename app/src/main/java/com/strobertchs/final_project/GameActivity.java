@@ -89,6 +89,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 student.setGrades(student.getGrades() + event.getGradesAdder());
                 student.setSleep(student.getSleep() + event.getSleepAdder());
                 student.increaseCurrentEventNum();
+                updateStudentStatusBars();
                 calculateCurrentGrade();
                 break;
 
@@ -98,6 +99,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 student.setGrades(student.getGrades() + event.getGradesReducer());
                 student.setSleep(student.getSleep() + event.getSleepReducer());
                 student.increaseCurrentEventNum();
+                updateStudentStatusBars();
                 calculateCurrentGrade();
                 break;
         }
@@ -118,5 +120,111 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         textObjectEvent.setText("Event: " + "Do you want to perform a/an " + event.getEventName());
     }
 
+    String moneyBarLines;
+    String socialBarLines;
+    String gradesBarLines;
+    String sleepBarLines;
+    void updateStudentStatusBars(){
+        if(student.getMoney() == 0 ){
+            moneyBarLines = "          ";
+        }else if(student.getMoney() == 10){
+            moneyBarLines = "|         ";
+        }else if(student.getMoney() == 20){
+            moneyBarLines = "||        ";
+        }else if(student.getMoney() == 30){
+            moneyBarLines = "|||       ";
+        }else if(student.getMoney() == 40){
+            moneyBarLines = "||||      ";
+        }else if(student.getMoney() == 50){
+            moneyBarLines = "|||||     ";
+        }else if(student.getMoney() == 60){
+            moneyBarLines = "||||||    ";
+        }else if(student.getMoney() == 70){
+            moneyBarLines = "|||||||   ";
+        }else if(student.getMoney() == 80){
+            moneyBarLines = "||||||||  ";
+        }else if(student.getMoney() == 90){
+            moneyBarLines = "||||||||| ";
+        }else if(student.getMoney() == 100){
+            moneyBarLines = "||||||||||";
+        }
+
+        if(student.getSocial() == 0 ){
+            socialBarLines = "          ";
+        }else if(student.getSocial() == 10){
+            socialBarLines = "|         ";
+        }else if(student.getSocial() == 20){
+            socialBarLines = "||        ";
+        }else if(student.getSocial() == 30){
+            socialBarLines = "|||       ";
+        }else if(student.getSocial() == 40){
+            socialBarLines = "||||      ";
+        }else if(student.getSocial() == 50){
+            socialBarLines = "|||||     ";
+        }else if(student.getSocial() == 60){
+            socialBarLines = "||||||    ";
+        }else if(student.getSocial() == 70){
+            socialBarLines = "|||||||   ";
+        }else if(student.getSocial() == 80){
+            socialBarLines = "||||||||  ";
+        }else if(student.getSocial() == 90){
+            socialBarLines = "||||||||| ";
+        }else if(student.getSocial() == 100){
+            socialBarLines = "||||||||||";
+        }
+
+        if(student.getGrades() == 0 ){
+            gradesBarLines = "          ";
+        }else if(student.getGrades() == 10){
+            gradesBarLines = "|         ";
+        }else if(student.getGrades() == 20){
+            gradesBarLines = "||        ";
+        }else if(student.getGrades() == 30){
+            gradesBarLines = "|||       ";
+        }else if(student.getGrades() == 40){
+            gradesBarLines = "||||      ";
+        }else if(student.getGrades() == 50){
+            gradesBarLines = "|||||     ";
+        }else if(student.getGrades() == 60){
+            gradesBarLines = "||||||    ";
+        }else if(student.getGrades() == 70){
+            gradesBarLines = "|||||||   ";
+        }else if(student.getGrades() == 80){
+            gradesBarLines = "||||||||  ";
+        }else if(student.getGrades() == 90){
+            gradesBarLines = "||||||||| ";
+        }else if(student.getGrades() == 100){
+            gradesBarLines = "||||||||||";
+        }
+
+        if(student.getSleep() == 0 ){
+            sleepBarLines = "          ";
+        }else if(student.getSleep() == 10){
+            sleepBarLines = "|         ";
+        }else if(student.getSleep() == 20){
+            sleepBarLines = "||        ";
+        }else if(student.getSleep() == 30){
+            sleepBarLines = "|||       ";
+        }else if(student.getSleep() == 40){
+            sleepBarLines = "||||      ";
+        }else if(student.getSleep() == 50){
+            sleepBarLines = "|||||     ";
+        }else if(student.getSleep() == 60){
+            sleepBarLines = "||||||    ";
+        }else if(student.getSleep() == 70){
+            sleepBarLines = "|||||||   ";
+        }else if(student.getSleep() == 80){
+            sleepBarLines = "||||||||  ";
+        }else if(student.getSleep() == 90){
+            sleepBarLines = "||||||||| ";
+        }else if(student.getSleep() == 100){
+            sleepBarLines = "||||||||||";
+        }
+
+        textObjectMoneyBar.setText("[" + moneyBarLines + "]");
+        textObjectSocialBar.setText("[" + socialBarLines + "]");
+        textObjectGradesBar.setText("[" + gradesBarLines + "]");
+        textObjectSleepBar.setText("[" + sleepBarLines + "]");
+    }
 
 }
