@@ -14,6 +14,12 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     TextView textObjectSocial;
     TextView textObjectGrades;
     TextView textObjectSleep;
+
+    TextView textObjectMoneyBar;
+    TextView textObjectSocialBar;
+    TextView textObjectGradesBar;
+    TextView textObjectSleepBar;
+
     TextView textObjectEvent;
     TextView textObjectCurrentGrade;
     Button buttonObjectYes;
@@ -40,6 +46,12 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         textObjectSocial = (TextView) findViewById(R.id.textSocial);
         textObjectGrades = (TextView) findViewById(R.id.textGrades);
         textObjectSleep = (TextView) findViewById(R.id.textSleep);
+
+        textObjectMoneyBar = (TextView) findViewById(R.id.textMoneyBar);
+        textObjectSocialBar = (TextView) findViewById(R.id.textSocialBar);
+        textObjectGradesBar = (TextView) findViewById(R.id.textGradesBar);
+        textObjectSleepBar = (TextView) findViewById(R.id.textSleepBar);
+
         textObjectEvent = (TextView) findViewById(R.id.textEvent);
         textObjectCurrentGrade = (TextView) findViewById(R.id.textCurrentGrade);
         buttonObjectYes = (Button) findViewById(R.id.buttonYes);
@@ -49,7 +61,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         buttonObjectNo.setOnClickListener(this);
 
         makeTurn();
-        updateStatusBars();
+        updateStudentStatus();
         updateEvent();
     }//onCreate ends here
 
@@ -90,11 +102,11 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
         makeTurn();
-        updateStatusBars();
+        updateStudentStatus();
         updateEvent();
     }
 
-    void updateStatusBars() {
+    void updateStudentStatus() {
         textObjectMoney.setText("Money: " + student.getMoney());
         textObjectSocial.setText("Social: " + student.getSocial());
         textObjectGrades.setText("Grades: " + student.getGrades());
