@@ -28,6 +28,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Event doYourHomework = new Event("homework assignment", 0, -20, 25, -5, 0, 20, -25, 5);
     Event extraCurricular = new Event("extra curricular", 0, 15, 5, -5, 0, -15, 5, 5);
     Event partTimeJob = new Event("part time job", 30, 10, -15, -10, 0, -10, 5, 5);
+    Event attendFamilyDinner = new Event("family dinner", 10, 10, -5, -5, -5, -10, 5, 5);
 
 
     @Override
@@ -53,11 +54,11 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }//onCreate ends here
 
     void calculateCurrentGrade() {
-        if(student.getCurrentEventNum() >= 2 && student.getCurrentEventNum() <= 3) {
+        if(student.getCurrentEventNum() >= 4 && student.getCurrentEventNum() <= 7) {
             currentGradeLevel = 10;
-        } else if(student.getCurrentEventNum() >= 4 && student.getCurrentEventNum() <= 5) {
+        } else if(student.getCurrentEventNum() >= 8 && student.getCurrentEventNum() <= 11) {
             currentGradeLevel = 11;
-        } else if(student.getCurrentEventNum() >= 6 && student.getCurrentEventNum() <= 7) {
+        } else if(student.getCurrentEventNum() >= 12 && student.getCurrentEventNum() <= 15) {
             currentGradeLevel = 12;
         }
     }
