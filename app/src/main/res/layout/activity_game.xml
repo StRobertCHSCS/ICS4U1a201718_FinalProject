@@ -12,12 +12,12 @@
         android:layout_height="52dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:text="Event:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214" />
+        app:layout_constraintVertical_bias="0.214"
+        tools:text="Event:" />
 
     <TextView
         android:id="@+id/textMoney"
@@ -27,12 +27,12 @@
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="Money: 50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.051"
+        tools:text="Money: 50" />
 
     <TextView
         android:id="@+id/textSleep"
@@ -42,12 +42,12 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="8dp"
-        android:text="Sleep: 50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.051"
+        tools:text="Sleep: 50" />
 
     <TextView
         android:id="@+id/textSocial"
@@ -56,11 +56,11 @@
         android:layout_marginBottom="272dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
-        android:text="Social: 50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textMoney"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.051"
+        tools:text="Social: 50" />
 
     <TextView
         android:id="@+id/textGrades"
@@ -70,13 +70,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Grades: 50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textSleep"
         app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toEndOf="@+id/textSocial"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.051"
+        tools:text="Grades: 50" />
 
     <Button
         android:id="@+id/buttonYes"
@@ -87,7 +87,6 @@
         android:layout_marginLeft="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Yes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonNo"
         app:layout_constraintHorizontal_bias="0.153"
@@ -104,7 +103,6 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="4dp"
         android:layout_marginTop="8dp"
-        android:text="No"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -113,17 +111,17 @@
 
     <TextView
         android:id="@+id/textCurrentGrade"
-        android:layout_width="225dp"
-        android:layout_height="25dp"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
         android:layout_marginBottom="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Current Grade Level:"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="Current Grade Level:" />
 </android.support.constraint.ConstraintLayout>
