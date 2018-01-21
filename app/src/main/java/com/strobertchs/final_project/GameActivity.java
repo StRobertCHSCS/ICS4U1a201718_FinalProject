@@ -30,11 +30,11 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Randomizer random = new Randomizer();
     int currentGradeLevel = 9;
 
-    Event allNighter = new Event("all Nighter playing videogames", 0, 30, -10, -30, 0, -15, 10, 20);
-    Event doYourHomework = new Event("homework assignment", 0, -20, 25, -5, 0, 20, -25, 5);
-    Event extraCurricular = new Event("extra curricular", 0, 15, 5, -5, 0, -15, 5, 5);
-    Event partTimeJob = new Event("part time job", 30, 10, -15, -10, 0, -10, 5, 5);
-    Event attendFamilyDinner = new Event("family dinner", 10, 10, -5, -5, -5, -10, 5, 5);
+    Event allNighter = new Event("all Nighter playing videogames", 0, 30, -20, -20, 0, -30, 20, 20);
+    Event doYourHomework = new Event("homework assignment", 0, -20, 20, -10, 0, 20, -20, 10);
+    Event extraCurricular = new Event("extra curricular", -10, 20, 10, -10, 10, -20, -10, 10);
+    Event partTimeJob = new Event("part time job", 30, 20, -25, -20, -30, -20, 20, 20);
+    Event attendFamilyDinner = new Event("family dinner", 10, 20, -10, -10, -10, -20, 10, 10);
 
 
     @Override
@@ -226,5 +226,4 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         textObjectGradesBar.setText("[" + gradesBarLines + "]");
         textObjectSleepBar.setText("[" + sleepBarLines + "]");
     }
-
 }
