@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class QuestionActivity extends AppCompatActivity
 {
     TextView questionText;
@@ -12,6 +15,13 @@ public class QuestionActivity extends AppCompatActivity
     int numChoices = 4;
     Question currentQuestion;
     int numQuestionAnswered;
+
+    ArrayList buttonRandom = new ArrayList<Button>();
+
+    int attribute1;
+    int attribute2;
+    int attribute3;
+    int attribute4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -28,6 +38,13 @@ public class QuestionActivity extends AppCompatActivity
         this.choices[2] = findViewById(R.id.Choice3);
         this.choices[3] = findViewById(R.id.Choice4);
 
+        buttonRandom.add(this.choices[0]);
+        buttonRandom.add(this.choices[1]);
+        buttonRandom.add(this.choices[2]);
+        buttonRandom.add(this.choices[3]);
+
+        Collections.shuffle(buttonRandom);
+
         //handlers
         for(int ct=0; ct<this.numChoices; ct++)
         {
@@ -35,6 +52,10 @@ public class QuestionActivity extends AppCompatActivity
         }
 
         this.numQuestionAnswered = 0;
+        this.attribute1 = 0;
+        this.attribute2 = 0;
+        this.attribute3 = 0;
+        this.attribute4 = 0;
         fetchQuestion();
     }
 
