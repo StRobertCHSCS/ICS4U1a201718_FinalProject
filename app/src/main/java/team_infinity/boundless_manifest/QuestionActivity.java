@@ -80,7 +80,8 @@ public class QuestionActivity extends AppCompatActivity
         //answer choices
         for(int ct=0; ct<this.numChoices; ct++)
         {
-            this.choices[ct].setText(q.getAnswers()[ct]);
+            //this.choices[ct].setText(q.getAnswers()[ct]);
+            ((Button)buttonRandom.get(ct)).setText(q.getAnswers()[ct]);
         }
     }
 
