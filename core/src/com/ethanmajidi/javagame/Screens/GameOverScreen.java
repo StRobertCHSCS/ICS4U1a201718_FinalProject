@@ -5,4 +5,5 @@ package com.ethanmajidi.javagame.Screens;
  */
 
 public class GameOverScreen {
+
 }
