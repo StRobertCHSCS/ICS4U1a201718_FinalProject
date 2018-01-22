@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         //Sets up drawer
         navDrawer = (NavigationView)findViewById(R.id.navView);
         setDrawerContent(navDrawer);
+
     }
 
     private void setDrawerContent(NavigationView navigationView) {
@@ -63,13 +66,13 @@ public class MainActivity extends AppCompatActivity {
         Class fragmentClass = null;
 
         Log.d("ADebugTag", "Value:" + menuItem.getItemId());
-        if(menuItem.getItemId() == 2131230822){
+        if(menuItem.getItemId() == 2131230826){
             fragmentClass = HomeScreen.class;
         }
-        else if(menuItem.getItemId() == 2131230844) {
+        else if(menuItem.getItemId() == 2131230853) {
             fragmentClass = FieldScoutingSheet.class;
         }
-        else if(menuItem.getItemId() == 2131230845) {
+        else if(menuItem.getItemId() == 2131230854) {
             fragmentClass = PitScoutingSheet.class;
         }
         else{

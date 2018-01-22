@@ -264,7 +264,7 @@
             app:layout_constraintVertical_bias="0.617" />
 
         <Button
-            android:id="@+id/button32"
+            android:id="@+id/button15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -277,7 +277,7 @@
             app:layout_constraintTop_toBottomOf="@+id/EditText" />
 
         <Button
-            android:id="@+id/button34"
+            android:id="@+id/button16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
