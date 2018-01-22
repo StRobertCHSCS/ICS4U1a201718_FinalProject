@@ -74,9 +74,8 @@ public class PlayScreen  implements Screen {
         //Creates our player in the game world
         player = new Java(world);
 
-
-
     }
+
     @Override
     public void show() {
 
@@ -123,6 +122,22 @@ public class PlayScreen  implements Screen {
 
         game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
         hud.stage.draw();
+
+        if(gameOver())
+        {
+            game.setScreen(new GameOverScreen(game));
+            dispose();
+        }
+    }
+
+
+    //jessica
+    public boolean gameOver() {
+        if(player.currentState == Mario.State.DEAD && player.getStateTimer() > 3)
+        {
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -151,6 +166,6 @@ public class PlayScreen  implements Screen {
         renderer.dispose();
         world.dispose();
         b2dr.dispose();
-        //hud.dispose();
+        hud.dispose();
     }
 }
