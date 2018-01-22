@@ -34,3 +34,4 @@ public class Mario extends Sprite {
         b2body.createFixture(fdef);
     }
 }
+
