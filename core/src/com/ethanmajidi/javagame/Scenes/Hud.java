@@ -24,7 +24,7 @@ public class Hud {
     private static Integer score;
 
     private Label countdownLabel;
-    private Label static scoreLabel;
+    private static Label scoreLabel;
     private Label timeLabel;
     private Label levelLabel;
     private Label worldLabel;
@@ -75,7 +75,8 @@ public class Hud {
         score += value;
         scoreLabel.setText(String.format("%06d", score));
     }
-    @Override
+
+    //@Override
     public void dispose() {
         stage.dispose();
     }
