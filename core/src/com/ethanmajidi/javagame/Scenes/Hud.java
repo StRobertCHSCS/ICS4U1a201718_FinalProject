@@ -21,14 +21,14 @@ public class Hud {
 
     private Integer worldTimer;
     private float timeCount;
-    private static Integer score;
+    private Integer score;
 
-    private Label countdownLabel;
-    public static Label scoreLabel;
-    private Label timeLabel;
-    private Label levelLabel;
-    private Label worldLabel;
-    private Label javaLabel;
+    Label countdownLabel;
+    Label scoreLabel;
+    Label timeLabel;
+    Label levelLabel;
+    Label worldLabel;
+    Label javaLabel;
 
     public  Hud(SpriteBatch sb){
         worldTimer = 300;
@@ -60,25 +60,4 @@ public class Hud {
         stage.addActor(table);
 
     }
-
-    //timer
-    public void update (float dt)
-    {
-        timeCount += dt;
-
-        if (timeCount >= 1)
-        {
-            worldTimer --;
-            countdownLabel.setText(String.format("%3d", worldTimer));
-            timeCount = 0;
-        }
-    }
-
-    //score
-    public static void addScore (int value)
-    {
-        score += value;
-        scoreLabel.setText(String.format("%06d", score));
-    }
-
 }

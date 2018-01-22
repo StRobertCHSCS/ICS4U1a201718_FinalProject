@@ -28,6 +28,7 @@ import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Scenes.Hud;
 import com.ethanmajidi.javagame.Sprites.Java;
 import com.ethanmajidi.javagame.Sprites.Mario;
+import com.ethanmajidi.javagame.Tools.B2WorldCreator;
 
 
 /**
@@ -64,69 +65,15 @@ public class PlayScreen  implements Screen {
         renderer = new OrthogonalTiledMapRenderer(map, 1/JavaGame.PPM);
         gamecam.position.set(gamePort.getWorldWidth() / 2, gamePort.getWorldHeight() /2, 0);
 
-
+        //create our 2d World
         world = new World(new Vector2(0, -10), true);
+        //allows debug lines in our world
         b2dr = new Box2DDebugRenderer();
+
+        new B2WorldCreator(world, map);
+        //Creates our player in the game world
         player = new Java(world);
 
-
-        BodyDef bdef = new BodyDef();
-        PolygonShape shape = new PolygonShape();
-        FixtureDef fdef = new FixtureDef();
-        Body body;
-        player = new Java(world);
-        //ground bodies/fixtures
-        for(MapObject object : map.getLayers().get(2).getObjects().getByType(RectangleMapObject.class)){
-            Rectangle rect  = ((RectangleMapObject) object).getRectangle();
-
-            bdef.type = BodyDef.BodyType.StaticBody;
-            bdef.position.set((rect.getX() + rect.getWidth() /2) /JavaGame.PPM, (rect.getY() + rect.getHeight() / 2)/JavaGame.PPM);
-
-            body = world.createBody(bdef);
-
-            shape.setAsBox(rect.getWidth() / 2/JavaGame.PPM, rect.getHeight() / 2/JavaGame.PPM);
-            fdef.shape = shape;
-            body.createFixture(fdef);
-        }
-        //pipe bodies/fixtures
-        for(MapObject object : map.getLayers().get(3).getObjects().getByType(RectangleMapObject.class)){
-            Rectangle rect  = ((RectangleMapObject) object).getRectangle();
-
-            bdef.type = BodyDef.BodyType.StaticBody;
-            bdef.position.set((rect.getX() + rect.getWidth() /2) /JavaGame.PPM, (rect.getY() + rect.getHeight() / 2)/JavaGame.PPM);
-
-            body = world.createBody(bdef);
-
-            shape.setAsBox(rect.getWidth() / 2/JavaGame.PPM, rect.getHeight() / 2/JavaGame.PPM);
-            fdef.shape = shape;
-            body.createFixture(fdef);
-        }
-        //brick bodies/fixtures
-        for(MapObject object : map.getLayers().get(5).getObjects().getByType(RectangleMapObject.class)){
-            Rectangle rect  = ((RectangleMapObject) object).getRectangle();
-
-            bdef.type = BodyDef.BodyType.StaticBody;
-            bdef.position.set((rect.getX() + rect.getWidth() /2) /JavaGame.PPM, (rect.getY() + rect.getHeight() / 2)/JavaGame.PPM);
-
-            body = world.createBody(bdef);
-
-            shape.setAsBox(rect.getWidth() / 2/JavaGame.PPM, rect.getHeight() / 2/JavaGame.PPM);
-            fdef.shape = shape;
-            body.createFixture(fdef);
-        }
-        //coin bodies/fixtures
-        for(MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)){
-            Rectangle rect  = ((RectangleMapObject) object).getRectangle();
-
-            bdef.type = BodyDef.BodyType.StaticBody;
-            bdef.position.set((rect.getX() + rect.getWidth() /2) /JavaGame.PPM, (rect.getY() + rect.getHeight() / 2)/JavaGame.PPM);
-
-            body = world.createBody(bdef);
-
-            shape.setAsBox(rect.getWidth() / 2/JavaGame.PPM, rect.getHeight() / 2/JavaGame.PPM);
-            fdef.shape = shape;
-            body.createFixture(fdef);
-        }
 
 
     }
@@ -200,6 +147,10 @@ public class PlayScreen  implements Screen {
 
     @Override
     public void dispose() {
-
+        map.dispose();
+        renderer.dispose();
+        world.dispose();
+        b2dr.dispose();
+        hud.dispose();
     }
 }
