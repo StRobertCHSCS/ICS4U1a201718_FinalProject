@@ -78,6 +78,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         } else if(student.getCurrentEventNum() >= 16){
             i = new Intent(this, GameOverActivity.class);
             startActivity(i);
+            student.setWinOrLose("win");
         }
     }
 
@@ -152,15 +153,19 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         if(student.getMoney() <= 0){
             i = new Intent(this, GameOverActivity.class);
             startActivity(i);
+            student.setWinOrLose("lose");
         }else if(student.getSocial() <= 0){
             i = new Intent(this, GameOverActivity.class);
             startActivity(i);
+            student.setWinOrLose("lose");
         }else if(student.getGrades() <= 0){
             i = new Intent(this, GameOverActivity.class);
             startActivity(i);
+            student.setWinOrLose("lose");
         }else if(student.getSleep() <= 0){
             i = new Intent(this, GameOverActivity.class);
             startActivity(i);
+            student.setWinOrLose("lose");
         }
     }
     void updateStudentStatus() {

@@ -6,6 +6,7 @@ public class Student
     private int social;
     private int grades;
     private int sleep;
+    private String winOrLose = "neutral";
     private int currentEventNum = 0;
 
     //0 = 9ner 1 = 12er 2 = Mr.Servidio
@@ -48,7 +49,9 @@ public class Student
     public int getSleep(){
         return sleep;
     }
-
+    public String getWinOrLose(){
+        return winOrLose;
+    }
     //Setters
     public void increaseCurrentEventNum() {
         currentEventNum ++;
@@ -64,5 +67,8 @@ public class Student
     }
     public void setSleep(int nSleep){
         sleep = nSleep;
+    }
+    public void setWinOrLose(String nWinOrLose){
+        winOrLose = nWinOrLose;
     }
 }
