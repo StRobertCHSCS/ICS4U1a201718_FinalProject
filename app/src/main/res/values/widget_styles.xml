@@ -9,8 +9,8 @@
 
     <style name="characterButtonTheme" parent="Widget.AppCompat.ImageButton">
         <item name="android:backgroundTint">@android:color/transparent</item>
-        <item name="android:layout_width">20dp</item>
-        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_width">30dip</item>
+        <item name="android:layout_height">30dip</item>
         <item name="android:padding">2dp</item>
         <item name="android:scaleType">fitXY</item>
     </style>

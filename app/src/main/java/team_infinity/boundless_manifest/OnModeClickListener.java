@@ -36,7 +36,7 @@ public class OnModeClickListener implements View.OnClickListener
         View popupView = inflater.inflate(R.layout.popup_choose, null);
 
         //get the table from the view
-        TableLayout table = (TableLayout) popupView.findViewById(R.id.tableLayout_heros);
+        //TableLayout table = (TableLayout) popupView.findViewById(R.id.tableLayout_heros);
 
         //get the set of all available characters
         Set<Integer> keySet = GlobalAttributes.characters.keySet();

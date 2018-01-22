@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
@@ -48,8 +49,9 @@ public class ChooseCharacter extends android.app.DialogFragment
      */
     private void setup(View diaView)
     {
-        //get the table from the view
-        TableLayout table = (TableLayout) diaView.findViewById(R.id.tableLayout_heros);
+        //get the layout from the scroll view
+        //TableLayout table = (TableLayout) diaView.findViewById(R.id.tableLayout_heros);
+        RelativeLayout charaSpace = (RelativeLayout)diaView.findViewById(R.id.characterScrollViewLayout);
 
         //get the set of all available characters
         Set<Integer> keySet = GlobalAttributes.characters.keySet();
@@ -65,8 +67,8 @@ public class ChooseCharacter extends android.app.DialogFragment
         {
             Character chara = GlobalAttributes.characters.get(i);
             //create a ImageButton and give it a theme
-            //buttons[ct] = new ImageButton(getContext(), null, R.style.characterButtonTheme);
-            buttons[ct] = new ImageButton(getContext());
+            buttons[ct] = new ImageButton(diaView.getContext(), null, R.style.characterButtonTheme);
+            //buttons[ct] = new ImageButton(getContext());
 
             //the id is already put in the object's characterSprite
             buttons[ct].setImageResource(chara.characterSprite);
@@ -74,24 +76,10 @@ public class ChooseCharacter extends android.app.DialogFragment
             //give the button the event handler
             buttons[ct].setOnClickListener(chara.eventHandle);
 
-            //modify the buttons' size using LayoutParams
-            /*
-            ViewGroup.LayoutParams param = buttons[ct].getLayoutParams();
-            param.height = GlobalAttributes.ChooseCharacterButtonHeight;
-            param.width = GlobalAttributes.ChooseCharacterButtonWidth;
-            buttons[ct].setLayoutParams(param);
-
-            buttons[ct].getLayoutParams().height = GlobalAttributes.ChooseCharacterButtonHeight;
-            buttons[ct].getLayoutParams().width = GlobalAttributes.ChooseCharacterButtonWidth;
-            */
-
             ct++;
         }
 
         /*
-        add the code for putting character buttons to TableLayout here
-         */
-
         TableRow row = (TableRow)diaView.findViewById(R.id.tableRow_heros_1);
         //counter for the following loop
         int ctt = 0;
@@ -99,6 +87,17 @@ public class ChooseCharacter extends android.app.DialogFragment
         {
             row.addView(b, new TableRow.LayoutParams(ctt));
             ctt++;
+        }
+        */
+
+        //length of the button array
+        int len = buttons.length;
+
+        for(int ctt=0; ctt<len; ctt++)
+        {
+            buttons[ctt].setTop(0);
+            buttons[ctt].setLeft(30 * ctt + 2);
+            charaSpace.addView(buttons[ctt]);
         }
 
         Log.d("tag", "ChooseCharacter.setup() finished");
