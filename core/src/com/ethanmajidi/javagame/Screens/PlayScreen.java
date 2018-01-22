@@ -94,10 +94,12 @@ public class PlayScreen  implements Screen {
         //handle user input
         handleInput(dt);
 
-        //world.step(1/60f, 6, 2);
+        //take 1 step in the physics simulation(60 times per second)
+        world.step(1/60f, 6, 2);
+
         //connecting to hud for timer
-        //player.update(dt);
-        //hud.update(dt);
+        player.update(dt);
+        hud.update(dt);
 
         world.step(1/60f, 6, 2);
         gamecam.position.x = player.b2body.getPosition().x;
