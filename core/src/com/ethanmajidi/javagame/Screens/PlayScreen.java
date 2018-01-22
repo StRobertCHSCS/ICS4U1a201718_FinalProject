@@ -148,12 +148,18 @@ public class PlayScreen  implements Screen {
         //handle user input
         handleInput(dt);
 
+        //world.step(1/60f, 6, 2);
+        //connecting to hud for timer
+        //player.update(dt);
+        //hud.update(dt);
+
         world.step(1/60f, 6, 2);
         gamecam.position.x = player.b2body.getPosition().x;
         //update our gamecam after changes
         gamecam.update();
         //tell our render what our camera can see
         renderer.setView(gamecam);
+
     }
 
     @Override
