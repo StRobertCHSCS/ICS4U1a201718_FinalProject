@@ -7,6 +7,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
@@ -29,6 +30,10 @@ import com.ethanmajidi.javagame.Scenes.Hud;
 import com.ethanmajidi.javagame.Sprites.Java;
 import com.ethanmajidi.javagame.Sprites.Mario;
 import com.ethanmajidi.javagame.Tools.B2WorldCreator;
+<<<<<<< HEAD
+=======
+import com.ethanmajidi.javagame.Tools.WorldContactListener;
+>>>>>>> 998403ee00bdb601e6312fc54359679afce2db9f
 
 
 /**
@@ -36,35 +41,53 @@ import com.ethanmajidi.javagame.Tools.B2WorldCreator;
  */
 
 public class PlayScreen  implements Screen {
-
+    //Reference to our game for setting screens
     private JavaGame game;
+    private TextureAtlas atlas;
+
+    //basic playscreen variables
     private OrthographicCamera gamecam;
     private Viewport gamePort;
     private Hud hud;
 
+    //Map variables
     private TmxMapLoader maploader;
     private TiledMap map;
     private OrthogonalTiledMapRenderer renderer;
 
     //box2d var
-
     private World world;
     private Box2DDebugRenderer b2dr;
+
+    //Sprites
     private Java player;
 
 
     public PlayScreen(JavaGame game){
 
+        atlas = new TextureAtlas("Player_and_Enemies.txt");
+
         this.game = game;
+        //Creates camera to follow mario
         gamecam = new OrthographicCamera();
+
+        //creates the fitviewport so that the game always fits the screen
         gamePort = new FitViewport(JavaGame.V_WIDTH /JavaGame.PPM,JavaGame.V_HEIGHT/JavaGame.PPM, gamecam);
+
+        //creates the hud for the score and time etc...
         hud = new Hud(game.batch);
 
+        //loads our map and renderer
         maploader = new TmxMapLoader();
         map = maploader.load("level1.tmx");
         renderer = new OrthogonalTiledMapRenderer(map, 1/JavaGame.PPM);
+
+<<<<<<< HEAD
+=======
+        //initially set our gamecam to be centered right
         gamecam.position.set(gamePort.getWorldWidth() / 2, gamePort.getWorldHeight() /2, 0);
 
+>>>>>>> 998403ee00bdb601e6312fc54359679afce2db9f
         //create our 2d World
         world = new World(new Vector2(0, -10), true);
         //allows debug lines in our world
@@ -72,11 +95,22 @@ public class PlayScreen  implements Screen {
 
         new B2WorldCreator(world, map);
         //Creates our player in the game world
+<<<<<<< HEAD
         player = new Java(world);
 
+=======
+        player = new Java(world, this);
 
+        world.setContactListener(new WorldContactListener());
 
     }
+
+    public TextureAtlas getAtlas(){
+        return atlas;
+    }
+>>>>>>> 998403ee00bdb601e6312fc54359679afce2db9f
+
+
     @Override
     public void show() {
 
@@ -94,8 +128,12 @@ public class PlayScreen  implements Screen {
     public void update(float dt){
         //handle user input
         handleInput(dt);
-
+        //takes 1 step
         world.step(1/60f, 6, 2);
+
+        player.update(dt);
+
+        //attach our gamecam to our player x coordinates
         gamecam.position.x = player.b2body.getPosition().x;
         //update our gamecam after changes
         gamecam.update();
@@ -105,8 +143,10 @@ public class PlayScreen  implements Screen {
 
     @Override
     public void render(float delta) {
+        //seperate logic from render
         update(delta);
 
+        //clear the game screen
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         //render game map
@@ -115,6 +155,12 @@ public class PlayScreen  implements Screen {
         //renderer our Box2DDebugLines
         b2dr.render(world,gamecam.combined);
 
+        game.batch.setProjectionMatrix(gamecam.combined);
+        game.batch.begin();
+        player.draw(game.batch);
+        game.batch.end();
+
+        //Set our batch to now draw what the hud sees
         game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
         hud.stage.draw();
     }
