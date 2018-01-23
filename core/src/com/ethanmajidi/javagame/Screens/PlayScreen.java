@@ -30,7 +30,7 @@ import com.ethanmajidi.javagame.Scenes.Hud;
 import com.ethanmajidi.javagame.Sprites.Java;
 import com.ethanmajidi.javagame.Sprites.Mario;
 import com.ethanmajidi.javagame.Tools.B2WorldCreator;
-
+import com.ethanmajidi.javagame.Tools.WorldContactListener;
 
 
 /**
@@ -90,6 +90,8 @@ public class PlayScreen  implements Screen {
         new B2WorldCreator(world, map);
         //Creates our player in the game world
         player = new Java(world, this);
+
+        world.setContactListener(new WorldContactListener());
 
     }
 
