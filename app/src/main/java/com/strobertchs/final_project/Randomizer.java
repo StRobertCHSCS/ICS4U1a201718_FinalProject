@@ -16,14 +16,15 @@ public class Randomizer
     Event event8;
     Event event9;
     Event event10;
+    Event event11;
 
     public Randomizer(){
         rand = new Random();
-        this.value = this.rand.nextInt(10) + 1;
+        this.value = this.rand.nextInt(11) + 1;
     }
 
     public int roll(){
-        this.value = this.rand.nextInt(10) + 1;
+        this.value = this.rand.nextInt(11) + 1;
         return this.value;
     }
 
@@ -31,7 +32,7 @@ public class Randomizer
         return this.value;
     }
 
-    public Event pickEvent(Event nEvent1, Event nEvent2, Event nEvent3, Event nEvent4, Event nEvent5, Event nEvent6, Event nEvent7, Event nEvent8, Event nEvent9, Event nEvent10){
+    public Event pickEvent(Event nEvent1, Event nEvent2, Event nEvent3, Event nEvent4, Event nEvent5, Event nEvent6, Event nEvent7, Event nEvent8, Event nEvent9, Event nEvent10, Event nEvent11){
         event1 = nEvent1;
         event2 = nEvent2;
         event3 = nEvent3;
@@ -42,6 +43,7 @@ public class Randomizer
         event8 = nEvent8;
         event9 = nEvent9;
         event10 = nEvent10;
+        event11 = nEvent11;
         roll();
         if(getValue() == 1){
             return event1;
@@ -61,8 +63,10 @@ public class Randomizer
             return event8;
         }else if(getValue() == 9){
             return event9;
-        }else{
+        }else if(getValue() == 10){
             return event10;
+        }else{
+            return event11;
         }
     }
 }

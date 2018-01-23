@@ -42,7 +42,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Event skipClass = new Event("skip class", 0, 20, -20, 0, 0, -20, 20, 0);
     Event doDrugs = new Event("do drugs", -30, 30, -30, -30, 30, -30, 30, 30);
     Event hangOut = new Event("hangout after school", -20, 20, -10, -10, 20, -20, 10, 10);
-
+    Event vacation = new Event("go on vaction", -30, 20, -20, 20, 30, -20, 20, -20);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +90,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
 
     void makeTurn(){
-        event = random.pickEvent(allNighter, doYourHomework, extraCurricular, partTimeJob, party, attendFamilyDinner, prepareForPresentation, skipClass, doDrugs, hangOut);
+        event = random.pickEvent(allNighter, doYourHomework, extraCurricular, partTimeJob, party, attendFamilyDinner, prepareForPresentation, skipClass, doDrugs, hangOut, vacation);
     }
 
     @Override
