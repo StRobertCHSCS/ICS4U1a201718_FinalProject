@@ -4,6 +4,7 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -61,6 +62,9 @@ public class PlayScreen  implements Screen {
     //Sprites
     private Java player;
 
+    //music
+    private Music music;
+
 
     public PlayScreen(JavaGame game){
 
@@ -98,6 +102,11 @@ public class PlayScreen  implements Screen {
 
         world.setContactListener(new WorldContactListener());
 
+        //music
+        music = JavaGame.manager.get("audio/music/JavaGameMusic.wave", Music.class);
+        music.setLooping(true);
+        music.play();
+
     }
 
     public TextureAtlas getAtlas(){
@@ -122,10 +131,13 @@ public class PlayScreen  implements Screen {
     public void update(float dt){
         //handle user input
         handleInput(dt);
-        //takes 1 step
+
+        //takes 1 step in the physics simulation (60 times per second)
         world.step(1/60f, 6, 2);
 
+        //connecting hud to timer
         player.update(dt);
+        hud.update(dt);
 
         //attach our gamecam to our player x coordinates
         gamecam.position.x = player.b2body.getPosition().x;
@@ -133,6 +145,7 @@ public class PlayScreen  implements Screen {
         gamecam.update();
         //tell our render what our camera can see
         renderer.setView(gamecam);
+
     }
 
     @Override
