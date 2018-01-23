@@ -32,11 +32,16 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Randomizer random = new Randomizer();
     int currentGradeLevel = 9;
 
-    Event allNighter = new Event("all Nighter playing videogames", 0, 30, -20, -20, 0, -30, 20, 20);
-    Event doYourHomework = new Event("homework assignment", 0, -20, 20, -10, 0, 20, -20, 10);
-    Event extraCurricular = new Event("extra curricular", -10, 20, 10, -10, 10, -20, -10, 10);
-    Event partTimeJob = new Event("part time job", 30, 20, -20, -20, -30, -20, 20, 20);
-    Event attendFamilyDinner = new Event("family dinner", 10, 20, -10, -10, -10, -20, 10, 10);
+    Event allNighter = new Event("stay up all night playing videogames", 0, 30, -20, -20, 0, -30, 20, 20);
+    Event doYourHomework = new Event("do your homework", 0, -20, 20, -10, 0, 20, -20, 10);
+    Event extraCurricular = new Event("do an extra curricular", -10, 20, 10, -10, 10, -20, -10, 10);
+    Event partTimeJob = new Event("a part time job", 30, 20, -20, -20, -30, -20, 20, 20);
+    Event party = new Event("go to a party", -10, 30, -20, -10, 10, -30, 20, 10);
+    Event attendFamilyDinner = new Event("attend a family dinner", 10, 20, -10, -10, -10, -20, 10, 10);
+    Event prepareForPresentation = new Event("prepare for your presentation", 0, -10, 20, -10, 0, 10, -20, 10);
+    Event skipClass = new Event("skip class", 0, 20, -20, 0, 0, -20, 20, 0);
+    Event doDrugs = new Event("do drugs", -30, 30, -30, -30, 30, -30, 30, 30);
+    Event hangOut = new Event("hangout after school", -20, 20, -10, -10, 20, -20, 10, 10);
 
 
     @Override
@@ -85,7 +90,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
 
     void makeTurn(){
-        event = random.pickEvent(allNighter, doYourHomework, extraCurricular, partTimeJob);
+        event = random.pickEvent(allNighter, doYourHomework, extraCurricular, partTimeJob, party, attendFamilyDinner, prepareForPresentation, skipClass, doDrugs, hangOut);
     }
 
     @Override
@@ -178,7 +183,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     void updateEvent() {
-        textObjectEvent.setText("Event: " + "Do you want to perform a/an " + event.getEventName());
+        textObjectEvent.setText("Event: " + "Do you want to " + event.getEventName());
     }
 
     String moneyBarLines;
