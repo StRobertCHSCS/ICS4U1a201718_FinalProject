@@ -19,7 +19,7 @@ public class Schedule extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
 
-        CustomListAdapter array1 = new CustomListAdapter(this, periodArray);
+        CustomListAdapter array1 = new CustomListAdapter(this, periodArray,periodArray);
         listView = (ListView) findViewById(R.id.ListViewID);
         listView.setAdapter(array1);
 
