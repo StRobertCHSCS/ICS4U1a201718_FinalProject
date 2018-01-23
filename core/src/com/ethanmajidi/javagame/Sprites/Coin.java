@@ -27,7 +27,7 @@ public class Coin extends InteractiveTileObject {
     public Coin(World world, TiledMap map, Rectangle bounds){
 
         super(world, map, bounds);
-        //tileset = map.getTileSets("tileset_gutter");
+        tileset = map.getTileSets().getTileSet("Custom_tile.png");
         fixture.setUserData(this);
         setCategoryFilter(JavaGame.COIN_BIT);
     }
