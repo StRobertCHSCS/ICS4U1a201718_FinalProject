@@ -12,6 +12,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.ethanmajidi.javagame.JavaGame;
+import com.ethanmajidi.javagame.Scenes.Hud;
 
 /**
  * Created by EthanMajidi on 2018-01-21.
@@ -19,10 +20,13 @@ import com.ethanmajidi.javagame.JavaGame;
 
 public class Coin extends InteractiveTileObject {
 
+    private static TiledMapTileSet tileset;
+    private final int BLANK_COIN = 28;
 
     public Coin(World world, TiledMap map, Rectangle bounds){
-        //private static TiledMapTileSet tileset;
+
         super(world, map, bounds);
+        //tileset = map.getTileSets("tileset_gutter");
         fixture.setUserData(this);
         setCategoryFilter(JavaGame.COIN_BIT);
     }
@@ -30,5 +34,8 @@ public class Coin extends InteractiveTileObject {
     @Override
     public void onHeadHit() {
         Gdx.app.log("Coin", "Collision");
+
+        //score
+        Hud.addScore(100);
     }
 }
