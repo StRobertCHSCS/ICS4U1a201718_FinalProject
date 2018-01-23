@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Random;
-
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView textObjectMoney;
@@ -27,6 +25,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonObjectNo;
 
     Student student = new Student(1);
+    {
+        GlobalAttributes.student = this.student;
+    }
     Event event;
     Randomizer random = new Randomizer();
     int currentGradeLevel = 9;
