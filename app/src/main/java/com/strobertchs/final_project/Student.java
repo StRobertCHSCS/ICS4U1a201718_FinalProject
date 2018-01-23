@@ -56,6 +56,9 @@ public class Student
     public void increaseCurrentEventNum() {
         currentEventNum ++;
     }
+    public void setCurrentEventNum(int nCurrentEventNum){
+        currentEventNum = nCurrentEventNum;
+    }
     public void setMoney(int nMoney){
         money = nMoney;
     }

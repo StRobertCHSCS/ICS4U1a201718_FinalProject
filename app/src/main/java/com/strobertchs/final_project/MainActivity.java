@@ -8,15 +8,18 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    Button buttonObjectPlay;
+    Button buttonObjectInstructions;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button buttonPlay = (Button)findViewById(R.id.buttonPlay);
-        Button buttonInstructions = (Button)findViewById(R.id.buttonInstructions);
-        buttonPlay.setOnClickListener(this);
-        buttonInstructions.setOnClickListener(this);
+        buttonObjectPlay = (Button)findViewById(R.id.buttonPlay);
+        buttonObjectInstructions = (Button)findViewById(R.id.buttonInstructions);
+        buttonObjectPlay.setOnClickListener(this);
+        buttonObjectInstructions.setOnClickListener(this);
     }
 
     @Override
