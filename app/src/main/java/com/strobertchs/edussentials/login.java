@@ -9,6 +9,7 @@ import android.widget.Button;
 public class Login extends AppCompatActivity {
 
     private Button log_in;
+    private Button openRegistration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +23,24 @@ public class Login extends AppCompatActivity {
                 openMenu();
             }
         });
+
+        openRegistration = (Button) findViewById(R.id.register);
+        openRegistration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openRegister();
+            }
+        });
+
     }
 
     public void openMenu() {
         Intent intent = new Intent(this, GradeTracker.class);
         startActivity(intent);
+    }
 
+    public void openRegister() {
+        Intent intent = new Intent(this, RegistrationActivity.class);
+        startActivity(intent);
     }
 }

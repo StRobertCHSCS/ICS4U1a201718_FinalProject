@@ -8,7 +8,7 @@
     tools:context="com.strobertchs.edussentials.RegistrationActivity">
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/etMail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -19,22 +19,22 @@
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/etPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText2"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_below="@+id/editText2"
+        android:layout_alignEnd="@+id/etMail"
+        android:layout_alignRight="@+id/etMail"
+        android:layout_below="@+id/etMail"
         android:layout_marginTop="25dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/etGrade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/etPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
         android:ems="10"
@@ -57,7 +57,7 @@
         android:id="@+id/confirmRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText4"
+        android:layout_below="@+id/etGrade"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="63dp"
         android:text="Confirm" />
