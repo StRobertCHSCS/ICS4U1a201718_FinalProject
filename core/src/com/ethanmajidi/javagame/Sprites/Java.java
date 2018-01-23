@@ -115,6 +115,8 @@ public class Java extends Sprite {
         FixtureDef fdef = new FixtureDef();
         CircleShape shape = new CircleShape();
         shape.setRadius(6/ JavaGame.PPM);
+        fdef.filter.categoryBits = JavaGame.PLAYER_BIT;
+        fdef.filter.maskBits = JavaGame.DEFAULT_BIT | JavaGame.COIN_BIT | JavaGame.BRICK_BIT;
 
         fdef.shape = shape;
         b2body.createFixture(fdef);
