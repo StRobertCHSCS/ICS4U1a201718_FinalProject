@@ -34,6 +34,7 @@ public class Coin extends InteractiveTileObject {
     @Override
     public void onHeadHit() {
         Gdx.app.log("Coin", "Collision");
+        getCell().setTile(tileset.getTile(BLANK_COIN));
 
         //score
         Hud.addScore(100);
