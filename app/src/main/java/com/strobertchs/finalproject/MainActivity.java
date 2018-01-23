@@ -1,11 +1,15 @@
 package com.strobertchs.finalproject;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,23 +27,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        TextView textView = (TextView)findViewById(R.id.CurrentDay);
+        Calendar calendar = Calendar.getInstance();
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = pref.edit();
 
-//        Thread t = new Thread(){
-//            public void run(){
-//                while(!isInterrupted()){
-//
- //                   try{
- //                       Thread.sleep(86400000);
-//
- //                       runOnUiThread(new Runnable() {
-//                              });
-//                        } catch (InterruptedException e){
-//                        e.printStackTrace()
-//                    }
-//                }
-//            }
-//        }
+        int count = 1;
+        while (count <= 2)
+        {
+            if (calendar.get(Calendar.HOUR_OF_DAY))== 12 && calendar.get((Calendar.AM_PM) == Calendar.AM)
+            {
+                count = pref.getInt("count", 1);
+                textView = (TextView)findViewById(R.id.DayText);
+                textView.setText(count);
+                count++;
+            }
+
+            if(this.isFinishing())
+            {
+                editor.putInt("count ", count);
+                editor.commit();
+            }
+        }
+
 
         buttonObjectChoice1 =
                 (Button) findViewById(R.id.TeacherButton);
