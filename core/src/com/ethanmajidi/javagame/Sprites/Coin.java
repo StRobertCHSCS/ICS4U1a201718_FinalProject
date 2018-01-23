@@ -1,5 +1,6 @@
 package com.ethanmajidi.javagame.Sprites;
 
+import com.badlogic.gdx.maps.tiled.TiledMapTileSet;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.Gdx;
 
@@ -20,6 +21,7 @@ public class Coin extends InteractiveTileObject {
 
 
     public Coin(World world, TiledMap map, Rectangle bounds){
+        //private static TiledMapTileSet tileset;
         super(world, map, bounds);
         fixture.setUserData(this);
         setCategoryFilter(JavaGame.COIN_BIT);

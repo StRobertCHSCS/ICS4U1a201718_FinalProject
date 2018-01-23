@@ -30,10 +30,9 @@ import com.ethanmajidi.javagame.Scenes.Hud;
 import com.ethanmajidi.javagame.Sprites.Java;
 import com.ethanmajidi.javagame.Sprites.Mario;
 import com.ethanmajidi.javagame.Tools.B2WorldCreator;
-<<<<<<< HEAD
-=======
+
 import com.ethanmajidi.javagame.Tools.WorldContactListener;
->>>>>>> 998403ee00bdb601e6312fc54359679afce2db9f
+
 
 
 /**
@@ -82,12 +81,11 @@ public class PlayScreen  implements Screen {
         map = maploader.load("level1.tmx");
         renderer = new OrthogonalTiledMapRenderer(map, 1/JavaGame.PPM);
 
-<<<<<<< HEAD
-=======
+
         //initially set our gamecam to be centered right
         gamecam.position.set(gamePort.getWorldWidth() / 2, gamePort.getWorldHeight() /2, 0);
 
->>>>>>> 998403ee00bdb601e6312fc54359679afce2db9f
+
         //create our 2d World
         world = new World(new Vector2(0, -10), true);
         //allows debug lines in our world
@@ -95,10 +93,7 @@ public class PlayScreen  implements Screen {
 
         new B2WorldCreator(world, map);
         //Creates our player in the game world
-<<<<<<< HEAD
-        player = new Java(world);
 
-=======
         player = new Java(world, this);
 
         world.setContactListener(new WorldContactListener());
@@ -108,7 +103,6 @@ public class PlayScreen  implements Screen {
     public TextureAtlas getAtlas(){
         return atlas;
     }
->>>>>>> 998403ee00bdb601e6312fc54359679afce2db9f
 
 
     @Override
