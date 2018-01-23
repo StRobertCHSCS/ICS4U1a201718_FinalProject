@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Login extends AppCompatActivity {
+public class login extends AppCompatActivity {
 
     private Button log_in;
     private Button openRegistration;
@@ -14,7 +14,7 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.login);
 
         log_in = (Button) findViewById(R.id.signin);
         log_in.setOnClickListener(new View.OnClickListener() {
