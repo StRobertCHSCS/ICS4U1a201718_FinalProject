@@ -1,5 +1,6 @@
 package com.ethanmajidi.javagame.Sprites;
 
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.maps.tiled.TiledMapTileSet;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.Gdx;
@@ -38,5 +39,16 @@ public class Coin extends InteractiveTileObject {
 
         //score
         Hud.addScore(100);
+
+        //sounds
+
+        if(getCell().getTile().getId() == BLANK_COIN)
+        {
+            JavaGame.manager.get("audio/sounds/BumpMusic.wav", Sound.class).play();
+        }
+        else
+        {
+            JavaGame.manager.get("audio/sounds/CoinMusic.wav", Sound.class).play();
+        }
     }
 }
