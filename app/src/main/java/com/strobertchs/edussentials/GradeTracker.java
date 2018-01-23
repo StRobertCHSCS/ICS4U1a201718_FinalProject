@@ -16,7 +16,7 @@ public class GradeTracker extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade_tracker);
 
-        scheduleOpen = (Button) findViewById(R.id.Schedule);
+        scheduleOpen = (Button) findViewById(R.id.schedulebutton);
         scheduleOpen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
