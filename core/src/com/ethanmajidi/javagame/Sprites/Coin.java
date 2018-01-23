@@ -1,9 +1,8 @@
 package com.ethanmajidi.javagame.Sprites;
 
-import com.badlogic.gdx.physics.box2d.World;<<<<<<< HEAD
-=======
+import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.Gdx;
->>>>>>> 998403ee00bdb601e6312fc54359679afce2db9f
+
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -18,11 +17,8 @@ import com.ethanmajidi.javagame.JavaGame;
  */
 
 public class Coin extends InteractiveTileObject {
-<<<<<<< HEAD
-    public  Coin(World world, TiledMap map, Rectangle bounds){
-        super(world, map, bounds);
 
-=======
+
     public Coin(World world, TiledMap map, Rectangle bounds){
         super(world, map, bounds);
         fixture.setUserData(this);
@@ -32,6 +28,5 @@ public class Coin extends InteractiveTileObject {
     @Override
     public void onHeadHit() {
         Gdx.app.log("Coin", "Collision");
->>>>>>> 998403ee00bdb601e6312fc54359679afce2db9f
     }
 }

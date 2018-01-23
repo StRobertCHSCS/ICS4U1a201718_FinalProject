@@ -1,17 +1,17 @@
 package com.ethanmajidi.javagame.Sprites;
 
 
-<<<<<<< HEAD
+
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.World;
-=======
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.World;
 import com.ethanmajidi.javagame.JavaGame;
->>>>>>> 998403ee00bdb601e6312fc54359679afce2db9f
+
 
 /**
  * Created by EthanMajidi on 2018-01-21.
@@ -20,8 +20,7 @@ import com.ethanmajidi.javagame.JavaGame;
 public class Brick extends InteractiveTileObject {
     public Brick(World world, TiledMap map, Rectangle bounds){
         super(world, map, bounds);
-<<<<<<< HEAD
-=======
+
         fixture.setUserData(this);
         setCategoryFilter(JavaGame.BRICK_BIT);
     }
@@ -31,6 +30,5 @@ public class Brick extends InteractiveTileObject {
         Gdx.app.log("Coin", "Collision");
         setCategoryFilter(JavaGame.DESTRYOYED_BIT);
         getCell().setTile(null);
->>>>>>> 998403ee00bdb601e6312fc54359679afce2db9f
     }
 }
