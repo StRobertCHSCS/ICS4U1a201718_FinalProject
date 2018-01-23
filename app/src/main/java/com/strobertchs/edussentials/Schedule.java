@@ -9,7 +9,8 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class Schedule extends AppCompatActivity {
-    String[] periodArray = {"Computer Science","Physics","Morality","Business Leadership"};
+    String[] periodArray = {"Computer Science","Physics","Morality","Business Leadership","Lunch"};
+    String[] timeArray = {"8:30-9:50","9:53-11:09","11:53-1:13","1:13-2:30","11:10-11:53"};
 
     ListView listView;
 
@@ -19,7 +20,7 @@ public class Schedule extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
 
-        CustomListAdapter array1 = new CustomListAdapter(this, periodArray,periodArray);
+        CustomListAdapter array1 = new CustomListAdapter(this, periodArray,timeArray);
         listView = (ListView) findViewById(R.id.ListViewID);
         listView.setAdapter(array1);
 

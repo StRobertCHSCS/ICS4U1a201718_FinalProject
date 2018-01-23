@@ -39,7 +39,7 @@ public class CustomListAdapter extends ArrayAdapter {
 
         //this code sets the values of the objects to values from the arrays
         periodTextField.setText(periodArray[position]);
-        periodTextField.setText(timeArray[position]);
+        timeTextField.setText(timeArray[position]);
 
         return rowView;
 
