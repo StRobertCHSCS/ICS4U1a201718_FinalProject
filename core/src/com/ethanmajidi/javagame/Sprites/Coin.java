@@ -1,6 +1,7 @@
 package com.ethanmajidi.javagame.Sprites;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTileSet;
 import com.badlogic.gdx.math.Rectangle;
@@ -31,7 +32,19 @@ public class Coin extends InteractiveTileObject {
     public void onHeadHit()
     {
         Gdx.app.log("Coin", "Collision");
-        //getCell().setTile(tileSet.getTile(BLANK_COIN));
+        getCell().setTile(tileSet.getTile(BLANK_COIN));
+
+        //sounds
+        if(getCell().getTile().getId() == BLANK_COIN)
+        {
+            JavaGame.manager.get("audio/sounds/bump.wav", Sound.class).play();
+        }
+        else
+        {
+            JavaGame.manager.get("audio/sounds/coin.wav", Sound.class).play();
+        }
+
+        //score
         Hud.addScore(100);
     }
 }

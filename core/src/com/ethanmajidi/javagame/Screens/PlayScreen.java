@@ -4,6 +4,7 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -52,6 +53,7 @@ public class PlayScreen  implements Screen {
     private Box2DDebugRenderer b2dr;
     private Java player;
 
+    private Music music;
 
     public PlayScreen(JavaGame game){
 
@@ -73,6 +75,11 @@ public class PlayScreen  implements Screen {
         new B2WorldCreator(world, map);
         //Creates our player in the game world
         player = new Java(world);
+
+        //music
+        music = JavaGame.manager.get("audio/music/mario_music.ogg", Music.class);
+        music.setLooping(true);
+        music.play();
 
     }
 
