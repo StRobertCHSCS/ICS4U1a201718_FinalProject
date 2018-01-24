@@ -23,7 +23,7 @@ public class CustomListAdapter extends ArrayAdapter {
 
     public CustomListAdapter(Activity context, String[] periodArrayParam, String[] timeArrayParam){
 
-        super(context,R.layout.listview_row , periodArrayParam, timeArrayParam);
+        super(context,R.layout.listview_row , periodArrayParam);
         this.context=context;
         this.periodArray = periodArrayParam;
         this.timeArray = timeArrayParam;
@@ -31,7 +31,7 @@ public class CustomListAdapter extends ArrayAdapter {
 
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater=context.getLayoutInflater();
-        View rowView=inflater.inflate(R.layout.listview_row, null,true);
+        View rowView=inflater.inflate(R.layout.listview_row,null,true);
 
         //this code gets references to objects in the listview_row.xml file
         TextView periodTextField = (TextView) rowView.findViewById(R.id.PeriodTextViewID);
