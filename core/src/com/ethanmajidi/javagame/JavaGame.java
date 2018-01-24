@@ -16,11 +16,15 @@ public class JavaGame extends Game {
 	public static final int V_HEIGHT = 208;
 	public static final float PPM = 100;
 
-	public static final short DEFAULT_BIT = 1;
+	//box2d collision
+	public static final short GROUND_BIT = 1;
 	public static final short PLAYER_BIT = 2;
 	public static final short BRICK_BIT = 4;
 	public static final short COIN_BIT = 8;
 	public static final short DESTRYOYED_BIT = 16;
+	public static final short OBJECT_BIT = 32;
+	public static final short ENEMY_BIT = 64;
+	public static final short ENEMY_HEAD_BIT = 128;
 
 	public SpriteBatch batch;
 
@@ -33,14 +37,14 @@ public class JavaGame extends Game {
 	public void create () {
 		batch = new SpriteBatch();
 
-		/**
-		manager = new AssetManager();
-		manager.load("audio/music/JavaGameMusic.wav", Music.class);
-		manager.load("audio/sounds/CoinMusic.wav", Sound.class);
-		manager.load("audio/sounds/BumpMusic.wav", Sound.class);
-		manager.load("audio/sounds/BreakBlock.wav", Sound.class);
-		manager.finishLoading();
-		 */
+
+		//manager = new AssetManager();
+		//manager.load("audio/music/JavaGameMusic.wav", Music.class);
+		//manager.load("audio/sounds/CoinMusic.wav", Sound.class);
+		//manager.load("audio/sounds/BumpMusic.wav", Sound.class);
+		//manager.load("audio/sounds/BreakBlock.wav", Sound.class);
+		//manager.finishLoading();
+
 
 		setScreen(new PlayScreen(this));
 

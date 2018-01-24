@@ -10,6 +10,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.ethanmajidi.javagame.JavaGame;
+import com.ethanmajidi.javagame.Screens.PlayScreen;
 import com.ethanmajidi.javagame.Sprites.Brick;
 import com.ethanmajidi.javagame.Sprites.Coin;
 
@@ -18,7 +19,9 @@ import com.ethanmajidi.javagame.Sprites.Coin;
  */
 
 public class B2WorldCreator {
-    public B2WorldCreator(World world, TiledMap map){
+    public B2WorldCreator(PlayScreen screen){
+        World world = screen.getWorld();
+        TiledMap map = screen.getMap();
 
         //create body and fixture variables
         BodyDef bdef = new BodyDef();
@@ -49,20 +52,21 @@ public class B2WorldCreator {
 
             shape.setAsBox(rect.getWidth() / 2/JavaGame.PPM, rect.getHeight() / 2/JavaGame.PPM);
             fdef.shape = shape;
+            fdef.filter.categoryBits = JavaGame.OBJECT_BIT;
             body.createFixture(fdef);
         }
         //brick bodies/fixtures
         for(MapObject object : map.getLayers().get(5).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect  = ((RectangleMapObject) object).getRectangle();
 
-            new Brick(world, map, rect);
+            new Brick(screen,rect);
 
         }
         //coin bodies/fixtures
         for(MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect  = ((RectangleMapObject) object).getRectangle();
 
-            new Coin(world, map, rect);
+            new Coin(screen, rect);
 
 
         }

@@ -14,6 +14,7 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Scenes.Hud;
+import com.ethanmajidi.javagame.Screens.PlayScreen;
 
 /**
  * Created by EthanMajidi on 2018-01-21.
@@ -23,8 +24,8 @@ public class Coin extends InteractiveTileObject{
     private static TiledMapTileSet tileSet;
     private final int BLANK_COIN = 2;
     private boolean isActive;
-    public Coin(World world, TiledMap map, Rectangle bounds){
-        super(world, map, bounds);
+    public Coin(PlayScreen screen, Rectangle bounds){
+        super(screen, bounds);
         tileSet = map.getTileSets().getTileSet("Custom_tile");
         fixture.setUserData(this);
         setCategoryFilter(JavaGame.COIN_BIT);
@@ -38,6 +39,17 @@ public class Coin extends InteractiveTileObject{
         if (isActive) {
             Hud.addScore(100);
             isActive = false;
+
         }
+
+        /**
+        if(getCell().getTile().getId() == BLANK_COIN)
+        {
+            JavaGame.manager.get("audio/sounds/BumpMusic.wav", Sound.class).play();
+        }
+        else
+        {
+            JavaGame.manager.get("audio/sounds/CoinMusic.wav", Sound.class).play();
+        */
     }
 }
