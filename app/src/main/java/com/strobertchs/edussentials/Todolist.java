@@ -58,6 +58,8 @@ public class Todolist extends AppCompatActivity {
         tasks.add("Task 1");
         tasks.add("Task 2");
         setupListViewListener();
+        readToDoList();
+        tasksAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, tasks);
 
     }
 
@@ -68,6 +70,7 @@ public class Todolist extends AppCompatActivity {
                     public boolean onItemLongClick(AdapterView<?> adapter, View item, int pos, long id) {
                         tasks.remove(pos);
                         tasksAdapter.notifyDataSetChanged();
+                        writeTasks();
                         return true;
                     }
 
@@ -79,6 +82,7 @@ public class Todolist extends AppCompatActivity {
         String taskText = etNewTask.getText().toString();
         tasksAdapter.add(taskText);
         etNewTask.setText("");
+        writeTasks();
 
     }
 }
