@@ -113,6 +113,8 @@ public class PlayScreen  implements Screen {
 
         goomba = new Goomba(this, 32/JavaGame.PPM, 32/JavaGame.PPM);
 
+        goomba = new Goomba(this, 32/JavaGame.PPM, 32/JavaGame.PPM);
+
     }
 
     public TextureAtlas getAtlas(){
