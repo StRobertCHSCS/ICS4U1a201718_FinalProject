@@ -31,23 +31,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = pref.edit();
 
-        int count = 1;
-        while (count <= 2)
-        {
-            if (calendar.get(Calendar.HOUR_OF_DAY))== 12 && calendar.get((Calendar.AM_PM) == Calendar.AM)
-            {
-                count = pref.getInt("count", 1);
-                textView = (TextView)findViewById(R.id.DayText);
-                textView.setText(count);
-                count++;
-            }
-
-            if(this.isFinishing())
-            {
-                editor.putInt("count ", count);
-                editor.commit();
-            }
-        }
+//        int count = 1;
+//        while (count <= 2)
+//        {
+//            if (calendar.get(Calendar.HOUR_OF_DAY))== 12 && calendar.get((Calendar.AM_PM) == Calendar.AM)
+//            {
+//                count = pref.getInt("count", 1);
+//                textView = (TextView)findViewById(R.id.DayText);
+//                textView.setText(count);
+//                count++;
+//            }
+//
+//            if(this.isFinishing())
+//            {
+//                editor.putInt("count ", count);
+//                editor.commit();
+//            }
+//        }
+//
 
 
         buttonObjectChoice1 =
@@ -117,6 +118,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.ExamScheduleButton:
                 i = new Intent(this, examschedule.class);
+                    startActivity(i);
+                break;
+
+            case R.id.ClassSitesButton:
+                i = new Intent(this, classsites.class);
+                    startActivity(i);
+                break;
+
+            case R.id.ClubsTeamsButton:
+                i = new Intent(this, clubsteams.class);
                     startActivity(i);
                 break;
         }

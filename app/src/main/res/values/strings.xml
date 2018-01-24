@@ -54,10 +54,9 @@
         <item>Gurunlian</item>
         <item>Hall, J</item>
         <item>Hall, M</item>
-        <item>Haisuk</item>
+        <item>Hasiuk</item>
         <item>Holding</item>
         <item>Hord</item>
-        <item>Iaboni-Laviolette</item>
         <item>Jorge</item>
         <item>Karges</item>
         <item>Klobucar</item>
@@ -65,6 +64,7 @@
         <item>Kotulski</item>
         <item>Kurtz</item>
         <item>Lam</item>
+        <item>Laviolette</item>
         <item>Lecce</item>
         <item>Leduc</item>
         <item>Loffredi</item>
@@ -129,47 +129,47 @@
 
     <string name="title_activity_clubsteams">clubsteams</string>
     <string-array name="array_clubsteams">
-    <item>Arts Council</item>
-    <item>Athletic Council</item>
-    <item>Band</item>
-    <item>Chess Club</item>
-    <item>Choir</item>
-    <item>Christian Fellowship</item>
-    <item>Cross Country</item>
-    <item>Dance ClubD</item>
-    <item>Debating Club</item>
-    <item>DECA Chapter</item>
-    <item>Design Club</item>
-    <item>ESL Writing Bootcamp</item>
-    <item>Empowered Student Partnerships (ESP)</item>
-    <item>Environmental Club</item>
-    <item>French Council</item>
-    <item>French Drama Club</item>
-    <item>French Homework Club</item>
-    <item>French Newspaper "La Silhouette"</item>
-    <item>Health Sciences (HOSA)</item>
-    <item>IB Club</item>
-    <item>Interfaith Club</item>
-    <item>Jazz Band</item>
-    <item>Mach 1 Aviation Club</item>
-    <item>Math Club</item>
-    <item>Newspaper "The Axiom"</item>
-    <item>Night Flyers Ski Club</item>
-    <item>Orchestra</item>
-    <item>Outreach Club</item>
-    <item>Mural Club</item>
-    <item>Photography Club</item>
-    <item>Physics Club</item>
-    <item>Pride</item>
-    <item>Reach for the Top</item>
-    <item>Robotics Club</item>
-    <item>Science and Research Innovation Club</item>
-    <item>Social Justice</item>
-    <item>Student Council</item>
-    <item>Table Tennis</item>
-    <item>United Book Nerds</item>
-    <item>United Nations York Catholic Assembly</item>
-    <item>Yearbook Club</item>
+        <item>Arts Council</item>
+        <item>Athletic Council</item>
+        <item>Band</item>
+        <item>Chess Club</item>
+        <item>Choir</item>
+        <item>Christian Fellowship</item>
+        <item>Cross Country</item>
+        <item>Dance ClubD</item>
+        <item>Debating Club</item>
+        <item>DECA Chapter</item>
+        <item>Design Club</item>
+        <item>ESL Writing Bootcamp</item>
+        <item>Empowered Student Partnerships (ESP)</item>
+        <item>Environmental Club</item>
+        <item>French Council</item>
+        <item>French Drama Club</item>
+        <item>French Homework Club</item>
+        <item>French Newspaper "La Silhouette"</item>
+        <item>Health Sciences (HOSA)</item>
+        <item>IB Club</item>
+        <item>Interfaith Club</item>
+        <item>Jazz Band</item>
+        <item>Mach 1 Aviation Club</item>
+        <item>Math Club</item>
+        <item>Newspaper "The Axiom"</item>
+        <item>Night Flyers Ski Club</item>
+        <item>Orchestra</item>
+        <item>Outreach Club</item>
+        <item>Mural Club</item>
+        <item>Photography Club</item>
+        <item>Physics Club</item>
+        <item>Pride</item>
+        <item>Reach for the Top</item>
+        <item>Robotics Club</item>
+        <item>Science and Research Innovation Club</item>
+        <item>Social Justice</item>
+        <item>Student Council</item>
+        <item>Table Tennis</item>
+        <item>United Book Nerds</item>
+        <item>United Nations York Catholic Assembly</item>
+        <item>Yearbook Club</item>
     </string-array>
     <string name="action_settings">Settings</string>
 </resources>
