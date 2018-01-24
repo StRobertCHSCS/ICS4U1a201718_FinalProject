@@ -10,9 +10,35 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Todolist extends AppCompatActivity {
+
+    private void readToDoList() {
+        File filesDir = getFilesDir();
+        File toDoListFile = new File(filesDir, "tasks.txt");
+        try {
+            tasks = new ArrayList<String>(FileUtils.readLines(toDoListFile));
+        } catch (IOException e) {
+            tasks = new ArrayList<String>();
+        }
+    }
+
+    private void writeTasks() {
+        File filesDir = getFilesDir();
+        File toDoListFile = new File(filesDir, "tasks.txt");
+        try {
+            FileUtils.writeLines(toDoListFile, tasks);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     private ArrayList<String> tasks;
     private ArrayAdapter<String> tasksAdapter;
     private ListView lvTasks;
