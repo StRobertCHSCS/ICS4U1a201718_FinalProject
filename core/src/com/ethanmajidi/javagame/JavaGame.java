@@ -24,17 +24,23 @@ public class JavaGame extends Game {
 
 	public SpriteBatch batch;
 
-	public static AssetManager manager;
+	//sound
+	//public static AssetManager manager;
+
+
+
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 
+		/**
 		manager = new AssetManager();
 		manager.load("audio/music/JavaGameMusic.wav", Music.class);
 		manager.load("audio/sounds/CoinMusic.wav", Sound.class);
 		manager.load("audio/sounds/BumpMusic.wav", Sound.class);
 		manager.load("audio/sounds/BreakBlock.wav", Sound.class);
 		manager.finishLoading();
+		 */
 
 		setScreen(new PlayScreen(this));
 
@@ -50,6 +56,6 @@ public class JavaGame extends Game {
 	public void dispose () {
 		super.dispose();
 		batch.dispose();
-		manager.dispose();
+		//manager.dispose();
 	}
 }

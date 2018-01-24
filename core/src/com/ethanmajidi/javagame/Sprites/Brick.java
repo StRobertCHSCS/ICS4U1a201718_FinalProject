@@ -2,6 +2,7 @@ package com.ethanmajidi.javagame.Sprites;
 
 
 
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.Rectangle;
@@ -25,6 +26,7 @@ public class Brick extends InteractiveTileObject {
 
         fixture.setUserData(this);
         setCategoryFilter(JavaGame.BRICK_BIT);
+
     }
 
     @Override
@@ -37,6 +39,6 @@ public class Brick extends InteractiveTileObject {
         Hud.addScore(200);
 
         //sounds
-        JavaGame.manager.get("audio/sounds/BreakBlock.wav", Sound.class).play();
+        //JavaGame.manager.get("audio/sounds/BreakBlock.wav", Sound.class).play();
     }
 }

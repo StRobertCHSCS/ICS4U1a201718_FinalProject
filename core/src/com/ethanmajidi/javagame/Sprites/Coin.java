@@ -41,6 +41,7 @@ public class Coin extends InteractiveTileObject {
         Hud.addScore(100);
 
         //sounds
+        /**
 
         if(getCell().getTile().getId() == BLANK_COIN)
         {
@@ -50,5 +51,7 @@ public class Coin extends InteractiveTileObject {
         {
             JavaGame.manager.get("audio/sounds/CoinMusic.wav", Sound.class).play();
         }
+
+         */
     }
 }
