@@ -8,26 +8,26 @@
     tools:context="com.strobertchs.edussentials.login">
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Username:" />
+        android:hint="Email:"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/username"
-        android:layout_alignStart="@+id/username"
-        android:layout_below="@+id/username"
-        android:layout_marginTop="18dp"
+        android:layout_alignLeft="@+id/Email"
+        android:layout_alignStart="@+id/Email"
+        android:layout_below="@+id/Email"
+        android:layout_marginTop="12dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Password:" />
+        android:hint="Password:"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/signin"
@@ -54,11 +54,32 @@
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_above="@+id/username"
+        android:layout_above="@+id/Email"
         android:layout_alignEnd="@+id/signin"
         android:layout_alignRight="@+id/signin"
         android:layout_marginBottom="37dp"
         android:src="@drawable/ic_create_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Email"
+        android:layout_alignRight="@+id/Email"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:src="@drawable/ic_mail_outline_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_alignTop="@+id/password"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/ic_enhanced_encryption_black_24dp" />
 
 
 </RelativeLayout>

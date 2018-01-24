@@ -23,10 +23,9 @@
         android:id="@+id/etPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/etMail"
-        android:layout_alignRight="@+id/etMail"
         android:layout_below="@+id/etMail"
-        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -36,9 +35,10 @@
         android:id="@+id/etGrade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etPassword"
+        android:layout_alignStart="@+id/etPassword"
         android:layout_below="@+id/etPassword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Grade"
         android:inputType="number"
@@ -73,5 +73,35 @@
         android:layout_below="@+id/registerTitle"
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/ic_build_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etPassword"
+        android:layout_alignEnd="@+id/etMail"
+        android:layout_alignRight="@+id/etMail"
+        android:layout_alignTop="@+id/etMail"
+        app:srcCompat="@drawable/ic_mail_outline_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etGrade"
+        android:layout_alignEnd="@+id/etPassword"
+        android:layout_alignRight="@+id/etPassword"
+        android:layout_alignTop="@+id/etPassword"
+        app:srcCompat="@drawable/ic_enhanced_encryption_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etGrade"
+        android:layout_alignEnd="@+id/etGrade"
+        android:layout_alignRight="@+id/etGrade"
+        android:layout_alignTop="@+id/etGrade"
+        app:srcCompat="@drawable/ic_school_black_24dp" />
 
 </RelativeLayout>
