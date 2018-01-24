@@ -50,15 +50,10 @@ public class Todolist extends AppCompatActivity {
 
 
         lvTasks = (ListView)findViewById(R.id.lvTasks);
-        tasks = new ArrayList<>();
-        tasksAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, tasks);
-        lvTasks.setAdapter(tasksAdapter);
-        tasks.add("Task 1");
-        tasks.add("Task 2");
-        setupListViewListener();
         readToDoList();
-        tasksAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, tasks);
-
+        tasksAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, tasks);
+        lvTasks.setAdapter(tasksAdapter);
+        setupListViewListener();
 
     }
 
@@ -79,7 +74,7 @@ public class Todolist extends AppCompatActivity {
     public void onAddTask(View v) {
         EditText etNewTask = (EditText) findViewById(R.id.taskName);
         String taskText = etNewTask.getText().toString();
-        tasks.add(taskText);
+        tasksAdapter.add(taskText);
         etNewTask.setText("");
         writeTasks();
 
