@@ -23,6 +23,7 @@
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ResetSchedule" />
         <activity android:name=".Todolist" />
+        <activity android:name=".ClubMeeting"></activity>
     </application>
 
 </manifest>

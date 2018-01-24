@@ -35,7 +35,7 @@ public class login extends AppCompatActivity {
     }
 
     public void openMenu() {
-        Intent intent = new Intent(this, GradeTracker.class);
+        Intent intent = new Intent(this, MainMenu.class);
         startActivity(intent);
     }
 
