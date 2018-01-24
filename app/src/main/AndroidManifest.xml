@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.strobertchs.finalproject">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -24,7 +25,39 @@
         <activity android:name=".clubsteams" />
         <activity android:name=".Axiom" />
         <activity android:name=".examschedule" />
-        <activity android:name=".classsites"></activity>
+        <activity android:name=".classsites" />
+        <activity android:name=".teachers_alshaikh" />
+        <activity android:name=".teachers_albi" />
+        <activity android:name=".teachers_ashworth" />
+        <activity android:name=".teachers_battaglia" />
+        <activity android:name=".bianchi" />
+        <activity android:name=".teachers_bianchi" />
+        <activity android:name=".teachers_boccia" />
+        <activity android:name=".teachers_bottiglione" />
+        <activity android:name=".teachers_brockest" />
+        <activity android:name=".teachers_buchignani" />
+        <activity android:name=".teachers_buckley" />
+        <activity android:name=".teachers_bumbaca" />
+        <activity android:name=".teachers_cappelli" />
+        <activity android:name=".teachers_capuccinello" />
+        <activity android:name=".teachers_cara" />
+        <activity android:name=".teachers_carone" />
+        <activity android:name=".teachers_catenaro" />
+        <activity android:name=".teachers_chan" />
+        <activity android:name=".teachers_chirrey" />
+        <activity android:name=".teachers_ciarallo" />
+        <activity android:name=".teachers_ciobanu" />
+        <activity android:name=".teachers_cisternino" />
+        <activity android:name=".teachers_civiero" />
+        <activity android:name=".teachers_coda" />
+        <activity android:name=".teachers_cooney" />
+        <activity android:name=".teachers_covre" />
+        <activity android:name=".teachers_cruz" />
+        <activity android:name=".teachers_curik" />
+        <activity android:name=".teachers_delia" />
+        <activity android:name=".teachers_damphouse" />
+        <activity android:name=".teachers_degregorio_boichevski" />
+        <activity android:name=".teachers_defina"></activity>
     </application>
 
 </manifest>

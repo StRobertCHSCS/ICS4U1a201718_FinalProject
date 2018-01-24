@@ -23,23 +23,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        TextView textView = (TextView)findViewById(R.id.CurrentDay);
-
-//        Thread t = new Thread(){
-//            public void run(){
-//                while(!isInterrupted()){
-//
- //                   try{
- //                       Thread.sleep(86400000);
-//
- //                       runOnUiThread(new Runnable() {
-//                              });
-//                        } catch (InterruptedException e){
-//                        e.printStackTrace()
-//                    }
-//                }
-//            }
-//        }
 
         buttonObjectChoice1 =
                 (Button) findViewById(R.id.TeacherButton);
