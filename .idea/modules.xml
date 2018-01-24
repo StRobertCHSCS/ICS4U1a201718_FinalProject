@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ICS4U1a201718_FinalProject.iml" filepath="$PROJECT_DIR$/ICS4U1a201718_FinalProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/ICS4U1a201718_FinalProjectA.iml" filepath="$PROJECT_DIR$/.idea/ICS4U1a201718_FinalProjectA.iml" />
+      <module fileurl="file://C:\Users\Gary\AndroidStudioProjects\ICS4U1a201718_FinalProject_4\ICS4U1a201718_FinalProject.iml" filepath="C:\Users\Gary\AndroidStudioProjects\ICS4U1a201718_FinalProject_4\ICS4U1a201718_FinalProject.iml" />
+      <module fileurl="file://C:\Users\Gary\AndroidStudioProjects\ICS4U1a201718_FinalProject_4\.idea\ICS4U1a201718_FinalProjectA.iml" filepath="C:\Users\Gary\AndroidStudioProjects\ICS4U1a201718_FinalProject_4\.idea\ICS4U1a201718_FinalProjectA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ICS4U1a201718_FinalProject_4.iml" filepath="$PROJECT_DIR$/.idea/ICS4U1a201718_FinalProject_4.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Gary\AndroidStudioProjects\ICS4U1a201718_FinalProject_4\app\app.iml" filepath="C:\Users\Gary\AndroidStudioProjects\ICS4U1a201718_FinalProject_4\app\app.iml" />
     </modules>
   </component>
 </project>
