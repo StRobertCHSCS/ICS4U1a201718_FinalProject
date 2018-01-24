@@ -22,7 +22,7 @@
         <activity android:name=".map" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ResetSchedule" />
-        <activity android:name=".Todolist"></activity>
+        <activity android:name=".Todolist" />
     </application>
 
 </manifest>
