@@ -172,7 +172,7 @@ public class PlayScreen  implements Screen {
         game.batch.setProjectionMatrix(gamecam.combined);
         game.batch.begin();
         player.draw(game.batch);
-        goomba.draw(game.batch);
+        //goomba.draw(game.batch);
         game.batch.end();
 
         //Set our batch to now draw what the hud sees
