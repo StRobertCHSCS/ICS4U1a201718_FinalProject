@@ -3,7 +3,6 @@ package com.strobertchs.finalproject;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -231,5 +230,342 @@ public class teachers extends AppCompatActivity implements AdapterView.OnItemCli
             Intent teachers_intent = new Intent(view.getContext(), teachers_gallo.class);
             startActivityForResult(teachers_intent,41);
         }
+        if (position==42) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_gallucci.class);
+            startActivityForResult(teachers_intent,42);
+        }
+        if (position==43) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_garofalo.class);
+            startActivityForResult(teachers_intent,43);
+        }
+        if (position==44) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_giang.class);
+            startActivityForResult(teachers_intent,44);
+        }
+        if (position==45) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_grah.class);
+            startActivityForResult(teachers_intent,45);
+        }
+        if (position==46) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_gueli.class);
+            startActivityForResult(teachers_intent,46);
+        }
+        if (position==47) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_guerrisi_a.class);
+            startActivityForResult(teachers_intent,47);
+        }
+        if (position==48) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_guerrisi_j.class);
+            startActivityForResult(teachers_intent,48);
+        }
+        if (position==49) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_gurunlian.class);
+            startActivityForResult(teachers_intent,49);
+        }
+        if (position==50) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_hall_j.class);
+            startActivityForResult(teachers_intent,50);
+        }
+        if (position==51) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_hall_m.class);
+            startActivityForResult(teachers_intent,51);
+        }
+        if (position==52) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_hasiuk.class);
+            startActivityForResult(teachers_intent,52);
+        }
+        if (position==53) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_holding.class);
+            startActivityForResult(teachers_intent,53);
+        }
+        if (position==54) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_hord.class);
+            startActivityForResult(teachers_intent,54);
+        }
+        if (position==55) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_jorge.class);
+            startActivityForResult(teachers_intent,55);
+        }
+        if (position==56) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_karges.class);
+            startActivityForResult(teachers_intent,56);
+        }
+        if (position==57) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_klobucar.class);
+            startActivityForResult(teachers_intent,57);
+        }
+        if (position==58) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_koon.class);
+            startActivityForResult(teachers_intent,58);
+        }
+        if (position==59) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_kotulski.class);
+            startActivityForResult(teachers_intent,59);
+        }
+        if (position==60) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_kurtz.class);
+            startActivityForResult(teachers_intent,60);
+        }
+        if (position==61) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_lam.class);
+            startActivityForResult(teachers_intent,61);
+        }
+        if (position==62) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_laviolette.class);
+            startActivityForResult(teachers_intent,62);
+        }
+        if (position==63) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_lecce.class);
+            startActivityForResult(teachers_intent,63);
+        }
+        if (position==64) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_leduc.class);
+            startActivityForResult(teachers_intent,64);
+        }
+        if (position==65) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_loffredi.class);
+            startActivityForResult(teachers_intent,65);
+        }
+        if (position==66) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_lothian.class);
+            startActivityForResult(teachers_intent,66);
+        }
+        if (position==67) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_macdonald.class);
+            startActivityForResult(teachers_intent,67);
+        }
+        if (position==68) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_mak.class);
+            startActivityForResult(teachers_intent,68);
+        }
+        if (position==69) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_martin.class);
+            startActivityForResult(teachers_intent,69);
+        }
+        if (position==70) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_mastrangelo.class);
+            startActivityForResult(teachers_intent,70);
+        }
+        if (position==71) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_mastroianni.class);
+            startActivityForResult(teachers_intent,71);
+        }
+        if (position==72) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_matchett.class);
+            startActivityForResult(teachers_intent,72);
+        }
+        if (position==73) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_mazzacca.class);
+            startActivityForResult(teachers_intent,73);
+        }
+        if (position==74) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_mcmahon.class);
+            startActivityForResult(teachers_intent,74);
+        }
+        if (position==75) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_meloche.class);
+            startActivityForResult(teachers_intent,75);
+        }
+        if (position==76) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_merlin.class);
+            startActivityForResult(teachers_intent,76);
+        }
+        if (position==77) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_milucci.class);
+            startActivityForResult(teachers_intent,77);
+        }
+        if (position==78) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_molnar.class);
+            startActivityForResult(teachers_intent,78);
+        }
+        if (position==79) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_morale.class);
+            startActivityForResult(teachers_intent,79);
+        }
+        if (position==80) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_morra.class);
+            startActivityForResult(teachers_intent,80);
+        }
+        if (position==81) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_muto.class);
+            startActivityForResult(teachers_intent,81);
+        }
+        if (position==82) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_nagybakos.class);
+            startActivityForResult(teachers_intent,82);
+        }
+        if (position==83) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_nardi.class);
+            startActivityForResult(teachers_intent,83);
+        }
+        if (position==84) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_nelson.class);
+            startActivityForResult(teachers_intent,84);
+        }
+        if (position==85) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_nesci.class);
+            startActivityForResult(teachers_intent,85);
+        }
+        if (position==86) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_palma.class);
+            startActivityForResult(teachers_intent,86);
+        }
+        if (position==87) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_palumbo.class);
+            startActivityForResult(teachers_intent,87);
+        }
+        if (position==88) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_parravani.class);
+            startActivityForResult(teachers_intent,88);
+        }
+        if (position==89) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_pasquali.class);
+            startActivityForResult(teachers_intent,89);
+        }
+        if (position==90) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_pellew.class);
+            startActivityForResult(teachers_intent,90);
+        }
+        if (position==91) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_perry.class);
+            startActivityForResult(teachers_intent,91);
+        }
+        if (position==92) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_power.class);
+            startActivityForResult(teachers_intent,92);
+        }
+        if (position==93) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_pulla.class);
+            startActivityForResult(teachers_intent,93);
+        }
+        if (position==94) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_purdon.class);
+            startActivityForResult(teachers_intent,94);
+        }
+        if (position==95) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_raczynski.class);
+            startActivityForResult(teachers_intent,95);
+        }
+        if (position==96) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_ricupero.class);
+            startActivityForResult(teachers_intent,96);
+        }
+        if (position==97) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_roccari.class);
+            startActivityForResult(teachers_intent,97);
+        }
+        if (position==98) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_rosalinas.class);
+            startActivityForResult(teachers_intent,98);
+        }
+        if (position==99) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_rovere.class);
+            startActivityForResult(teachers_intent,99);
+        }
+        if (position==100) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_sarracini.class);
+            startActivityForResult(teachers_intent,100);
+        }
+        if (position==101) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_scarcello.class);
+            startActivityForResult(teachers_intent,101);
+        }
+        if (position==102) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_schiavone.class);
+            startActivityForResult(teachers_intent,102);
+        }
+        if (position==103) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_scugila.class);
+            startActivityForResult(teachers_intent,103);
+        }
+        if (position==104) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_sersta.class);
+            startActivityForResult(teachers_intent,104);
+        }
+        if (position==105) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_servidio.class);
+            startActivityForResult(teachers_intent,105);
+        }
+        if (position==106) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_sgouros.class);
+            startActivityForResult(teachers_intent,106);
+        }
+        if (position==107) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_simone.class);
+            startActivityForResult(teachers_intent,107);
+        }
+        if (position==108) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_siranni.class);
+            startActivityForResult(teachers_intent,108);
+        }
+        if (position==109) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_steele.class);
+            startActivityForResult(teachers_intent,109);
+        }
+        if (position==110) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_stilo.class);
+            startActivityForResult(teachers_intent,110);
+        }
+        if (position==111) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_sun.class);
+            startActivityForResult(teachers_intent,111);
+        }
+        if (position==112) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_thome.class);
+            startActivityForResult(teachers_intent,112);
+        }
+        if (position==113) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_torresan.class);
+            startActivityForResult(teachers_intent,113);
+        }
+        if (position==114) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_totino.class);
+            startActivityForResult(teachers_intent,114);
+        }
+        if (position==115) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_tsui.class);
+            startActivityForResult(teachers_intent,115);
+        }
+        if (position==116) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_turrin.class);
+            startActivityForResult(teachers_intent,116);
+        }
+        if (position==117) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_u.class);
+            startActivityForResult(teachers_intent,117);
+        }
+        if (position==118) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_villani.class);
+            startActivityForResult(teachers_intent,118);
+        }
+        if (position==119) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_weeks.class);
+            startActivityForResult(teachers_intent,119);
+        }
+        if (position==120) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_wood_r.class);
+            startActivityForResult(teachers_intent,120);
+        }
+        if (position==121) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_wood_s.class);
+            startActivityForResult(teachers_intent,121);
+        }
+        if (position==122) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_yeghiaian.class);
+            startActivityForResult(teachers_intent,122);
+        }
+        if (position==123) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_zasowski.class);
+            startActivityForResult(teachers_intent,123);
+        }
+        if (position==124) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_zmak.class);
+            startActivityForResult(teachers_intent,124);
+        }
+        if (position==125) {
+            Intent teachers_intent = new Intent(view.getContext(), teachers_zucchetto.class);
+            startActivityForResult(teachers_intent,125);
+        }
+
     }
 }
