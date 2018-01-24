@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,9 +31,22 @@ public class Todolist extends AppCompatActivity {
         lvTasks.setAdapter(tasksAdapter);
         tasks.add("Task 1");
         tasks.add("Task 2");
+        setupListViewListener();
 
     }
 
+    private void setupListViewListener() {
+        lvTasks.setOnItemLongClickListener(
+                new AdapterView.OnItemLongClickListener() {
+                    @Override
+                    public boolean onItemLongClick(AdapterView<?> adapter, View item, int pos, long id) {
+                        tasks.remove(pos);
+                        tasksAdapter.notifyDataSetChanged();
+                        return true;
+                    }
+
+                });
+    }
 
     public void onAddTask(View v) {
         EditText etNewTask = (EditText) findViewById(R.id.taskName);
