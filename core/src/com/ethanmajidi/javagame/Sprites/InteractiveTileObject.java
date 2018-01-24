@@ -24,6 +24,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.ui.Cell;
 
 import com.ethanmajidi.javagame.JavaGame;
+import com.ethanmajidi.javagame.Screens.PlayScreen;
 
 /**
  * Created by EthanMajidi on 2018-01-21.
@@ -39,9 +40,9 @@ public abstract class InteractiveTileObject {
     protected Fixture fixture;
 
 
-    public InteractiveTileObject(World world, TiledMap map, Rectangle bounds){
-        this.world = world;
-        this.map = map;
+    public InteractiveTileObject(PlayScreen screen, Rectangle bounds){
+        this.world = screen.getWorld();
+        this.map = screen.getMap();
         this.bounds = bounds;
 
         BodyDef bdef = new BodyDef();
@@ -49,15 +50,14 @@ public abstract class InteractiveTileObject {
         PolygonShape shape = new PolygonShape();
 
         bdef.type = BodyDef.BodyType.StaticBody;
-        bdef.position.set((bounds.getX() + bounds.getWidth() /2) / JavaGame.PPM, (bounds.getY() + bounds.getHeight() / 2)/JavaGame.PPM);
+        bdef.position.set((bounds.getX() + bounds.getWidth() / 2) / JavaGame.PPM, (bounds.getY() + bounds.getHeight() / 2) / JavaGame.PPM);
 
         body = world.createBody(bdef);
 
-        shape.setAsBox(bounds.getWidth() / 2/JavaGame.PPM, bounds.getHeight() / 2/JavaGame.PPM);
+        shape.setAsBox(bounds.getWidth() / 2 / JavaGame.PPM, bounds.getHeight() / 2 / JavaGame.PPM);
         fdef.shape = shape;
-
-        body.createFixture(fdef);
         fixture = body.createFixture(fdef);
+
     }
 
     public abstract void onHeadHit();

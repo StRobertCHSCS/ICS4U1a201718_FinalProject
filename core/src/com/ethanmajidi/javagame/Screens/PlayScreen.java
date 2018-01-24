@@ -28,6 +28,7 @@ import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Scenes.Hud;
+import com.ethanmajidi.javagame.Sprites.Goomba;
 import com.ethanmajidi.javagame.Sprites.Java;
 import com.ethanmajidi.javagame.Sprites.Mario;
 import com.ethanmajidi.javagame.Tools.B2WorldCreator;
@@ -61,6 +62,7 @@ public class PlayScreen  implements Screen {
 
     //Sprites
     private Java player;
+    private Goomba goomba;
 
     //audio.music
     //private Music music;
@@ -95,10 +97,10 @@ public class PlayScreen  implements Screen {
         //allows debug lines in our world
         b2dr = new Box2DDebugRenderer();
 
-        new B2WorldCreator(world, map);
+        new B2WorldCreator(this);
         //Creates our player in the game world
 
-        player = new Java(world, this);
+        player = new Java(this);
 
         world.setContactListener(new WorldContactListener());
 
@@ -108,6 +110,8 @@ public class PlayScreen  implements Screen {
         music.setLooping(true);
         music.play();
          */
+
+        goomba = new Goomba(this, 32/JavaGame.PPM, 32/JavaGame.PPM);
 
     }
 
@@ -139,6 +143,7 @@ public class PlayScreen  implements Screen {
 
         //connecting hud to timer
         player.update(dt);
+        goomba.update(dt);
         hud.update(dt);
 
         //attach our gamecam to our player x coordinates
@@ -167,6 +172,7 @@ public class PlayScreen  implements Screen {
         game.batch.setProjectionMatrix(gamecam.combined);
         game.batch.begin();
         player.draw(game.batch);
+        goomba.draw(game.batch);
         game.batch.end();
 
         //Set our batch to now draw what the hud sees
@@ -177,6 +183,14 @@ public class PlayScreen  implements Screen {
     @Override
     public void resize(int width, int height) {
         gamePort.update(width,height);
+    }
+
+    public TiledMap getMap(){
+        return map;
+    }
+
+    public World getWorld(){
+        return world;
     }
 
     @Override

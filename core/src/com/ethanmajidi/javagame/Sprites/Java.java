@@ -30,9 +30,9 @@ public class Java extends Sprite {
     private float stateTimer;
     private boolean runningRight;
 
-    public Java(World world, PlayScreen screen){
+    public Java(PlayScreen screen){
         super(screen.getAtlas().findRegion("little_mario"));
-        this.world = world;
+        this.world = screen.getWorld();
         currentState = State.STANDING;
         previousState = State.STANDING;
         stateTimer = 0;
@@ -116,7 +116,7 @@ public class Java extends Sprite {
         CircleShape shape = new CircleShape();
         shape.setRadius(6/ JavaGame.PPM);
         fdef.filter.categoryBits = JavaGame.PLAYER_BIT;
-        fdef.filter.maskBits = JavaGame.DEFAULT_BIT | JavaGame.COIN_BIT | JavaGame.BRICK_BIT;
+        fdef.filter.maskBits = JavaGame.GROUND_BIT | JavaGame.COIN_BIT | JavaGame.BRICK_BIT | JavaGame.ENEMY_BIT | JavaGame.OBJECT_BIT;
 
         fdef.shape = shape;
         b2body.createFixture(fdef);
