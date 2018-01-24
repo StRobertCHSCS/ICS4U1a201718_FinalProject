@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.strobertchs.edussentials.LoginActivity">
+    tools:context="com.strobertchs.edussentials.login">
 
     <EditText
         android:id="@+id/username"
@@ -35,7 +35,7 @@
         android:layout_height="70dp"
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="13dp"
         android:background="@color/colorPrimary"
         android:text="Sign In" />
 
@@ -44,10 +44,21 @@
         android:layout_width="160dp"
         android:layout_height="50dp"
         android:layout_alignLeft="@+id/signin"
-        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/signin"
+        android:layout_below="@+id/signin"
+        android:layout_marginTop="11dp"
         android:background="@color/colorPrimary"
         android:text="Register" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/username"
+        android:layout_alignEnd="@+id/signin"
+        android:layout_alignRight="@+id/signin"
+        android:layout_marginBottom="37dp"
+        android:src="@drawable/ic_create_black_24dp" />
 
 
 </RelativeLayout>

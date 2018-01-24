@@ -13,6 +13,7 @@
         android:layout_height="0dp"
         android:layout_marginEnd="200dp"
         android:layout_marginTop="70dp"
+        android:fontFamily="casual"
         android:text="EDUssentials"
         android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,11 +23,11 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/ClubMeetings"
+        android:id="@+id/calendar"
         android:layout_width="190dp"
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
-        android:text="Club Meetings"
+        android:text="Calendar"
         app:layout_constraintBottom_toTopOf="@+id/ToDoList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/SchoolMap" />
@@ -70,7 +71,7 @@
         android:layout_height="100dp"
         android:layout_marginBottom="12dp"
         android:text="Grade Tracker"
-        app:layout_constraintBottom_toTopOf="@+id/ClubMeetings"
+        app:layout_constraintBottom_toTopOf="@+id/calendar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/schedulebutton"
         app:layout_constraintTop_toTopOf="parent"
@@ -84,7 +85,7 @@
         android:layout_marginBottom="8dp"
         android:text="School Map"
         app:layout_constraintBottom_toTopOf="@+id/checkerButton"
-        app:layout_constraintEnd_toStartOf="@+id/ClubMeetings"
+        app:layout_constraintEnd_toStartOf="@+id/calendar"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
