@@ -62,7 +62,7 @@ public class PlayScreen  implements Screen {
     //Sprites
     private Java player;
 
-    //music
+    //audio.music
     private Music music;
 
 
@@ -102,8 +102,8 @@ public class PlayScreen  implements Screen {
 
         world.setContactListener(new WorldContactListener());
 
-        //music
-        music = JavaGame.manager.get("audio/music/JavaGameMusic.wav", Music.class);
+        //audio.music
+        music = JavaGame.manager.get("audio/audio.music/JavaGameMusic.wav", Music.class);
         music.setLooping(true);
         music.play();
 
