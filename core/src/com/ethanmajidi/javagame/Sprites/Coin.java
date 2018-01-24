@@ -21,13 +21,12 @@ import com.ethanmajidi.javagame.Scenes.Hud;
 
 public class Coin extends InteractiveTileObject {
 
-    private static TiledMapTileSet tileset;
-    private final int BLANK_COIN = 28;
+    private static TiledMapTileSet tileSet;
+    private final int BLANK_COIN = 2;
 
     public Coin(World world, TiledMap map, Rectangle bounds){
-
         super(world, map, bounds);
-        tileset = map.getTileSets().getTileSet("Custom_tile.png");
+        tileSet = map.getTileSets().getTileSet("Custom_tile.png");
         fixture.setUserData(this);
         setCategoryFilter(JavaGame.COIN_BIT);
     }
@@ -35,7 +34,7 @@ public class Coin extends InteractiveTileObject {
     @Override
     public void onHeadHit() {
         Gdx.app.log("Coin", "Collision");
-        getCell().setTile(tileset.getTile(BLANK_COIN));
+        getCell().setTile(tileSet.getTile(BLANK_COIN));
 
         //score
         Hud.addScore(100);
