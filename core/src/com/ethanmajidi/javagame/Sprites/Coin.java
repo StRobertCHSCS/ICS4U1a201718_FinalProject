@@ -19,38 +19,25 @@ import com.ethanmajidi.javagame.Scenes.Hud;
  * Created by EthanMajidi on 2018-01-21.
  */
 
-public class Coin extends InteractiveTileObject {
-
+public class Coin extends InteractiveTileObject{
     private static TiledMapTileSet tileSet;
     private final int BLANK_COIN = 2;
-
+    private boolean isActive;
     public Coin(World world, TiledMap map, Rectangle bounds){
         super(world, map, bounds);
-        tileSet = map.getTileSets().getTileSet("Custom_tile1.png");
+        tileSet = map.getTileSets().getTileSet("Custom_tile");
         fixture.setUserData(this);
         setCategoryFilter(JavaGame.COIN_BIT);
+        isActive = true;
     }
 
     @Override
     public void onHeadHit() {
         Gdx.app.log("Coin", "Collision");
         getCell().setTile(tileSet.getTile(BLANK_COIN));
-
-        //score
-        Hud.addScore(100);
-
-        //sounds
-        /**
-
-        if(getCell().getTile().getId() == BLANK_COIN)
-        {
-            JavaGame.manager.get("audio/sounds/BumpMusic.wav", Sound.class).play();
+        if (isActive) {
+            Hud.addScore(100);
+            isActive = false;
         }
-        else
-        {
-            JavaGame.manager.get("audio/sounds/CoinMusic.wav", Sound.class).play();
-        }
-
-         */
     }
 }
