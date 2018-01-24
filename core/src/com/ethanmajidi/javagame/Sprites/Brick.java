@@ -37,6 +37,6 @@ public class Brick extends InteractiveTileObject {
         Hud.addScore(200);
 
         //sounds
-        JavaGame.manager.get("audio/sounds/BreakBlock.wav", Sound.class);
+        JavaGame.manager.get("audio/sounds/BreakBlock.wav", Sound.class).play();
     }
 }
