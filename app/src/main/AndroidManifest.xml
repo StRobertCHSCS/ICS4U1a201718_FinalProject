@@ -57,7 +57,38 @@
         <activity android:name=".teachers_delia" />
         <activity android:name=".teachers_damphouse" />
         <activity android:name=".teachers_degregorio_boichevski" />
-        <activity android:name=".teachers_defina"></activity>
+        <activity android:name=".teachers_defina" />
+        <activity android:name=".teachers_devine" />
+        <activity android:name=".teachers_dicarlo" />
+        <activity android:name=".teachers_digirolamo" />
+        <activity android:name=".teachers_dinunzio" />
+        <activity android:name=".teachers_do" />
+        <activity android:name=".teachers_durrant" />
+        <activity android:name=".teachers_fabroa" />
+        <activity android:name=".teachers_facchini" />
+        <activity android:name=".teachers_ferrari" />
+        <activity android:name=".teachers_galatianos" />
+        <activity android:name=".teachers_gallo" />
+        <activity android:name=".teachers_gallucci" />
+        <activity android:name=".teachers_garofalo" />
+        <activity android:name=".teachers_giang" />
+        <activity android:name=".teachers_grah" />
+        <activity android:name=".teachers_gueli" />
+        <activity android:name=".teachers_guerrisi_a" />
+        <activity android:name=".teachers_guerrisi_j" />
+        <activity android:name=".teachers_gurunlian" />
+        <activity android:name=".teachers_hall_j" />
+        <activity android:name=".teachers_hall_m" />
+        <activity android:name=".teachers_haisuk" />
+        <activity android:name=".teachers_holding" />
+        <activity android:name=".teachers_hasiuk" />
+        <activity android:name=".teachers_hord" />
+        <activity android:name=".teachers_jorge" />
+        <activity android:name=".teachers_karges" />
+        <activity android:name=".teachers_klobucar" />
+        <activity android:name=".teachers_koon" />
+        <activity android:name=".teachers_kotulski" />
+        <activity android:name=".teachers_kurtz"></activity>
     </application>
 
 </manifest>
