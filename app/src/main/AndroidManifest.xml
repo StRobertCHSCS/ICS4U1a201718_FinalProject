@@ -88,7 +88,13 @@
         <activity android:name=".teachers_klobucar" />
         <activity android:name=".teachers_koon" />
         <activity android:name=".teachers_kotulski" />
-        <activity android:name=".teachers_kurtz"></activity>
+        <activity android:name=".teachers_kurtz" />
+        <activity android:name=".teachers_lam" />
+        <activity android:name=".teachers_laviolette" />
+        <activity android:name=".teachers_lecce" />
+        <activity android:name=".teachers_leduc" />
+        <activity android:name=".teachers_loffredi" />
+        <activity android:name=".teachers_lothian"></activity>
     </application>
 
 </manifest>

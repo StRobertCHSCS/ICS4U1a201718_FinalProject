@@ -93,6 +93,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 i = new Intent(this, examschedule.class);
                     startActivity(i);
                 break;
+
+            case R.id.ClassSitesButton:
+                i = new Intent(this, classsites.class);
+                    startActivity(i);
+                break;
+
+            case R.id.ClubsTeamsButton:
+                i = new Intent(this, clubsteams.class);
+                    startActivity(i);
+                break;
         }
     }
 }
