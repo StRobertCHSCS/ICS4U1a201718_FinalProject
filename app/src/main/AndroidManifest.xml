@@ -94,7 +94,8 @@
         <activity android:name=".teachers_lecce" />
         <activity android:name=".teachers_leduc" />
         <activity android:name=".teachers_loffredi" />
-        <activity android:name=".teachers_lothian"></activity>
+        <activity android:name=".teachers_lothian" />
+        <activity android:name=".clubsteams_artcouncil"></activity>
     </application>
 
 </manifest>
