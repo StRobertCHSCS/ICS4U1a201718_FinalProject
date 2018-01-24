@@ -30,7 +30,7 @@ public class JavaGame extends Game {
 		batch = new SpriteBatch();
 
 		manager = new AssetManager();
-		manager.load("audio/audio.music/JavaGameMusic.wav", Music.class);
+		manager.load("audio/sounds/JavaGameMusic.wav", Sound.class);
 		manager.load("audio/sounds/CoinMusic.wav", Sound.class);
 		manager.load("audio/sounds/BumpMusic.wav", Sound.class);
 		manager.load("audio/sounds/BreakBlock.wav", Sound.class);
