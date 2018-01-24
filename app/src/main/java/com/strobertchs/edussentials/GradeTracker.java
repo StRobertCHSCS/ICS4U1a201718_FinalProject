@@ -10,6 +10,7 @@ public class GradeTracker extends AppCompatActivity {
 
     private Button scheduleOpen;
     private Button mapOpen;
+    private Button toDoOpen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,14 @@ public class GradeTracker extends AppCompatActivity {
                 openMap();
             }
         });
+
+        toDoOpen = (Button) findViewById(R.id.ToDoList);
+        toDoOpen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openToDo();
+            }
+        });
     }
 
     public void openSchedule() {
@@ -41,6 +50,11 @@ public class GradeTracker extends AppCompatActivity {
     public void openMap() {
         Intent mapOp = new Intent(this, map.class);
         startActivity(mapOp);
+    }
+
+    public void openToDo() {
+        Intent toDoOp = new Intent(this, Todolist.class);
+        startActivity(toDoOp);
     }
 
 }

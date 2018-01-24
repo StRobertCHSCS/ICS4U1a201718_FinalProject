@@ -11,88 +11,82 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="casual"
         android:text="EDUssentials"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkerButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="61dp" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/ClubMeetings"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="80dp"
-        android:layout_marginEnd="60dp"
-        android:text="Club Meetings"
-        app:layout_constraintBottom_toTopOf="@+id/CiviesAndHomework"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:id="@+id/calendar"
+        android:layout_width="190dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:text="Calendar"
+        app:layout_constraintBottom_toTopOf="@+id/ToDoList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SchoolMap" />
 
     <Button
-        android:id="@+id/button10"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:id="@+id/checkerButton"
+        android:layout_width="190dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="50dp"
         android:text="Checker"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/CiviesAndHomework"
+        app:layout_constraintEnd_toStartOf="@+id/ToDoList"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/schedulebutton"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
+        android:layout_width="190dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Schedule"
         app:layout_constraintBottom_toTopOf="@+id/SchoolMap"
         app:layout_constraintEnd_toStartOf="@+id/gradetracker"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663" />
+        app:layout_constraintVertical_bias="0.942" />
 
     <Button
-        android:id="@+id/CiviesAndHomework"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="60dp"
-        android:text="Reminders"
+        android:id="@+id/ToDoList"
+        android:layout_width="190dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="50dp"
+        android:text="To Do"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkerButton" />
 
     <Button
         android:id="@+id/gradetracker"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginTop="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/ClubMeetings"
+        android:layout_width="190dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="12dp"
+        android:text="Grade Tracker"
+        app:layout_constraintBottom_toTopOf="@+id/calendar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/schedulebutton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663"
+        app:layout_constraintVertical_bias="0.97"
         tools:text="Grade Tracker" />
 
     <Button
         android:id="@+id/SchoolMap"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="80dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="190dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
         android:text="School Map"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
-        app:layout_constraintEnd_toStartOf="@+id/ClubMeetings"
+        app:layout_constraintBottom_toTopOf="@+id/checkerButton"
+        app:layout_constraintEnd_toStartOf="@+id/calendar"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
