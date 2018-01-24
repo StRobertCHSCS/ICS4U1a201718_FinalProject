@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class GradeTracker extends AppCompatActivity {
+public class MainMenu extends AppCompatActivity {
 
     private Button scheduleOpen;
     private Button mapOpen;
