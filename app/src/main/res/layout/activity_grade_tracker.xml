@@ -28,7 +28,7 @@
         android:layout_marginBottom="80dp"
         android:layout_marginEnd="60dp"
         android:text="Club Meetings"
-        app:layout_constraintBottom_toTopOf="@+id/CiviesAndHomework"
+        app:layout_constraintBottom_toTopOf="@+id/ToDoList"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
@@ -40,7 +40,7 @@
         android:layout_marginStart="8dp"
         android:text="Checker"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/CiviesAndHomework"
+        app:layout_constraintEnd_toStartOf="@+id/ToDoList"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -60,12 +60,12 @@
         app:layout_constraintVertical_bias="0.663" />
 
     <Button
-        android:id="@+id/CiviesAndHomework"
+        android:id="@+id/ToDoList"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="60dp"
-        android:text="Reminders"
+        android:text="To Do"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -21,7 +21,8 @@
         <activity android:name=".GradeTracker" />
         <activity android:name=".map" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".ResetSchedule"></activity>
+        <activity android:name=".ResetSchedule" />
+        <activity android:name=".Todolist"></activity>
     </application>
 
 </manifest>
