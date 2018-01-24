@@ -10,7 +10,6 @@
         android:id="@+id/lvTasks"
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        android:layout_below="@+id/addNewTask"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -31,5 +30,6 @@
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/taskName"
         android:layout_toRightOf="@+id/taskName"
-        android:text="Add Task" />
+        android:text="Add Task"
+        android:onClick="onAddTask"/>
 </RelativeLayout>

@@ -9,9 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-
 import org.apache.commons.io.FileUtils;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -55,8 +53,6 @@ public class Todolist extends AppCompatActivity {
         tasks = new ArrayList<>();
         tasksAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, tasks);
         lvTasks.setAdapter(tasksAdapter);
-        tasks.add("Task 1");
-        tasks.add("Task 2");
         setupListViewListener();
         readToDoList();
         tasksAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, tasks);
