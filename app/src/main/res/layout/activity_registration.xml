@@ -48,10 +48,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="29dp"
-        android:text="TextView"
-        android:textSize="25dp"
         android:background="@color/colorPrimary"
-        tools:text="Registration for EDUssentials" />
+        android:text="Registration for EDUssentials"
+        android:textSize="25dp" />
 
     <Button
         android:id="@+id/confirmRegister"
@@ -59,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etGrade"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="66dp"
         android:text="Confirm" />
 
 </RelativeLayout>
