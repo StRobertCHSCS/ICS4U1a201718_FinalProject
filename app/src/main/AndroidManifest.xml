@@ -95,6 +95,7 @@
         <activity android:name=".teachers_leduc" />
         <activity android:name=".teachers_loffredi" />
         <activity android:name=".teachers_lothian" />
+<<<<<<< HEAD
         <activity android:name=".teachers_macdonald" />
         <activity android:name=".teachers_mak" />
         <activity android:name=".teachers_martin" />
@@ -154,6 +155,9 @@
         <activity android:name=".teachers_zasowski" />
         <activity android:name=".teachers_zmak" />
         <activity android:name=".teachers_zucchetto"></activity>
+=======
+        <activity android:name=".clubsteams_artcouncil"></activity>
+>>>>>>> 0da9f2a42b5d4d481f57e77eeff4ab92d9237dc6
     </application>
 
 </manifest>

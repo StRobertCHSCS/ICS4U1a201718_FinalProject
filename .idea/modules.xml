@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/ICS4U1a201718_FinalProject.iml" filepath="$PROJECT_DIR$/ICS4U1a201718_FinalProject.iml" />
+=======
+      <module fileurl="file://C:\Users\Darkvortexes\AndroidStudioProjects\Final_ICS4U1a201718_FinalProject\FinalProject.iml" filepath="C:\Users\Darkvortexes\AndroidStudioProjects\Final_ICS4U1a201718_FinalProject\FinalProject.iml" />
+      <module fileurl="file://C:\Users\Darkvortexes\AndroidStudioProjects\Final_ICS4U1a201718_FinalProject\.idea\FinalProjectRough3.iml" filepath="C:\Users\Darkvortexes\AndroidStudioProjects\Final_ICS4U1a201718_FinalProject\.idea\FinalProjectRough3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Final_ICS4U1a201718_FinalProject.iml" filepath="$PROJECT_DIR$/Final_ICS4U1a201718_FinalProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ICS4U1a201718_FinalProject.iml" filepath="$PROJECT_DIR$/ICS4U1a201718_FinalProject.iml" />
+      <module fileurl="file://C:\Users\Darkvortexes\AndroidStudioProjects\Final_ICS4U1a201718_FinalProject\ICS4U1a201718_FinalProject.iml" filepath="C:\Users\Darkvortexes\AndroidStudioProjects\Final_ICS4U1a201718_FinalProject\ICS4U1a201718_FinalProject.iml" />
+>>>>>>> 0da9f2a42b5d4d481f57e77eeff4ab92d9237dc6
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
