@@ -18,10 +18,14 @@
         android:id="@+id/resetSched"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="230dp"
+        android:background="@color/darkblue"
         android:text="Reset Schedule"
-        tools:layout_editor_absoluteX="230dp"
-        tools:layout_editor_absoluteY="457dp"
-        android:layout_marginTop="100dp"/>
+        android:textColor="@color/yello"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListViewID" />
 
 
 </android.support.constraint.ConstraintLayout>

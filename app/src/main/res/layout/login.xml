@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@android:color/white"
     tools:context="com.strobertchs.edussentials.login">
 
     <EditText
@@ -15,7 +15,8 @@
         android:layout_centerVertical="true"
         android:ems="10"
         android:hint="Email:"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="@color/darkblue" />
 
     <EditText
         android:id="@+id/password"
@@ -27,7 +28,8 @@
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Password:"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="@color/darkblue" />
 
     <Button
         android:id="@+id/signin"
@@ -36,8 +38,9 @@
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
-        android:background="@color/colorPrimary"
-        android:text="Sign In" />
+        android:background="@color/darkblue"
+        android:text="Sign In"
+        android:textColor="@color/yello" />
 
     <Button
         android:id="@+id/register"
@@ -47,8 +50,9 @@
         android:layout_alignStart="@+id/signin"
         android:layout_below="@+id/signin"
         android:layout_marginTop="11dp"
-        android:background="@color/colorPrimary"
-        android:text="Register" />
+        android:background="@color/darkblue"
+        android:text="Register"
+        android:textColor="@color/yello" />
 
     <ImageView
         android:id="@+id/imageView"

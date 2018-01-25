@@ -30,6 +30,8 @@
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/taskName"
         android:layout_toRightOf="@+id/taskName"
+        android:background="@color/darkblue"
+        android:onClick="onAddTask"
         android:text="Add Task"
-        android:onClick="onAddTask"/>
+        android:textColor="@color/yello" />
 </RelativeLayout>
