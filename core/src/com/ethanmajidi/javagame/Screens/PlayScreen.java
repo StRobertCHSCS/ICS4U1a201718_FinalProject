@@ -111,9 +111,9 @@ public class PlayScreen  implements Screen {
         //music.play();
 
 
-        goomba = new Goomba(this, 32/JavaGame.PPM, 32/JavaGame.PPM);
+        goomba = new Goomba(this, 1f,.32f);
 
-        goomba = new Goomba(this, 32/JavaGame.PPM, 32/JavaGame.PPM);
+
 
     }
 
@@ -174,7 +174,7 @@ public class PlayScreen  implements Screen {
         game.batch.setProjectionMatrix(gamecam.combined);
         game.batch.begin();
         player.draw(game.batch);
-        //goomba.draw(game.batch);
+        goomba.draw(game.batch);
         game.batch.end();
 
         //Set our batch to now draw what the hud sees

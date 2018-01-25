@@ -21,8 +21,8 @@ public class Goomba extends Enemy {
     private float stateTime;
     private Animation <TextureRegion> walkAnimation;
     private com.badlogic.gdx.utils.Array<TextureRegion> frames;
-    //private boolean setToDestroy;
-    //private boolean destoryed;
+    private boolean setToDestroy;
+    private boolean destoryed;
 
     public Goomba(PlayScreen screen, float x, float y) {
         super(screen, x, y);
@@ -32,22 +32,22 @@ public class Goomba extends Enemy {
         walkAnimation = new Animation(0.4f, frames);
         stateTime = 0;
         setBounds(getX(), getY(), 16 / JavaGame.PPM, 16 / JavaGame.PPM);
-        //setToDestroy = false;
-        //destoryed = false;
+        setToDestroy = false;
+        destoryed = false;
     }
 
     public void update(float dt){
         stateTime += dt;
-        //if(setToDestroy && !destoryed){
-            //world.destroyBody(b2body);
-            //destoryed = true;
+        if(setToDestroy && !destoryed){
+            world.destroyBody(b2body);
+            destoryed = true;
             setRegion(new TextureRegion(screen.getAtlas().findRegion("goomba"), 32, 0, 16, 16));
             stateTime = 0;
-        //}
-
-            setPosition(b2body.getPosition().x - getWidth() / 2, b2body.getPosition().y - getHeight() /2);
+        }
+        else if (!destoryed) {
+            setPosition(b2body.getPosition().x - getWidth() / 2, b2body.getPosition().y - getHeight() / 2);
             setRegion(walkAnimation.getKeyFrame(stateTime, true));
-
+        }
     }
 
     @Override
@@ -81,9 +81,9 @@ public class Goomba extends Enemy {
         b2body.createFixture(fdef).setUserData(this);
     }
 
-    //@Override
-    //public void hitOnHead() {
-        //setToDestroy = true;
+    @Override
+    public void hitOnHead() {
+        setToDestroy = true;
 
-    //}
+    }
 }

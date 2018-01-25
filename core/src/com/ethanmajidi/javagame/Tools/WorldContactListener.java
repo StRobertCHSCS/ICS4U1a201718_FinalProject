@@ -19,7 +19,9 @@ public class WorldContactListener implements ContactListener {
         Fixture fixA = contact.getFixtureA();
         Fixture fixB = contact.getFixtureB();
 
-        //int cDef = fixA.getFilterData().categoryBits | fixB.getFilterData().categoryBits;
+        int cDef = fixA.getFilterData().categoryBits | fixB.getFilterData().categoryBits;
+
+
 
         if(fixA.getUserData() == "head" || fixB.getUserData() == "head"){
             Fixture head = fixA.getUserData() == "head" ? fixA : fixB;
@@ -28,16 +30,16 @@ public class WorldContactListener implements ContactListener {
             if(object.getUserData() != null && InteractiveTileObject.class.isAssignableFrom(object.getUserData().getClass())){
                 ((InteractiveTileObject) object.getUserData()).onHeadHit();
             }
+        }
+
+        switch (cDef){
+            case JavaGame.ENEMY_HEAD_BIT | JavaGame.PLAYER_BIT:
+                if(fixA.getFilterData().categoryBits == JavaGame.ENEMY_HEAD_BIT)
+                    ((Enemy)fixA.getUserData()).hitOnHead();
+                else if(fixB.getFilterData().categoryBits == JavaGame.ENEMY_HEAD_BIT)
+                    ((Enemy)fixB.getUserData()).hitOnHead();
 
         }
-        //switch (cDef){
-            //case JavaGame.ENEMY_HEAD_BIT | JavaGame.PLAYER_BIT:
-                //if(fixA.getFilterData().categoryBits == JavaGame.ENEMY_HEAD_BIT)
-                    //((Enemy)fixA.getUserData()).hitOnHead();
-                //else if(fixB.getFilterData().categoryBits == JavaGame.ENEMY_HEAD_BIT)
-                    //((Enemy)fixA.getUserData()).hitOnHead();
-
-        //}
     }
     @Override
     public void endContact(Contact contact) {
