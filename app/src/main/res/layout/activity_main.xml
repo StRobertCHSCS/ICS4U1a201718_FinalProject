@@ -184,7 +184,7 @@
         android:layout_height="163dp"
         app:srcCompat="@drawable/zerams"
         tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="392dp" />
+        tools:layout_editor_absoluteY="425dp" />
 
     <TextView
         android:id="@+id/DayText"

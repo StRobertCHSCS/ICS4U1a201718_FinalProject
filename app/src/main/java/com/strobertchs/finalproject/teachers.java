@@ -442,129 +442,114 @@ public class teachers extends AppCompatActivity implements AdapterView.OnItemCli
             Intent teachers_intent = new Intent(view.getContext(), teachers_purdon.class);
             startActivityForResult(teachers_intent,94);
         }
+
         if (position==95) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_raczynski.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_ricupero.class);
             startActivityForResult(teachers_intent,95);
         }
         if (position==96) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_ricupero.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_roccari.class);
             startActivityForResult(teachers_intent,96);
         }
+
         if (position==97) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_roccari.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_rovere.class);
             startActivityForResult(teachers_intent,97);
         }
         if (position==98) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_rosalinas.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_sarracini.class);
             startActivityForResult(teachers_intent,98);
         }
         if (position==99) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_rovere.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_scarcello.class);
             startActivityForResult(teachers_intent,99);
         }
         if (position==100) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_sarracini.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_schiavone.class);
             startActivityForResult(teachers_intent,100);
         }
         if (position==101) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_scarcello.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_scugila.class);
             startActivityForResult(teachers_intent,101);
         }
+
         if (position==102) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_schiavone.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_servidio.class);
             startActivityForResult(teachers_intent,102);
         }
         if (position==103) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_scugila.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_sgouros.class);
             startActivityForResult(teachers_intent,103);
         }
         if (position==104) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_sersta.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_simone.class);
             startActivityForResult(teachers_intent,104);
         }
         if (position==105) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_servidio.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_siranni.class);
             startActivityForResult(teachers_intent,105);
         }
         if (position==106) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_sgouros.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_steele.class);
             startActivityForResult(teachers_intent,106);
         }
         if (position==107) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_simone.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_stilo.class);
             startActivityForResult(teachers_intent,107);
         }
         if (position==108) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_siranni.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_sun.class);
             startActivityForResult(teachers_intent,108);
         }
         if (position==109) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_steele.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_thome.class);
             startActivityForResult(teachers_intent,109);
         }
         if (position==110) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_stilo.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_torresan.class);
             startActivityForResult(teachers_intent,110);
         }
         if (position==111) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_sun.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_totino.class);
             startActivityForResult(teachers_intent,111);
         }
+
         if (position==112) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_thome.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_turrin.class);
             startActivityForResult(teachers_intent,112);
         }
         if (position==113) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_torresan.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_u.class);
             startActivityForResult(teachers_intent,113);
         }
         if (position==114) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_totino.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_villani.class);
             startActivityForResult(teachers_intent,114);
         }
+
         if (position==115) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_tsui.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_wood_r.class);
             startActivityForResult(teachers_intent,115);
         }
         if (position==116) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_turrin.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_wood_s.class);
             startActivityForResult(teachers_intent,116);
         }
         if (position==117) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_u.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_yeghiaian.class);
             startActivityForResult(teachers_intent,117);
         }
         if (position==118) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_villani.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_zasowski.class);
             startActivityForResult(teachers_intent,118);
         }
         if (position==119) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_weeks.class);
+            Intent teachers_intent = new Intent(view.getContext(), teachers_zmak.class);
             startActivityForResult(teachers_intent,119);
         }
         if (position==120) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_wood_r.class);
-            startActivityForResult(teachers_intent,120);
-        }
-        if (position==121) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_wood_s.class);
-            startActivityForResult(teachers_intent,121);
-        }
-        if (position==122) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_yeghiaian.class);
-            startActivityForResult(teachers_intent,122);
-        }
-        if (position==123) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_zasowski.class);
-            startActivityForResult(teachers_intent,123);
-        }
-        if (position==124) {
-            Intent teachers_intent = new Intent(view.getContext(), teachers_zmak.class);
-            startActivityForResult(teachers_intent,124);
-        }
-        if (position==125) {
             Intent teachers_intent = new Intent(view.getContext(), teachers_zucchetto.class);
-            startActivityForResult(teachers_intent,125);
+            startActivityForResult(teachers_intent,120);
         }
 
     }

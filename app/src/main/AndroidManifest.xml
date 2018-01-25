@@ -30,7 +30,6 @@
         <activity android:name=".teachers_albi" />
         <activity android:name=".teachers_ashworth" />
         <activity android:name=".teachers_battaglia" />
-        <activity android:name=".bianchi" />
         <activity android:name=".teachers_bianchi" />
         <activity android:name=".teachers_boccia" />
         <activity android:name=".teachers_bottiglione" />
@@ -79,7 +78,6 @@
         <activity android:name=".teachers_gurunlian" />
         <activity android:name=".teachers_hall_j" />
         <activity android:name=".teachers_hall_m" />
-        <activity android:name=".teachers_haisuk" />
         <activity android:name=".teachers_holding" />
         <activity android:name=".teachers_hasiuk" />
         <activity android:name=".teachers_hord" />
@@ -95,7 +93,6 @@
         <activity android:name=".teachers_leduc" />
         <activity android:name=".teachers_loffredi" />
         <activity android:name=".teachers_lothian" />
-<<<<<<< HEAD
         <activity android:name=".teachers_macdonald" />
         <activity android:name=".teachers_mak" />
         <activity android:name=".teachers_martin" />
@@ -124,16 +121,13 @@
         <activity android:name=".teachers_power" />
         <activity android:name=".teachers_pulla" />
         <activity android:name=".teachers_purdon" />
-        <activity android:name=".teachers_raczynski" />
         <activity android:name=".teachers_ricupero" />
         <activity android:name=".teachers_roccari" />
-        <activity android:name=".teachers_rosalinas" />
         <activity android:name=".teachers_rovere" />
         <activity android:name=".teachers_sarracini" />
         <activity android:name=".teachers_scarcello" />
         <activity android:name=".teachers_schiavone" />
         <activity android:name=".teachers_scugila" />
-        <activity android:name=".teachers_sersta" />
         <activity android:name=".teachers_servidio" />
         <activity android:name=".teachers_sgouros" />
         <activity android:name=".teachers_simone" />
@@ -144,20 +138,16 @@
         <activity android:name=".teachers_thome" />
         <activity android:name=".teachers_torresan" />
         <activity android:name=".teachers_totino" />
-        <activity android:name=".teachers_tsui" />
         <activity android:name=".teachers_turrin" />
         <activity android:name=".teachers_u" />
         <activity android:name=".teachers_villani" />
-        <activity android:name=".teachers_weeks" />
         <activity android:name=".teachers_wood_r" />
         <activity android:name=".teachers_wood_s" />
         <activity android:name=".teachers_yeghiaian" />
         <activity android:name=".teachers_zasowski" />
         <activity android:name=".teachers_zmak" />
         <activity android:name=".teachers_zucchetto"></activity>
-=======
         <activity android:name=".clubsteams_artcouncil"></activity>
->>>>>>> 0da9f2a42b5d4d481f57e77eeff4ab92d9237dc6
     </application>
 
 </manifest>
