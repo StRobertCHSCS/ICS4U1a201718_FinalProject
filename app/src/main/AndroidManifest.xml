@@ -136,6 +136,10 @@
         <activity android:name=".clubsteams_unitedbooknerds" />
         <activity android:name=".clubsteams_unitednations" />
         <activity android:name=".clubsteams_yearbookclub"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
