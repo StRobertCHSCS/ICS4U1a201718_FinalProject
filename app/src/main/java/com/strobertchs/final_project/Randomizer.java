@@ -17,14 +17,23 @@ public class Randomizer
     Event event9;
     Event event10;
     Event event11;
+    Event event12;
+    Event event13;
+    Event event14;
+    Event event15;
+    Event event16;
+    Event event17;
+    Event event18;
+    Event event19;
+    Event event20;
 
     public Randomizer(){
         rand = new Random();
-        this.value = this.rand.nextInt(11) + 1;
+        this.value = this.rand.nextInt(21) + 1;
     }
 
     public int roll(){
-        this.value = this.rand.nextInt(11) + 1;
+        this.value = this.rand.nextInt(21) + 1;
         return this.value;
     }
 
@@ -32,7 +41,7 @@ public class Randomizer
         return this.value;
     }
 
-    public Event pickEvent(Event nEvent1, Event nEvent2, Event nEvent3, Event nEvent4, Event nEvent5, Event nEvent6, Event nEvent7, Event nEvent8, Event nEvent9, Event nEvent10, Event nEvent11){
+    public Event pickEvent(Event nEvent1, Event nEvent2, Event nEvent3, Event nEvent4, Event nEvent5, Event nEvent6, Event nEvent7, Event nEvent8, Event nEvent9, Event nEvent10, Event nEvent11, Event nEvent12, Event nEvent13, Event nEvent14, Event nEvent15, Event nEvent16, Event nEvent17, Event nEvent18, Event nEvent19, Event nEvent20, Event nEvent21){
         event1 = nEvent1;
         event2 = nEvent2;
         event3 = nEvent3;
@@ -44,6 +53,18 @@ public class Randomizer
         event9 = nEvent9;
         event10 = nEvent10;
         event11 = nEvent11;
+        event12 = nEvent12;
+        event13 = nEvent13;
+        event14 = nEvent14;
+        event15 = nEvent15;
+        event16 = nEvent16;
+        event17 = nEvent17;
+        event18 = nEvent18;
+        event19 = nEvent19;
+        event20 = nEvent20;
+        event21 = nEvent21;
+
+
         roll();
         if(getValue() == 1){
             return event1;
@@ -65,8 +86,28 @@ public class Randomizer
             return event9;
         }else if(getValue() == 10){
             return event10;
-        }else{
+        }else if(getValue() == 11){
             return event11;
+        }else if(getValue() == 12){
+            return event12;
+        }else if(getValue() == 13){
+            return event13;
+        }else if(getValue() == 14){
+            return event14;
+        }else if(getValue() == 15){
+            return event15;
+        }else if(getValue() == 16){
+            return event16;
+        }else if(getValue() == 17){
+            return event17;
+        }else if(getValue() == 18){
+            return event18;
+        }else if(getValue() == 19){
+            return event19;
+        }else if(getValue() == 20){
+            return event20;
+        }else{
+            return event21;
         }
     }
 }

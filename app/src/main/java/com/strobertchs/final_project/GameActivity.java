@@ -38,11 +38,21 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Event partTimeJob = new Event("a part time job", 30, 20, -20, -20, -30, -20, 20, 20);
     Event party = new Event("go to a party", -10, 30, -20, -10, 10, -30, 20, 10);
     Event attendFamilyDinner = new Event("attend a family dinner", 10, 20, -10, -10, -10, -20, 10, 10);
-    Event prepareForPresentation = new Event("prepare for your presentation", 0, -10, 20, -10, 0, 10, -20, 10);
-    Event skipClass = new Event("skip class", 0, 20, -20, 0, 0, -20, 20, 0);
-    Event doDrugs = new Event("do drugs", -30, 30, -30, -30, 30, -30, 30, 30);
-    Event hangOut = new Event("hangout after school", -20, 20, -10, -10, 20, -20, 10, 10);
-    Event vacation = new Event("go on vaction", -30, 20, -20, 20, 30, -20, 20, -20);
+    Event prepareForPresentation = new Event("stay up late to prepare for your presentation", 0, -10, 20, -10, 0, 10, -20, 10);
+    Event skipClass = new Event("skip class and chill with your friends", 0, 20, -20, 0, 0, -20, 20, 0);
+    Event doDrugs = new Event("do drugs and see the world in a new light", -30, 30, -30, -30, 30, -30, 30, 30);
+    Event hangOut = new Event("hangout after school with your friends", -20, 20, -10, -10, 20, -20, 10, 10);
+    Event vacation = new Event("go on a nice sunny vacation", -30, 20, -20, 20, 30, -20, 20, -20);
+    Event sleepIn = new Event("sleep in",0,0,-30,20,0,0,30,-20);
+    Event getTutor = new Event("get a tutor", -20, -10, 40, -10, 20, 10,-40,10);
+    Event attendSchoolSick = new Event("attend school even though you are sick", 0, -10, 10, -10, 0, 10, -10, 10);
+    Event procrastinate = new Event("procrastinate today", 0, 20, -20, 20, 0, -20, 20, -20);
+    Event playVideoGames = new Event("play video games on your new PS4", -10, 20, -10, -10, 10, -20, 10, 10);
+    Event cram = new Event("cram tonight", 0, 10, 20, -20, 0, -10, -20, 20);
+    Event attendSchoolRetreat = new Event("attend a school retreat", -10, 20, -10, 0, 10, -20, 10, 0);
+    Event contest = new Event("participate in a math contest", 0, 0, 20, -20, 0, 0, -20, 20);
+    Event groupProjectAlone = new Event("do a group project by yourself", 0, -20, 20, -10,  0, 20, -20, -10);
+    Event communityService = new Event ("volunteer in a community service project", 0, 30, 0, -10, 0, -30, 0, 10);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +100,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
 
     void makeTurn(){
-        event = random.pickEvent(allNighter, doYourHomework, extraCurricular, partTimeJob, party, attendFamilyDinner, prepareForPresentation, skipClass, doDrugs, hangOut, vacation);
+        event = random.pickEvent(allNighter, doYourHomework, extraCurricular, partTimeJob, party, attendFamilyDinner, prepareForPresentation, skipClass, doDrugs, hangOut, vacation, sleepIn, getTutor, attendSchoolSick, procrastinate, playVideoGames, cram, attendSchoolRetreat, contest, groupProjectAlone, communityService);
     }
 
     @Override
