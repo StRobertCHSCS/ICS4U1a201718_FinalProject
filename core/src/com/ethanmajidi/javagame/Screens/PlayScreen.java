@@ -111,7 +111,7 @@ public class PlayScreen  implements Screen {
         //music.play();
 
 
-        goomba = new Goomba(this, 1f,.32f);
+        goomba = new Goomba(this, 5.64f,.16f);
 
 
 

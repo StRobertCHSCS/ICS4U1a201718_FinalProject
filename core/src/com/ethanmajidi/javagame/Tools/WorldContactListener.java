@@ -1,5 +1,6 @@
 package com.ethanmajidi.javagame.Tools;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
@@ -8,6 +9,8 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Sprites.Enemy;
 import com.ethanmajidi.javagame.Sprites.InteractiveTileObject;
+
+import java.util.jar.JarEntry;
 
 /**
  * Created by EthanMajidi on 2018-01-23.
@@ -36,8 +39,17 @@ public class WorldContactListener implements ContactListener {
             case JavaGame.ENEMY_HEAD_BIT | JavaGame.PLAYER_BIT:
                 if(fixA.getFilterData().categoryBits == JavaGame.ENEMY_HEAD_BIT)
                     ((Enemy)fixA.getUserData()).hitOnHead();
-                else if(fixB.getFilterData().categoryBits == JavaGame.ENEMY_HEAD_BIT)
+                else
                     ((Enemy)fixB.getUserData()).hitOnHead();
+                break;
+            case JavaGame.ENEMY_BIT | JavaGame.OBJECT_BIT:
+                if(fixA.getFilterData().categoryBits == JavaGame.ENEMY_BIT)
+                    ((Enemy)fixA.getUserData()).reverseVelocity(true, false);
+                else
+                    ((Enemy)fixB.getUserData()).reverseVelocity(true, false);
+                break;
+            case JavaGame.PLAYER_BIT | JavaGame.ENEMY_BIT:
+                Gdx.app.log("Player", "Died");
 
         }
     }

@@ -46,8 +46,10 @@ public class Goomba extends Enemy {
             stateTime = 0;
         }
         else if (!destoryed) {
+            b2body.setLinearVelocity(velocity);
             setPosition(b2body.getPosition().x - getWidth() / 2, b2body.getPosition().y - getHeight() / 2);
             setRegion(walkAnimation.getKeyFrame(stateTime, true));
+
         }
     }
 
@@ -65,7 +67,7 @@ public class Goomba extends Enemy {
         fdef.filter.maskBits = JavaGame.GROUND_BIT | JavaGame.COIN_BIT | JavaGame.BRICK_BIT | JavaGame.ENEMY_BIT | JavaGame.OBJECT_BIT | JavaGame.PLAYER_BIT;
 
         fdef.shape = shape;
-        b2body.createFixture(fdef);
+        b2body.createFixture(fdef).setUserData(this);
 
         //create head of goomba
         PolygonShape head = new PolygonShape();
