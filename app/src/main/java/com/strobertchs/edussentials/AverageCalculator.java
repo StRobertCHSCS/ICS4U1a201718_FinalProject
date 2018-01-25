@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class AverageCalculator extends AppCompatActivity {
-    private TextView textviewGradeinput;
+    private TextView textviewMarkinput;
     private TextView textviewWeightFactor;
     private Button button;
 
@@ -16,7 +16,7 @@ public class AverageCalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_average_calculator);
 
-        textviewGradeinput = (TextView) findViewById(R.id.textview_gradeinput);
+        textviewMarkinput = (TextView) findViewById(R.id.textview_markinput);
         textviewWeightFactor = (TextView) findViewById(R.id.textview_weightfactor);
         button = (Button) findViewById(R.id.dialogbutton);
         button.setOnClickListener(new View.OnClickListener() {
