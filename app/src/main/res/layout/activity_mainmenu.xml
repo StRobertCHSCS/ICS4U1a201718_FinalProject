@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.strobertchs.edussentials.MainMenu">
+
+
+    <!--<at.markushi.ui.CircleButton-->
+        <!--android:id="@+id/averagecalculator"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:layout_alignEnd="@+id/title"-->
+        <!--android:layout_alignRight="@+id/title"-->
+        <!--android:layout_below="@+id/title"-->
+        <!--android:layout_marginEnd="29dp"-->
+        <!--android:layout_marginRight="29dp"-->
+        <!--app:cb_color="@color/colorPrimary2"-->
+        <!--app:cb_pressedRingWidth="8dip" />-->
+
+    <!--<at.markushi.ui.CircleButton-->
+        <!--android:id="@+id/ToDoList"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:layout_below="@+id/schedulebutton"-->
+        <!--android:layout_toEndOf="@+id/SchoolMap"-->
+        <!--android:layout_toRightOf="@+id/SchoolMap"-->
+        <!--app:cb_color="@color/colorPrimary2"-->
+        <!--app:cb_pressedRingWidth="8dip" />-->
+
+    <!--<at.markushi.ui.CircleButton-->
+        <!--android:id="@+id/calendar"-->
+        <!--android:layout_width="155dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--app:cb_color="@color/colorPrimary2"-->
+        <!--app:cb_pressedRingWidth="8dip" />-->
+
+    <!--<at.markushi.ui.CircleButton-->
+        <!--android:id="@+id/SchoolMap"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:layout_alignLeft="@+id/schedulebutton"-->
+        <!--android:layout_alignStart="@+id/schedulebutton"-->
+        <!--android:layout_below="@+id/schedulebutton"-->
+        <!--app:cb_color="@color/colorPrimary2"-->
+        <!--app:cb_pressedRingWidth="8dip" />-->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:fontFamily="casual"
+        android:text="EDUssentials"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/yello"
+        android:textSize="55sp"
+        android:textStyle="bold" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/schedulebutton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/title"
+        android:layout_toLeftOf="@+id/averagecalculator"
+        android:layout_toStartOf="@+id/averagecalculator"
+        app:cb_color="@color/colorPrimary2"
+        app:cb_pressedRingWidth="8dip" />
+
+</RelativeLayout>

@@ -18,12 +18,14 @@
         </activity>
         <activity android:name=".Schedule" />
         <activity android:name=".DetailActivity" />
-        <activity android:name=".GradeTracker" />
+        <activity android:name=".MainMenu" />
         <activity android:name=".map" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ResetSchedule" />
         <activity android:name=".Todolist" />
-        <activity android:name=".ClubMeeting"></activity>
+        <activity android:name=".AverageCalculator"></activity>
+
+
     </application>
 
 </manifest>

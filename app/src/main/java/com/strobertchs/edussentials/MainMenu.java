@@ -12,11 +12,12 @@ public class MainMenu extends AppCompatActivity {
     private Button mapOpen;
     private Button toDoOpen;
     private Button meetingOpen;
+    private Button calcOpen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grade_tracker);
+        setContentView(R.layout.activity_mainmenu);
 
         scheduleOpen = (Button) findViewById(R.id.schedulebutton);
         scheduleOpen.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +50,14 @@ public class MainMenu extends AppCompatActivity {
                 openMeeting();
             }
         });
+
+        calcOpen = (Button) findViewById(R.id.averagecalculator);
+        calcOpen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openCalc();
+            }
+        });
     }
 
     public void openSchedule() {
@@ -69,6 +78,11 @@ public class MainMenu extends AppCompatActivity {
     public void openMeeting() {
         Intent opMeet = new Intent(this, ClubMeeting.class);
         startActivity(opMeet);
+    }
+
+    public void openCalc() {
+        Intent opCalc = new Intent(this, AverageCalculator.class);
+        startActivity(opCalc);
     }
 
 }
