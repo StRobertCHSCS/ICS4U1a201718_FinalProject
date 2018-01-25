@@ -11,6 +11,7 @@ public class MainMenu extends AppCompatActivity {
     private Button scheduleOpen;
     private Button mapOpen;
     private Button toDoOpen;
+    private Button meetingOpen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,14 @@ public class MainMenu extends AppCompatActivity {
                 openToDo();
             }
         });
+
+        meetingOpen = (Button) findViewById(R.id.calendar);
+        meetingOpen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMeeting();
+            }
+        });
     }
 
     public void openSchedule() {
@@ -55,6 +64,11 @@ public class MainMenu extends AppCompatActivity {
     public void openToDo() {
         Intent toDoOp = new Intent(this, Todolist.class);
         startActivity(toDoOp);
+    }
+
+    public void openMeeting() {
+        Intent opMeet = new Intent(this, ClubMeeting.class);
+        startActivity(opMeet);
     }
 
 }
