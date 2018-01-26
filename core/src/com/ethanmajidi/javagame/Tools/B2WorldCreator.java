@@ -13,12 +13,17 @@ import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Screens.PlayScreen;
 import com.ethanmajidi.javagame.Sprites.Brick;
 import com.ethanmajidi.javagame.Sprites.Coin;
+import com.ethanmajidi.javagame.Sprites.Goomba;
+
+import java.lang.reflect.Array;
 
 /**
  * Created by EthanMajidi on 2018-01-21.
  */
 
 public class B2WorldCreator {
+    private com.badlogic.gdx.utils.Array<Goomba> goombas;
+
     public B2WorldCreator(PlayScreen screen){
         World world = screen.getWorld();
         TiledMap map = screen.getMap();
@@ -58,17 +63,25 @@ public class B2WorldCreator {
         //brick bodies/fixtures
         for(MapObject object : map.getLayers().get(5).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect  = ((RectangleMapObject) object).getRectangle();
-
             new Brick(screen,rect);
 
         }
         //coin bodies/fixtures
         for(MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect  = ((RectangleMapObject) object).getRectangle();
-
             new Coin(screen, rect);
 
+        }
+        //create all goombas
+        goombas = new com.badlogic.gdx.utils.Array<Goomba>();
+        for(MapObject object : map.getLayers().get(6).getObjects().getByType(RectangleMapObject.class)){
+            Rectangle rect  = ((RectangleMapObject) object).getRectangle();
+            goombas.add(new Goomba(screen, rect.getX() / JavaGame.PPM, rect.getY() / JavaGame.PPM));
 
         }
+    }
+
+    public com.badlogic.gdx.utils.Array<Goomba> getGoombas() {
+        return goombas;
     }
 }

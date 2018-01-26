@@ -28,6 +28,7 @@ import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Scenes.Hud;
+import com.ethanmajidi.javagame.Sprites.Enemy;
 import com.ethanmajidi.javagame.Sprites.Goomba;
 import com.ethanmajidi.javagame.Sprites.Java;
 import com.ethanmajidi.javagame.Sprites.Mario;
@@ -59,10 +60,11 @@ public class PlayScreen  implements Screen {
     //box2d var
     private World world;
     private Box2DDebugRenderer b2dr;
+    private B2WorldCreator creator;
 
     //Sprites
     private Java player;
-    private Goomba goomba;
+
 
     //audio.music
     //private Music music;
@@ -97,7 +99,7 @@ public class PlayScreen  implements Screen {
         //allows debug lines in our world
         b2dr = new Box2DDebugRenderer();
 
-        new B2WorldCreator(this);
+        creator = new B2WorldCreator(this);
         //Creates our player in the game world
 
         player = new Java(this);
@@ -111,7 +113,7 @@ public class PlayScreen  implements Screen {
         //music.play();
 
 
-        goomba = new Goomba(this, 5.64f,.16f);
+
 
 
 
@@ -145,7 +147,8 @@ public class PlayScreen  implements Screen {
 
         //connecting hud to timer
         player.update(dt);
-        goomba.update(dt);
+        for(Enemy enemy : creator.getGoombas())
+            enemy.update(dt);
         hud.update(dt);
 
         //attach our gamecam to our player x coordinates
@@ -174,7 +177,8 @@ public class PlayScreen  implements Screen {
         game.batch.setProjectionMatrix(gamecam.combined);
         game.batch.begin();
         player.draw(game.batch);
-        goomba.draw(game.batch);
+        for(Enemy enemy : creator.getGoombas())
+            enemy.draw(game.batch);
         game.batch.end();
 
         //Set our batch to now draw what the hud sees
