@@ -16,6 +16,10 @@ public class GlobalAttributes
     //the dimensions of character buttons
     public static int ChooseCharacterButtonHeight = 40;
     public static int ChooseCharacterButtonWidth = 40;
+    public static int knowledgeAtt = 0;
+    public static int thinkingAtt = 0;
+    public static int understandingAtt = 0;
+    public static int numQuestionAnswered;
 
     //the question getter in use
     public static QuestionGetterBase questionGetter = new QuestionGetterMock();

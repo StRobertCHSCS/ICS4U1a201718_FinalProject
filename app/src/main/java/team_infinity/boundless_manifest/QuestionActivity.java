@@ -9,20 +9,16 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static team_infinity.boundless_manifest.GlobalAttributes.numQuestionAnswered;
+
 public class QuestionActivity extends AppCompatActivity
 {
     TextView questionText;
     Button[] choices;
     int numChoices = 4;
     Question currentQuestion;
-    int numQuestionAnswered;
     ArrayList buttonRandom = new ArrayList<Button>();
     ProgressBar questProgress;
-
-    int attribute1;
-    int attribute2;
-    int attribute3;
-    int attribute4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -54,12 +50,6 @@ public class QuestionActivity extends AppCompatActivity
 
         questProgress = (ProgressBar)findViewById(R.id.questProgress);
         questProgress.setMax(0);
-
-        this.numQuestionAnswered = 0;
-        this.attribute1 = 0;
-        this.attribute2 = 0;
-        this.attribute3 = 0;
-        this.attribute4 = 0;
         fetchQuestion();
     }
 
