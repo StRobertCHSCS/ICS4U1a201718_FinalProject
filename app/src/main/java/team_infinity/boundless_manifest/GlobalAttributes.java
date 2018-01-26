@@ -17,6 +17,8 @@ public class GlobalAttributes
     public static int ChooseCharacterButtonHeight = 40;
     public static int ChooseCharacterButtonWidth = 40;
 
+    public static final String ServerFullUrl = "";
+
     //the question getter in use
     public static QuestionGetterBase questionGetter = new QuestionGetterMock();
 

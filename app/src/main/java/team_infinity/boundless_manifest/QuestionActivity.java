@@ -64,7 +64,7 @@ public class QuestionActivity extends AppCompatActivity
      */
     private void fetchQuestion()
     {
-        Question q = GlobalAttributes.questionGetter.getQuestion();
+        Question q = GlobalAttributes.questionGetter.getQuestion(0);
         this.currentQuestion = q;
         this.showQuestion(q);
     }

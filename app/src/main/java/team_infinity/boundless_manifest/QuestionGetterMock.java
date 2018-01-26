@@ -7,7 +7,7 @@ package team_infinity.boundless_manifest;
 public class QuestionGetterMock implements QuestionGetterBase
 {
     @Override
-    public Question getQuestion()
+    public Question getQuestion(long id)
     {
         String[] answers = {"sava", "pa", "pap", "despacito"};
         return new Question("apa", answers, 1);

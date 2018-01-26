@@ -6,5 +6,5 @@ package team_infinity.boundless_manifest;
 
 public interface QuestionGetterBase
 {
-    public Question getQuestion();
+    public Question getQuestion(long id);
 }
