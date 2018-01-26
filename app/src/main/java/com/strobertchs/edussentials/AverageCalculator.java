@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class AverageCalculator extends AppCompatActivity {
+public class AverageCalculator extends AppCompatActivity implements ExampleDialog.ExampleDialogListener{
     private TextView textviewMarkinput;
     private TextView textviewWeightFactor;
     private Button button;
@@ -30,5 +30,11 @@ public class AverageCalculator extends AppCompatActivity {
         ExampleDialog exampleDialog = new ExampleDialog();
         exampleDialog.show(getSupportFragmentManager(), "example dialog");
 
+    }
+
+    @Override
+    public void applyTexts(String mark, String weight) {
+        textviewMarkinput.setText(mark);
+        textviewWeightFactor.setText(weight);
     }
 }

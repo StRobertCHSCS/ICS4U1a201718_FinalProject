@@ -1,6 +1,7 @@
 package com.strobertchs.edussentials;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -16,6 +17,7 @@ import android.widget.EditText;
 public class ExampleDialog extends AppCompatDialogFragment {
     private EditText editTextMark;
     private EditText editTextWeight;
+    private ExampleDialogListener listener;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -35,12 +37,28 @@ public class ExampleDialog extends AppCompatDialogFragment {
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
+                        String mark = editTextMark.getText().toString();
+                        String weight = editTextWeight.getText().toString();
+                        listener.applyTexts(mark, weight    );
                     }
-                });w
+                });
         editTextMark = view.findViewById(R.id.edit_markinput);
         editTextWeight = view.findViewById(R.id.edit_weightinput);
 
         return builder.create();
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            listener = (ExampleDialogListener) context
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString() + "must implement ExampleDialogListener");
+        }
+    }
+
+    public interface ExampleDialogListener{
+        void applyTexts(String mark, String weight);
     }
 }
