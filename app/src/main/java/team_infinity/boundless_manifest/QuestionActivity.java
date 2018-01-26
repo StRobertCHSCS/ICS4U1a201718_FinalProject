@@ -3,6 +3,7 @@ package team_infinity.boundless_manifest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -15,8 +16,8 @@ public class QuestionActivity extends AppCompatActivity
     int numChoices = 4;
     Question currentQuestion;
     int numQuestionAnswered;
-
     ArrayList buttonRandom = new ArrayList<Button>();
+    ProgressBar questProgress;
 
     int attribute1;
     int attribute2;
@@ -50,6 +51,9 @@ public class QuestionActivity extends AppCompatActivity
         {
             this.choices[ct].setOnClickListener(new OnChoiceClickListener(this, ct));
         }
+
+        questProgress = (ProgressBar)findViewById(R.id.questProgress);
+        questProgress.setMax(0);
 
         this.numQuestionAnswered = 0;
         this.attribute1 = 0;
@@ -91,6 +95,7 @@ public class QuestionActivity extends AppCompatActivity
      */
     public void answerClicked(int choice)
     {
-
+        numQuestionAnswered++;
+        questProgress.setProgress(numQuestionAnswered);
     }
 }
