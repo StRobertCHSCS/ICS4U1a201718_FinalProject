@@ -24,7 +24,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonObjectYes;
     Button buttonObjectNo;
 
-    Student student = new Student(1);
+    Student student = new Student();
     {
         GlobalAttributes.student = this.student;
     }
@@ -193,7 +193,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     void updateEvent() {
-        textObjectEvent.setText("Event: " + "Do you want to " + event.getEventName());
+        textObjectEvent.setText("Event: " + "Do you want to " + event.getEventMessage());
     }
 
     String moneyBarLines;

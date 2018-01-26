@@ -26,6 +26,7 @@ public class Randomizer
     Event event18;
     Event event19;
     Event event20;
+    Event event21;
 
     public Randomizer(){
         rand = new Random();
