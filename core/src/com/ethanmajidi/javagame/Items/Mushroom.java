@@ -40,6 +40,8 @@ public class Mushroom extends Item{
     @Override
     public void use(Java java) {
         destroy();
+        java.grow();
+
     }
 
     @Override
