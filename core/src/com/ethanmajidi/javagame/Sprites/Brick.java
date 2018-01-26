@@ -32,15 +32,14 @@ public class Brick extends InteractiveTileObject {
     }
 
     @Override
-    public void onHeadHit() {
-        Gdx.app.log("Coin", "Collision");
-        setCategoryFilter(JavaGame.DESTRYOYED_BIT);
-        getCell().setTile(null);
+    public void onHeadHit(Java java) {
 
-        //score
-        Hud.addScore(200);
-
-        //sounds
-        //JavaGame.manager.get("audio/sounds/BreakBlock.wav", Sound.class).play();
+        if(java.isBig()) {
+            setCategoryFilter(JavaGame.DESTRYOYED_BIT);
+            getCell().setTile(null);
+            Hud.addScore(200);
+            //sounds
+            //JavaGame.manager.get("audio/sounds/BreakBlock.wav", Sound.class).play();
+        }
     }
 }

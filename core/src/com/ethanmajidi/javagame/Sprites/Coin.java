@@ -37,7 +37,7 @@ public class Coin extends InteractiveTileObject{
     }
 
     @Override
-    public void onHeadHit() {
+    public void onHeadHit(Java java) {
         Gdx.app.log("Coin", "Collision");
         getCell().setTile(tileSet.getTile(BLANK_COIN));
         if (isActive) {

@@ -36,8 +36,10 @@ public class Java extends Sprite {
 
     private float stateTimer;
     private boolean runningRight;
-    private boolean playerIsBig;
+    public boolean playerIsBig;
     private boolean runGrowAnimation;
+    private boolean timeToDefineBigPlayer;
+    private boolean timeToRedefinePlayer;
 
     public Java(PlayScreen screen){
         //initialize default values
@@ -81,8 +83,15 @@ public class Java extends Sprite {
 
 
     public void update(float dt){
-        setPosition(b2body.getPosition().x - getWidth() / 2, b2body.getPosition().y - getHeight() / 2);
+        if(playerIsBig)
+            setPosition(b2body.getPosition().x - getWidth() / 2, b2body.getPosition().y - getHeight() / 2 -6 /JavaGame.PPM);
+        else
+            setPosition(b2body.getPosition().x - getWidth() / 2, b2body.getPosition().y - getHeight() / 2);
         setRegion(getFrame(dt));
+        if(timeToDefineBigPlayer)
+            defineBigPlayer();
+        if(timeToRedefinePlayer)
+            redefinePlayer();
     }
 
     public TextureRegion getFrame(float dt){
@@ -138,9 +147,80 @@ public class Java extends Sprite {
     public  void grow(){
         runGrowAnimation = true;
         playerIsBig = true;
+        timeToDefineBigPlayer = true;
         setBounds(getX(), getY(), getWidth(), getHeight() *2);
 
     }
+    public boolean isBig(){
+        return playerIsBig;
+    }
+    public void hit(){
+        if(playerIsBig)
+            playerIsBig = false;
+            timeToRedefinePlayer = true;
+            setBounds(getX(), getY(), getWidth(),getHeight()/2);
+
+    }
+
+    public void redefinePlayer(){
+        Vector2 position = b2body.getPosition();
+        world.destroyBody(b2body);
+
+        BodyDef bdef = new BodyDef();
+        bdef.position.set(position);
+        bdef.type = BodyDef.BodyType.DynamicBody;
+        b2body = world.createBody(bdef);
+
+        FixtureDef fdef = new FixtureDef();
+        CircleShape shape = new CircleShape();
+        shape.setRadius(6/ JavaGame.PPM);
+        fdef.filter.categoryBits = JavaGame.PLAYER_BIT;
+        fdef.filter.maskBits = JavaGame.GROUND_BIT | JavaGame.COIN_BIT | JavaGame.BRICK_BIT | JavaGame.ENEMY_BIT | JavaGame.OBJECT_BIT | JavaGame.ENEMY_HEAD_BIT | JavaGame.ITEM_BIT;
+
+        fdef.shape = shape;
+        b2body.createFixture(fdef).setUserData(this);
+
+        EdgeShape head = new EdgeShape();
+        head.set(new Vector2(-2/JavaGame.PPM, 6/JavaGame.PPM), new Vector2(2/JavaGame.PPM, 6/JavaGame.PPM));
+        fdef.filter.categoryBits = JavaGame.PLAYER_HEAD_BIT;
+        fdef.shape = head;
+        fdef.isSensor = true;
+
+        b2body.createFixture(fdef).setUserData(this);
+        timeToRedefinePlayer = false;
+
+    }
+
+    public void defineBigPlayer(){
+        Vector2 currentPosition = b2body.getPosition();
+        world.destroyBody(b2body);
+
+        BodyDef bdef = new BodyDef();
+        bdef.position.set(currentPosition.add(0,10/JavaGame.PPM));
+        bdef.type = BodyDef.BodyType.DynamicBody;
+        b2body = world.createBody(bdef);
+
+        FixtureDef fdef = new FixtureDef();
+        CircleShape shape = new CircleShape();
+        shape.setRadius(6/ JavaGame.PPM);
+        fdef.filter.categoryBits = JavaGame.PLAYER_BIT;
+        fdef.filter.maskBits = JavaGame.GROUND_BIT | JavaGame.COIN_BIT | JavaGame.BRICK_BIT | JavaGame.ENEMY_BIT | JavaGame.OBJECT_BIT | JavaGame.ENEMY_HEAD_BIT | JavaGame.ITEM_BIT;
+
+        fdef.shape = shape;
+        b2body.createFixture(fdef).setUserData(this);
+        shape.setPosition(new Vector2(0,-14/JavaGame.PPM));
+        b2body.createFixture(fdef).setUserData(this);
+
+        EdgeShape head = new EdgeShape();
+        head.set(new Vector2(-2/JavaGame.PPM, 6/JavaGame.PPM), new Vector2(2/JavaGame.PPM, 6/JavaGame.PPM));
+        fdef.filter.categoryBits = JavaGame.PLAYER_HEAD_BIT;
+        fdef.shape = head;
+        fdef.isSensor = true;
+
+        b2body.createFixture(fdef).setUserData(this);
+        timeToDefineBigPlayer = false;
+    }
+
 
     public void defineMario(){
         BodyDef bdef = new BodyDef();
