@@ -5,43 +5,79 @@ import java.util.Random;
 public class Randomizer
 {
     int value;
-    Random rand;
-    Event event1;
-    Event event2;
-    Event event3;
-    Event event4;
-    Event event5;
-    Event event6;
-    Event event7;
-    Event event8;
-    Event event9;
-    Event event10;
-    Event event11;
-    Event event12;
-    Event event13;
-    Event event14;
-    Event event15;
-    Event event16;
-    Event event17;
-    Event event18;
-    Event event19;
-    Event event20;
-    Event event21;
+    private Random rand;
+    private Event event1;
+    private Event event2;
+    private Event event3;
+    private Event event4;
+    private Event event5;
+    private Event event6;
+    private Event event7;
+    private Event event8;
+    private Event event9;
+    private Event event10;
+    private Event event11;
+    private Event event12;
+    private Event event13;
+    private Event event14;
+    private Event event15;
+    private Event event16;
+    private Event event17;
+    private Event event18;
+    private Event event19;
+    private Event event20;
+    private Event event21;
 
+    /**
+     * Sets up the randomizer and it's boundaries
+     */
     public Randomizer(){
         rand = new Random();
         this.value = this.rand.nextInt(21) + 1;
     }
 
+    /**
+     * Generates a number and returns the value of the roll
+     * @return the value of the roll
+     */
     public int roll(){
         this.value = this.rand.nextInt(21) + 1;
         return this.value;
     }
 
+    /**
+     * Returns the value of the roll without rolling it again
+     * @return the value of the roll
+     */
     public int getValue(){
         return this.value;
     }
 
+    /**
+     * Creates a list of events that contains all the current Events
+     * @param nEvent1 Event number 1
+     * @param nEvent2 Event number 2
+     * @param nEvent3 Event number 3
+     * @param nEvent4 Event number 4
+     * @param nEvent5 Event number 5
+     * @param nEvent6 Event number 6
+     * @param nEvent7 Event number 7
+     * @param nEvent8 Event number 8
+     * @param nEvent9 Event number 9
+     * @param nEvent10 Event number 10
+     * @param nEvent11 Event number 11
+     * @param nEvent12 Event number 12
+     * @param nEvent13 Event number 13
+     * @param nEvent14 Event number 14
+     * @param nEvent15 Event number 15
+     * @param nEvent16 Event number 16
+     * @param nEvent17 Event number 17
+     * @param nEvent18 Event number 18
+     * @param nEvent19 Event number 19
+     * @param nEvent20 Event number 20
+     * @param nEvent21 Event number 21
+     * @return a event chosen randomly
+     */
     public Event pickEvent(Event nEvent1, Event nEvent2, Event nEvent3, Event nEvent4, Event nEvent5, Event nEvent6, Event nEvent7, Event nEvent8, Event nEvent9, Event nEvent10, Event nEvent11, Event nEvent12, Event nEvent13, Event nEvent14, Event nEvent15, Event nEvent16, Event nEvent17, Event nEvent18, Event nEvent19, Event nEvent20, Event nEvent21){
         event1 = nEvent1;
         event2 = nEvent2;
@@ -64,7 +100,6 @@ public class Randomizer
         event19 = nEvent19;
         event20 = nEvent20;
         event21 = nEvent21;
-
 
         roll();
         if(getValue() == 1){
