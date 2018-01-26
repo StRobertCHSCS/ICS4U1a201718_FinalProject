@@ -16,6 +16,10 @@ public class GlobalAttributes
     //the dimensions of character buttons
     public static int ChooseCharacterButtonHeight = 40;
     public static int ChooseCharacterButtonWidth = 40;
+    public static int knowledgeAtt = 0;
+    public static int thinkingAtt = 0;
+    public static int understandingAtt = 0;
+    public static int numQuestionAnswered;
 
     //this url is temporary, 10.0.2.2 let emulator access the mother system(my laptop)'s localhost ip
     public static final String ServerFullUrl = "http://10.0.2.2:8080/BM_server/qestn";
