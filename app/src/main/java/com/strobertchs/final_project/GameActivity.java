@@ -264,10 +264,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 }else {
                     student.setSleep(100);
                 }
-                checkIfLose();
-                student.increaseCurrentEventNum();
-                updateStudentStatusBars();
-                calculateCurrentGrade();
                 break;
 
             case R.id.buttonNo:
@@ -291,12 +287,12 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 }else {
                     student.setSleep(100);
                 }
-                checkIfLose();
-                student.increaseCurrentEventNum();
-                updateStudentStatusBars();
-                calculateCurrentGrade();
                 break;
         }
+        checkIfLose();
+        student.increaseCurrentEventNum();
+        updateStudentStatusBars();
+        calculateCurrentGrade();
         makeTurn();
         updateStudentStatus();
         updateEvent();
