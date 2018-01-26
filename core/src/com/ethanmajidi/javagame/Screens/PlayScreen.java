@@ -147,8 +147,11 @@ public class PlayScreen  implements Screen {
 
         //connecting hud to timer
         player.update(dt);
-        for(Enemy enemy : creator.getGoombas())
+        for(Enemy enemy : creator.getGoombas()) {
             enemy.update(dt);
+            if(enemy.getX()< player.getX() + 224 / JavaGame.PPM)
+                enemy.b2body.setActive(true);
+        }
         hud.update(dt);
 
         //attach our gamecam to our player x coordinates
