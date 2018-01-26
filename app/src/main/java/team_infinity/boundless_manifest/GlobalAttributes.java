@@ -17,10 +17,12 @@ public class GlobalAttributes
     public static int ChooseCharacterButtonHeight = 40;
     public static int ChooseCharacterButtonWidth = 40;
 
-    public static final String ServerFullUrl = "";
+    //this url is temporary, 10.0.2.2 let emulator access the mother system(my laptop)'s localhost ip
+    public static final String ServerFullUrl = "http://10.0.2.2:8080/BM_server/qestn";
 
     //the question getter in use
     public static QuestionGetterBase questionGetter = new QuestionGetterMock();
+    public static QuestionGetterBase questionGetter2 = new AjaxQuestionGetter();
 
     //the map for all characters
     public static CharacterMap characters;

@@ -3,6 +3,7 @@ package team_infinity.boundless_manifest;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.media.Image;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
@@ -51,5 +52,18 @@ public class MainMenuActivity extends AppCompatActivity
         mode = (ImageButton) findViewById(R.id.imageButton_mode);
         mode.setOnClickListener(new OnModeClickListener2(this));
 
+        //for testing purposes
+        //this is the compass image button at the downleft corner
+        ImageButton ib = (ImageButton) findViewById(R.id.imageButton);
+        ib.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                //for test purpose
+                Log.d("qst", "MainMenuActivity.ib.OnClickListener.OnClick(): called");
+                GlobalAttributes.questionGetter2.getQuestion(4274997763828313469l);
+            }
+        });
     }
 }

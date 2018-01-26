@@ -5,9 +5,11 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.net.HttpURLConnection;
@@ -26,61 +28,48 @@ public class AjaxQuestionGetter implements QuestionGetterBase
     @Override
     public Question getQuestion(long id)
     {
-        InputStream inputS = null;
-        String result = "";
+        //create an AsyncTask and execute it
+        JSONAsyncTask jsonAsyncTask = new JSONAsyncTask();
+        jsonAsyncTask.execute(id);
 
-        try
+        //infinite loop to check if progress done
+        while(true)
         {
-            HttpURLConnection con = null;
-            //create url
-            URL url = new URL(GlobalAttributes.ServerFullUrl);
-            //start connection
-            con = (HttpURLConnection) url.openConnection();
+            /*
+            note:
+            this is definitly not de right waey to use AsyncTask
+            but since AsyncTask.onPostExecute() is sent to and called
+            directly in the GUI dispatcher thread,
+            and I want to do something else with the result,
+            so I do it the very stupid way
+            (could have used a Thread Runnable lol)
+                                                    -Kevin
+             */
+            String prog = jsonAsyncTask.getProgress();
+            if(prog == "done")
+            {
+                break;
+            }
+            else if (prog == "error")
+            {
+                Log.e("json", "AjaxQuestionGetter.getQuestion(): error occured");
+                return null;
+            }
 
-            //define the specific meat for the request
-            con.setDoOutput(true);
-            con.setRequestMethod("POST");
-            con.setRequestProperty("Content-Type", "application/json");
-            con.setRequestProperty("Accept", "application/json");
-
-            Writer write = new BufferedWriter(new OutputStreamWriter(con.getOutputStream()));
-            String jsonStr = this.createJsonObjectToString(id);
-
-            //write and flust the json to send it to server
-            write.write(jsonStr);
-            write.close();
-
-
+            try
+            {
+                Thread.sleep(10);
+            }
+            catch (InterruptedException ie)
+            {
+                Log.d("json", "AjaxQuestionGetter.getQuestion(): thread sleep interrupted");
+            }
         }
-        catch(IOException ioe)
-        {
 
-        }
+        //get the string and print to debug log
+        String res = jsonAsyncTask.getResulte();
+        Log.d("json", "AjaxQuestionGetter.getQuestion(): result string: " +  res);
 
         return null;
-    }
-
-    /**
-     * method for creating a JSONObject object
-     * @param id the id of the session
-     * @return the json object
-     */
-    public String createJsonObjectToString(long id)
-    {
-        JSONObject requestBody = new JSONObject();
-
-        try
-        {
-            //only id matters
-            requestBody.accumulate("subject", "");
-            requestBody.accumulate("level", 0);
-            requestBody.accumulate("sessionId", id);
-        }
-        catch(org.json.JSONException e)//handle exception
-        {
-            Log.e("json", "AjaxQuestionGetter.createJsonObject(): exception: " + e.getMessage());
-        }
-
-        return requestBody.toString();
     }
 }
