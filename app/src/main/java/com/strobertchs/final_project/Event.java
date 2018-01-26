@@ -17,7 +17,7 @@ public class Event
     private int sleepReducer;
 
     /**
-     * Sets the effects of an Event when the "No" or "Yes" button is pressed
+     * Creates an Event and sets the effects of an Event when the "No" or "Yes" button is pressed
      * @param theEventMessage The description of the Event
      * @param aMoney Money applied when "Yes" is pressed
      * @param aSocial Social applied when "Yes" is pressed

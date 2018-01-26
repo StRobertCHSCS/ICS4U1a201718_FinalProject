@@ -29,7 +29,7 @@ public class Randomizer
     private Event event21;
 
     /**
-     * Sets up the randomizer and it's boundaries
+     * Creates the Randomizer and it's boundaries
      */
     public Randomizer(){
         rand = new Random();
