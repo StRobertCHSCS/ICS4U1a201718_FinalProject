@@ -21,6 +21,8 @@ public class GlobalAttributes
     public static int understandingAtt = 0;
     public static int numQuestionAnswered;
 
+    public static final String ServerFullUrl = "";
+
     //the question getter in use
     public static QuestionGetterBase questionGetter = new QuestionGetterMock();
 
