@@ -6,9 +6,11 @@ import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
+import com.ethanmajidi.javagame.Items.Item;
 import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Sprites.Enemy;
 import com.ethanmajidi.javagame.Sprites.InteractiveTileObject;
+import com.ethanmajidi.javagame.Sprites.Java;
 
 import java.util.jar.JarEntry;
 
@@ -51,6 +53,18 @@ public class WorldContactListener implements ContactListener {
             case JavaGame.ENEMY_BIT | JavaGame.ENEMY_BIT:
                 ((Enemy)fixA.getUserData()).reverseVelocity(true, false);
                 ((Enemy)fixB.getUserData()).reverseVelocity(true, false);
+                break;
+            case JavaGame.ITEM_BIT | JavaGame.OBJECT_BIT:
+                if(fixA.getFilterData().categoryBits == JavaGame.ITEM_BIT)
+                    ((Item)fixA.getUserData()).reverseVelocity(true, false);
+                else
+                    ((Item)fixB.getUserData()).reverseVelocity(true, false);
+                break;
+            case JavaGame.ITEM_BIT | JavaGame.PLAYER_BIT:
+                if(fixA.getFilterData().categoryBits == JavaGame.ITEM_BIT)
+                    ((Item)fixA.getUserData()).use((Java)fixB.getUserData());
+                else
+                    ((Item)fixB.getUserData()).use((Java)fixA.getUserData());
                 break;
 
         }
