@@ -27,17 +27,14 @@ public class WorldContactListener implements ContactListener {
         int cDef = fixA.getFilterData().categoryBits | fixB.getFilterData().categoryBits;
 
 
-
-        if(fixA.getUserData() == "head" || fixB.getUserData() == "head"){
-            Fixture head = fixA.getUserData() == "head" ? fixA : fixB;
-            Fixture object = head == fixA ? fixB : fixA;
-
-            if(object.getUserData() != null && InteractiveTileObject.class.isAssignableFrom(object.getUserData().getClass())){
-                ((InteractiveTileObject) object.getUserData()).onHeadHit();
-            }
-        }
-
         switch (cDef){
+            case JavaGame.PLAYER_HEAD_BIT | JavaGame.BRICK_BIT:
+            case JavaGame.PLAYER_HEAD_BIT | JavaGame.COIN_BIT:
+                if(fixA.getFilterData().categoryBits == JavaGame.PLAYER_HEAD_BIT)
+                    ((InteractiveTileObject) fixB.getUserData()).onHeadHit();
+                else
+                    ((InteractiveTileObject) fixA.getUserData()).onHeadHit();
+                break;
             case JavaGame.ENEMY_HEAD_BIT | JavaGame.PLAYER_BIT:
                 if(fixA.getFilterData().categoryBits == JavaGame.ENEMY_HEAD_BIT)
                     ((Enemy)fixA.getUserData()).hitOnHead();

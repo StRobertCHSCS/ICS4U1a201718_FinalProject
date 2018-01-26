@@ -159,9 +159,10 @@ public class Java extends Sprite {
 
         EdgeShape head = new EdgeShape();
         head.set(new Vector2(-2/JavaGame.PPM, 6/JavaGame.PPM), new Vector2(2/JavaGame.PPM, 6/JavaGame.PPM));
+        fdef.filter.categoryBits = JavaGame.PLAYER_HEAD_BIT;
         fdef.shape = head;
         fdef.isSensor = true;
 
-        b2body.createFixture(fdef).setUserData("head");
+        b2body.createFixture(fdef).setUserData(this);
     }
 }
