@@ -22,10 +22,14 @@ import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.ethanmajidi.javagame.Items.Item;
+import com.ethanmajidi.javagame.Items.ItemDef;
+import com.ethanmajidi.javagame.Items.Mushroom;
 import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Scenes.Hud;
 import com.ethanmajidi.javagame.Sprites.Enemy;
@@ -36,6 +40,7 @@ import com.ethanmajidi.javagame.Tools.B2WorldCreator;
 
 import com.ethanmajidi.javagame.Tools.WorldContactListener;
 
+import java.util.concurrent.LinkedBlockingQueue;
 
 
 /**
@@ -64,6 +69,10 @@ public class PlayScreen  implements Screen {
 
     //Sprites
     private Java player;
+
+    private Array<Item> items;
+    private LinkedBlockingQueue<ItemDef> itemsToSpawn;
+
 
 
     //audio.music
@@ -112,11 +121,20 @@ public class PlayScreen  implements Screen {
         //music.setLooping(true);
         //music.play();
 
+        items = new Array<Item>();
+        itemsToSpawn = new LinkedBlockingQueue<ItemDef>();
 
-
-
-
-
+    }
+    public void spawnItem(ItemDef idef){
+        itemsToSpawn.add(idef);
+    }
+    public void handleSpawningItems(){
+        if(!itemsToSpawn.isEmpty()){
+            ItemDef idef = itemsToSpawn.poll();
+            if(idef.type == Mushroom.class){
+                items.add(new Mushroom(this, idef.position.x, idef.position.y));
+            }
+        }
     }
 
     public TextureAtlas getAtlas(){
@@ -141,7 +159,7 @@ public class PlayScreen  implements Screen {
     public void update(float dt){
         //handle user input
         handleInput(dt);
-
+        handleSpawningItems();
         //takes 1 step in the physics simulation (60 times per second)
         world.step(1/60f, 6, 2);
 
@@ -152,6 +170,10 @@ public class PlayScreen  implements Screen {
             if(enemy.getX()< player.getX() + 224 / JavaGame.PPM)
                 enemy.b2body.setActive(true);
         }
+
+        for(Item item : items)
+            item.update(dt);
+
         hud.update(dt);
 
         //attach our gamecam to our player x coordinates
@@ -182,6 +204,8 @@ public class PlayScreen  implements Screen {
         player.draw(game.batch);
         for(Enemy enemy : creator.getGoombas())
             enemy.draw(game.batch);
+        for(Item item : items)
+            item.draw(game.batch);
         game.batch.end();
 
         //Set our batch to now draw what the hud sees

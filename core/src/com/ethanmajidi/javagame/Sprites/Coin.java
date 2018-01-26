@@ -2,6 +2,7 @@ package com.ethanmajidi.javagame.Sprites;
 
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.maps.tiled.TiledMapTileSet;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.Gdx;
 
@@ -12,6 +13,8 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
+import com.ethanmajidi.javagame.Items.ItemDef;
+import com.ethanmajidi.javagame.Items.Mushroom;
 import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Scenes.Hud;
 import com.ethanmajidi.javagame.Screens.PlayScreen;
@@ -39,6 +42,7 @@ public class Coin extends InteractiveTileObject{
         if (isActive) {
             Hud.addScore(100);
             isActive = false;
+            screen.spawnItem(new ItemDef(new Vector2(body.getPosition().x, body.getPosition().y + 16 / JavaGame.PPM), Mushroom.class));
 
         }
 
