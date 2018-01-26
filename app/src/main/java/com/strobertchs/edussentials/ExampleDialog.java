@@ -37,7 +37,7 @@ public class ExampleDialog extends AppCompatDialogFragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                     }
-                });
+                });w
         editTextMark = view.findViewById(R.id.edit_markinput);
         editTextWeight = view.findViewById(R.id.edit_weightinput);
 

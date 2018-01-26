@@ -27,6 +27,8 @@ public class AverageCalculator extends AppCompatActivity {
         });
     }
     public void openDialog(){
+        ExampleDialog exampleDialog = new ExampleDialog();
+        exampleDialog.show(getSupportFragmentManager(), "example dialog");
 
     }
 }
