@@ -8,8 +8,6 @@ import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Screens.PlayScreen;
 import com.ethanmajidi.javagame.Sprites.Java;
 
-import javax.tools.JavaCompiler;
-
 /**
  * Created by EthanMajidi on 2018-01-25.
  */
@@ -32,7 +30,7 @@ public class Mushroom extends Item{
         CircleShape shape = new CircleShape();
         shape.setRadius(6 / JavaGame.PPM);
         fdef.filter.categoryBits = JavaGame.ITEM_BIT;
-        fdef.filter.maskBits = JavaGame.PLAYER_BIT | JavaGame.OBJECT_BIT | JavaGame.GROUND_BIT | JavaGame.COIN_BIT | JavaGame.BRICK_BIT;
+        fdef.filter.maskBits = JavaGame.PLAYER_BIT | JavaGame.OBJECT_BIT | JavaGame.GROUND_BIT | JavaGame.COIN_BIT;
 
         fdef.shape = shape;
         body.createFixture(fdef).setUserData(this);

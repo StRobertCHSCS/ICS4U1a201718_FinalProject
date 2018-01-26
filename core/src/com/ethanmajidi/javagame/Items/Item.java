@@ -47,11 +47,11 @@ public abstract class Item extends Sprite{
     public void destroy(){
         toDestroy = true;
     }
+
     public void reverseVelocity(boolean x, boolean y){
         if(x)
             velocity.x = -velocity.x;
         if(y)
             velocity.y = -velocity.y;
     }
-
 }

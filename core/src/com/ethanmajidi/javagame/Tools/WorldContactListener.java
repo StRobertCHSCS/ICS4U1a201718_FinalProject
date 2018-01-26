@@ -62,9 +62,9 @@ public class WorldContactListener implements ContactListener {
                 break;
             case JavaGame.ITEM_BIT | JavaGame.PLAYER_BIT:
                 if(fixA.getFilterData().categoryBits == JavaGame.ITEM_BIT)
-                    ((Item)fixA.getUserData()).use((Java)fixB.getUserData());
+                    ((Item)fixA.getUserData()).use((Java) fixB.getUserData());
                 else
-                    ((Item)fixB.getUserData()).use((Java)fixA.getUserData());
+                    ((Item)fixB.getUserData()).use((Java) fixA.getUserData());
                 break;
 
         }
