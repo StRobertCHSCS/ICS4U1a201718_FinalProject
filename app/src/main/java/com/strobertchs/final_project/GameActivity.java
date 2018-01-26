@@ -54,35 +54,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Event groupProjectAlone = new Event("do a group project by yourself", 0, -20, 20, -10,  0, 20, -20, -10);
     Event communityService = new Event ("volunteer in a community service project", 0, 30, 0, -10, 0, -30, 0, 10);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
-
-        textObjectMoney = (TextView) findViewById(R.id.textMoney);
-        textObjectSocial = (TextView) findViewById(R.id.textSocial);
-        textObjectGrades = (TextView) findViewById(R.id.textGrades);
-        textObjectSleep = (TextView) findViewById(R.id.textSleep);
-
-        textObjectMoneyBar = (TextView) findViewById(R.id.textMoneyBar);
-        textObjectSocialBar = (TextView) findViewById(R.id.textSocialBar);
-        textObjectGradesBar = (TextView) findViewById(R.id.textGradesBar);
-        textObjectSleepBar = (TextView) findViewById(R.id.textSleepBar);
-
-        textObjectEvent = (TextView) findViewById(R.id.textEvent);
-        textObjectCurrentGrade = (TextView) findViewById(R.id.textCurrentGrade);
-        buttonObjectYes = (Button) findViewById(R.id.buttonYes);
-        buttonObjectNo = (Button) findViewById(R.id.buttonNo);
-
-        buttonObjectYes.setOnClickListener(this);
-        buttonObjectNo.setOnClickListener(this);
-
-        makeTurn();
-        updateStudentStatus();
-        updateStudentStatusBars();
-        updateEvent();
-    }//onCreate ends here
-
     Intent i;
     void calculateCurrentGrade() {
         if(student.getCurrentEventNum() >= 4 && student.getCurrentEventNum() <= 7) {
@@ -97,74 +68,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             student.setWinOrLose("win");
         }
     }
-
-
-    void makeTurn(){
-        event = random.pickEvent(allNighter, doYourHomework, extraCurricular, partTimeJob, party, attendFamilyDinner, prepareForPresentation, skipClass, doDrugs, hangOut, vacation, sleepIn, getTutor, attendSchoolSick, procrastinate, playVideoGames, cram, attendSchoolRetreat, contest, groupProjectAlone, communityService);
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.buttonYes:
-                if(student.getMoney() + event.getMoneyAdder() <= 100){
-                    student.setMoney(student.getMoney() + event.getMoneyAdder());
-                }else {
-                    student.setMoney(100);
-                }
-                if(student.getSocial() + event.getSocialAdder() <= 100){
-                    student.setSocial(student.getSocial() + event.getSocialAdder());
-                }else {
-                    student.setSocial(100);
-                }
-                if(student.getGrades() + event.getGradesAdder() <= 100){
-                    student.setGrades(student.getGrades() + event.getGradesAdder());
-                }else {
-                    student.setGrades(100);
-                }
-                if(student.getSleep() + event.getSleepAdder() <= 100){
-                    student.setSleep(student.getSleep() + event.getSleepAdder());
-                }else {
-                    student.setSleep(100);
-                }
-                checkIfLose();
-                student.increaseCurrentEventNum();
-                updateStudentStatusBars();
-                calculateCurrentGrade();
-                break;
-
-            case R.id.buttonNo:
-                if(student.getMoney() + event.getMoneyReducer() <= 100){
-                    student.setMoney(student.getMoney() + event.getMoneyReducer());
-                }else {
-                    student.setMoney(100);
-                }
-                if(student.getSocial() + event.getSocialReducer() <= 100){
-                    student.setSocial(student.getSocial() + event.getSocialReducer());
-                }else {
-                    student.setSocial(100);
-                }
-                if(student.getGrades() + event.getGradesReducer() <= 100){
-                    student.setGrades(student.getGrades() + event.getGradesReducer());
-                }else {
-                    student.setGrades(100);
-                }
-                if(student.getSleep() + event.getSleepReducer() <= 100){
-                    student.setSleep(student.getSleep() + event.getSleepReducer());
-                }else {
-                    student.setSleep(100);
-                }
-                checkIfLose();
-                student.increaseCurrentEventNum();
-                updateStudentStatusBars();
-                calculateCurrentGrade();
-                break;
-        }
-        makeTurn();
-        updateStudentStatus();
-        updateEvent();
-    }
-
     void checkIfLose(){
         if(student.getMoney() <= 0){
             i = new Intent(this, GameOverActivity.class);
@@ -184,6 +87,11 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             student.setWinOrLose("lose");
         }
     }
+
+    void makeTurn(){
+        event = random.pickEvent(allNighter, doYourHomework, extraCurricular, partTimeJob, party, attendFamilyDinner, prepareForPresentation, skipClass, doDrugs, hangOut, vacation, sleepIn, getTutor, attendSchoolSick, procrastinate, playVideoGames, cram, attendSchoolRetreat, contest, groupProjectAlone, communityService);
+    }
+
     void updateStudentStatus() {
         textObjectMoney.setText("Money: " + student.getMoney());
         textObjectSocial.setText("Social: " + student.getSocial());
@@ -301,5 +209,96 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         textObjectSocialBar.setText("[" + socialBarLines + "]");
         textObjectGradesBar.setText("[" + gradesBarLines + "]");
         textObjectSleepBar.setText("[" + sleepBarLines + "]");
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_game);
+
+        textObjectMoney = (TextView) findViewById(R.id.textMoney);
+        textObjectSocial = (TextView) findViewById(R.id.textSocial);
+        textObjectGrades = (TextView) findViewById(R.id.textGrades);
+        textObjectSleep = (TextView) findViewById(R.id.textSleep);
+
+        textObjectMoneyBar = (TextView) findViewById(R.id.textMoneyBar);
+        textObjectSocialBar = (TextView) findViewById(R.id.textSocialBar);
+        textObjectGradesBar = (TextView) findViewById(R.id.textGradesBar);
+        textObjectSleepBar = (TextView) findViewById(R.id.textSleepBar);
+
+        textObjectEvent = (TextView) findViewById(R.id.textEvent);
+        textObjectCurrentGrade = (TextView) findViewById(R.id.textCurrentGrade);
+        buttonObjectYes = (Button) findViewById(R.id.buttonYes);
+        buttonObjectNo = (Button) findViewById(R.id.buttonNo);
+
+        buttonObjectYes.setOnClickListener(this);
+        buttonObjectNo.setOnClickListener(this);
+
+        makeTurn();
+        updateStudentStatus();
+        updateStudentStatusBars();
+        updateEvent();
+    }//onCreate ends here
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.buttonYes:
+                if(student.getMoney() + event.getMoneyAdder() <= 100){
+                    student.setMoney(student.getMoney() + event.getMoneyAdder());
+                }else {
+                    student.setMoney(100);
+                }
+                if(student.getSocial() + event.getSocialAdder() <= 100){
+                    student.setSocial(student.getSocial() + event.getSocialAdder());
+                }else {
+                    student.setSocial(100);
+                }
+                if(student.getGrades() + event.getGradesAdder() <= 100){
+                    student.setGrades(student.getGrades() + event.getGradesAdder());
+                }else {
+                    student.setGrades(100);
+                }
+                if(student.getSleep() + event.getSleepAdder() <= 100){
+                    student.setSleep(student.getSleep() + event.getSleepAdder());
+                }else {
+                    student.setSleep(100);
+                }
+                checkIfLose();
+                student.increaseCurrentEventNum();
+                updateStudentStatusBars();
+                calculateCurrentGrade();
+                break;
+
+            case R.id.buttonNo:
+                if(student.getMoney() + event.getMoneyReducer() <= 100){
+                    student.setMoney(student.getMoney() + event.getMoneyReducer());
+                }else {
+                    student.setMoney(100);
+                }
+                if(student.getSocial() + event.getSocialReducer() <= 100){
+                    student.setSocial(student.getSocial() + event.getSocialReducer());
+                }else {
+                    student.setSocial(100);
+                }
+                if(student.getGrades() + event.getGradesReducer() <= 100){
+                    student.setGrades(student.getGrades() + event.getGradesReducer());
+                }else {
+                    student.setGrades(100);
+                }
+                if(student.getSleep() + event.getSleepReducer() <= 100){
+                    student.setSleep(student.getSleep() + event.getSleepReducer());
+                }else {
+                    student.setSleep(100);
+                }
+                checkIfLose();
+                student.increaseCurrentEventNum();
+                updateStudentStatusBars();
+                calculateCurrentGrade();
+                break;
+        }
+        makeTurn();
+        updateStudentStatus();
+        updateEvent();
     }
 }
