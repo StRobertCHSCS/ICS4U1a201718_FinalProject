@@ -10,8 +10,8 @@ import java.util.List;
  */
 
 @Dao
-public interface UserInfoDao {
-
-    //@Query("SELECT * FROM userInfo") working on something else atm
-
+public interface UserInfoDao
+{
+    @Query("SELECT * FROM userInfo")
+    List<UserInfoRoom> getAll();
 }
