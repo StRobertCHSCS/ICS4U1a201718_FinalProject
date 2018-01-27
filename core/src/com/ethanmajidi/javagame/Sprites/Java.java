@@ -8,6 +8,8 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.EdgeShape;
+import com.badlogic.gdx.physics.box2d.Filter;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
@@ -19,7 +21,7 @@ import com.ethanmajidi.javagame.Screens.PlayScreen;
  */
 
 public class Java extends Sprite {
-    public enum State { FALLING, JUMPING, STANDING, RUNNING, GROWING};
+    public enum State { FALLING, JUMPING, STANDING, RUNNING, GROWING, DEAD};
     public State currentState;
     public State previousState;
 
@@ -29,6 +31,7 @@ public class Java extends Sprite {
     private TextureRegion playerStand;
     private Animation <TextureRegion> playerRun;
     private TextureRegion playerJump;
+    private TextureRegion playerDead;
     private TextureRegion bigPlayerStand;
     private TextureRegion bigPlayerJump;
     private Animation <TextureRegion> bigPlayerRun;
@@ -40,6 +43,7 @@ public class Java extends Sprite {
     private boolean runGrowAnimation;
     private boolean timeToDefineBigPlayer;
     private boolean timeToRedefinePlayer;
+    private boolean playerIsDead;
 
     public Java(PlayScreen screen){
         //initialize default values
@@ -75,6 +79,9 @@ public class Java extends Sprite {
         playerStand = new TextureRegion(screen.getAtlas().findRegion("little_mario"), 0, 0, 16, 16);
         bigPlayerStand = new TextureRegion(screen.getAtlas().findRegion("big_mario"), 0,0,16,32);
 
+        //create dead player texture region
+        playerDead = new TextureRegion(screen.getAtlas().findRegion("little_mario"), 96, 0, 16, 16);
+
         defineMario();
         setBounds(0, 0, 16 / JavaGame.PPM, 16 / JavaGame.PPM);
         setRegion(playerStand);
@@ -99,6 +106,9 @@ public class Java extends Sprite {
 
         TextureRegion region;
         switch(currentState){
+            case DEAD:
+                region = playerDead;
+                break;
             case GROWING:
                 region = growPlayer.getKeyFrame(stateTimer);
                 if(growPlayer.isAnimationFinished(stateTimer))
@@ -133,7 +143,9 @@ public class Java extends Sprite {
     }
 
     public State getState(){
-        if(runGrowAnimation)
+        if(playerIsDead)
+            return State.DEAD;
+        else if(runGrowAnimation)
             return State.GROWING;
         else if(b2body.getLinearVelocity().y > 0 || (b2body.getLinearVelocity().y < 0 && previousState == State.JUMPING))
             return State.JUMPING;
@@ -144,23 +156,43 @@ public class Java extends Sprite {
         else
             return State.STANDING;
     }
-    public  void grow(){
+    public void grow(){
         runGrowAnimation = true;
         playerIsBig = true;
         timeToDefineBigPlayer = true;
         setBounds(getX(), getY(), getWidth(), getHeight() *2);
 
     }
+
+    public boolean isDead() {
+        return playerIsDead;
+    }
+
+    public float getStateTimer() {
+        return stateTimer;
+    }
+
     public boolean isBig(){
         return playerIsBig;
     }
-    public void hit(){
-        if(playerIsBig)
+
+    public void hit() {
+        if (playerIsBig) {
             playerIsBig = false;
             timeToRedefinePlayer = true;
-            setBounds(getX(), getY(), getWidth(),getHeight()/2);
+            setBounds(getX(), getY(), getWidth(), getHeight() / 2);
+        } else {
+            playerIsDead = true;
+            Filter filter = new Filter();
+            filter.maskBits = JavaGame.NOTHING_BIT;
+            for (Fixture fixture : b2body.getFixtureList())
+                fixture.setFilterData(filter);
+            b2body.applyLinearImpulse(new Vector2(0, 4f), b2body.getWorldCenter(), true);
+
+        }
 
     }
+
 
     public void redefinePlayer(){
         Vector2 position = b2body.getPosition();

@@ -38,6 +38,7 @@ import com.ethanmajidi.javagame.Sprites.Java;
 import com.ethanmajidi.javagame.Sprites.Mario;
 import com.ethanmajidi.javagame.Tools.B2WorldCreator;
 
+
 import com.ethanmajidi.javagame.Tools.WorldContactListener;
 
 import java.util.concurrent.LinkedBlockingQueue;
@@ -72,8 +73,6 @@ public class PlayScreen  implements Screen {
 
     private Array<Item> items;
     private LinkedBlockingQueue<ItemDef> itemsToSpawn;
-
-
 
     //audio.music
     //private Music music;
@@ -148,13 +147,25 @@ public class PlayScreen  implements Screen {
     }
     //maybe use double instead of float
     public void handleInput(float dt){
-        if(Gdx.input.isKeyJustPressed(Input.Keys.UP))
-            player.b2body.applyLinearImpulse(new Vector2(0, 4f),player.b2body.getWorldCenter(), true);
-        if(Gdx.input.isKeyPressed(Input.Keys.RIGHT)&& player.b2body.getLinearVelocity().x <= 2)
-            player.b2body.applyLinearImpulse(new Vector2(0.1f, 0),player.b2body.getWorldCenter(), true);
-        if(Gdx.input.isKeyPressed(Input.Keys.LEFT)&& player.b2body.getLinearVelocity().x >= -2)
-            player.b2body.applyLinearImpulse(new Vector2(-0.1f, 0),player.b2body.getWorldCenter(), true);
-    }
+
+        if(player.currentState != Java.State.DEAD) {
+           if (Gdx.input.isKeyJustPressed(Input.Keys.UP))
+                player.b2body.applyLinearImpulse(new Vector2(0, 4f), player.b2body.getWorldCenter(), true);
+           if (Gdx.input.isKeyPressed(Input.Keys.RIGHT) && player.b2body.getLinearVelocity().x <= 2)
+                player.b2body.applyLinearImpulse(new Vector2(0.1f, 0), player.b2body.getWorldCenter(), true);
+           if (Gdx.input.isKeyPressed(Input.Keys.LEFT) && player.b2body.getLinearVelocity().x >= -2)
+                player.b2body.applyLinearImpulse(new Vector2(-0.1f, 0), player.b2body.getWorldCenter(), true);
+           }
+        }
+
+    public void checkGameOver(){
+
+        if(player.currentState == Java.State.DEAD && player.getStateTimer() > 3){
+            dispose();
+            game.setScreen(new GameOverScreen(game));
+            }
+        }
+
 
     public void update(float dt){
         //handle user input
@@ -177,7 +188,10 @@ public class PlayScreen  implements Screen {
         hud.update(dt);
 
         //attach our gamecam to our player x coordinates
-        gamecam.position.x = player.b2body.getPosition().x;
+        if(player.currentState != Java.State.DEAD) {
+            gamecam.position.x = player.b2body.getPosition().x;
+        }
+
         //update our gamecam after changes
         gamecam.update();
         //tell our render what our camera can see
@@ -211,6 +225,21 @@ public class PlayScreen  implements Screen {
         //Set our batch to now draw what the hud sees
         game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
         hud.stage.draw();
+
+
+        if(gameOver()){
+            game.setScreen(new GameOverScreen(game));
+            dispose();
+        }
+
+
+    }
+
+    public boolean gameOver() {
+        if(player.currentState == Java.State.DEAD && player.getStateTimer() > 3) {
+            return true;
+        }
+        return false;
     }
 
     @Override
