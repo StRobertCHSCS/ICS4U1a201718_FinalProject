@@ -55,4 +55,5 @@
     <string name="can_climb">Can Climb</string>
     <string name="gives_assistance">Gives Assistance</string>
     <string name="with_assistance">With Assistance</string>
+    <string name="team_name">Team Name</string>
 </resources>
