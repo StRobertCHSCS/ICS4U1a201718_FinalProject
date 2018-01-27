@@ -23,7 +23,8 @@
         android:layout_below="@+id/textview_markinput"
         android:gravity="center_horizontal"
         android:text="Weight factor"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:inputType="numberDecimal"/>
 
     <Button
         android:id="@+id/dialogbutton"
@@ -31,7 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textview_weightfactor"
         android:layout_centerHorizontal="true"
-        android:text="Open Dialog" />
+        android:text="Open Dialog"
+        android:inputType="numberDecimal"/>
 
     <EditText
         android:id="@+id/TotalMarkID"

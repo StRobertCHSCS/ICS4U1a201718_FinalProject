@@ -11,18 +11,12 @@ public class AverageCalculator extends AppCompatActivity implements ExampleDialo
     private TextView textviewWeightFactor;
     private Button button;
     private TextView textviewGrade;
-    private double totalgrade;
-    private double totalweightfactor;
-    private double mymark;
-    private double newweight;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_average_calculator);
-
-        totalgrade = 0;
-        totalweightfactor = 0;
 
         textviewMarkinput = (TextView) findViewById(R.id.textview_markinput);
         textviewWeightFactor = (TextView) findViewById(R.id.textview_weightfactor);
@@ -46,9 +40,5 @@ public class AverageCalculator extends AppCompatActivity implements ExampleDialo
         textviewMarkinput.setText(mark);
         textviewWeightFactor.setText(weight);
     }
-
-    @Override
-
-
 
 }
