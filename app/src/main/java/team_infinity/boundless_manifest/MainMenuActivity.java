@@ -29,6 +29,7 @@ public class MainMenuActivity extends AppCompatActivity
     private PopupWindow pop1;
     FragmentManager fm = getSupportFragmentManager();
     FragmentTransaction ft = getFragmentManager().beginTransaction();
+    FragmentManager statsFm;
     AppDatabase db;
 
 
@@ -56,15 +57,19 @@ public class MainMenuActivity extends AppCompatActivity
 
         //for testing purposes
         //this is the compass image button at the downleft corner
-        ImageButton ib = (ImageButton) findViewById(R.id.imageButton);
-        ib.setOnClickListener(new View.OnClickListener()
+        ImageButton stats = (ImageButton) findViewById(R.id.imageButton);
+        stats.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
+                StatisticsPopUp statsPop = new StatisticsPopUp();
+                statsPop.show(statsFm, "Statistics Pop-up");
+                /*
                 //for test purpose
                 Log.d("qst", "MainMenuActivity.ib.OnClickListener.OnClick(): called");
                 GlobalAttributes.questionGetter2.getQuestion(4274997763828313469l);
+                */
             }
         });
 
