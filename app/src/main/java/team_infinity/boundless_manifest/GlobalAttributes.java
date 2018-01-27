@@ -19,7 +19,7 @@ public class GlobalAttributes
     public static int knowledgeAtt = 0;
     public static int thinkingAtt = 0;
     public static int understandingAtt = 0;
-    public static int numQuestionAnswered;
+    public static int numQuestionAnswered = 0;
 
     //this url is temporary, 10.0.2.2 let emulator access the mother system(my laptop)'s localhost ip
     public static final String ServerFullUrl = "http://10.0.2.2:8080/BM_server/qestn";

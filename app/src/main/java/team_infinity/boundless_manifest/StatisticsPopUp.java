@@ -5,4 +5,5 @@ package team_infinity.boundless_manifest;
  */
 
 public class StatisticsPopUp {
+
 }

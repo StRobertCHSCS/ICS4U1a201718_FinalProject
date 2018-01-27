@@ -23,7 +23,7 @@ public class UserInfoRoom {
     private String answer2;
     private String answer3;
     private String answer4;
-    private String corrAns; //correctAnswer
+    private int corrAns; //correctAnswer
 
     //attributes to the question, and how many they currently have
     private int thinkingAtt;
