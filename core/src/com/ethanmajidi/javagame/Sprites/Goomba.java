@@ -90,7 +90,7 @@ public class Goomba extends Enemy {
     }
 
     @Override
-    public void hitOnHead() {
+    public void hitOnHead(Java java) {
         setToDestroy = true;
 
     }

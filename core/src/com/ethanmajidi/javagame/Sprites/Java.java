@@ -176,20 +176,26 @@ public class Java extends Sprite {
         return playerIsBig;
     }
 
-    public void hit() {
-        if (playerIsBig) {
-            playerIsBig = false;
-            timeToRedefinePlayer = true;
-            setBounds(getX(), getY(), getWidth(), getHeight() / 2);
-        } else {
-            playerIsDead = true;
-            Filter filter = new Filter();
-            filter.maskBits = JavaGame.NOTHING_BIT;
-            for (Fixture fixture : b2body.getFixtureList())
-                fixture.setFilterData(filter);
-            b2body.applyLinearImpulse(new Vector2(0, 4f), b2body.getWorldCenter(), true);
-
+    public void hit(Enemy enemy) {
+        if(enemy instanceof Turtle && ((Turtle)enemy).getCurrentState() == Turtle.State.STANDING_SHELL){
+            ((Turtle)enemy).kick(this.getX() <= enemy.getX() ? Turtle.KICK_RIGHT_SPEED : Turtle.KICK_LEFT_SPEED);
         }
+        else {
+            if (playerIsBig) {
+                playerIsBig = false;
+                timeToRedefinePlayer = true;
+                setBounds(getX(), getY(), getWidth(), getHeight() / 2);
+            } else {
+                playerIsDead = true;
+                Filter filter = new Filter();
+                filter.maskBits = JavaGame.NOTHING_BIT;
+                for (Fixture fixture : b2body.getFixtureList())
+                    fixture.setFilterData(filter);
+                b2body.applyLinearImpulse(new Vector2(0, 4f), b2body.getWorldCenter(), true);
+            }
+        }
+
+
 
     }
 

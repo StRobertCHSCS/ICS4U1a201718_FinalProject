@@ -37,9 +37,9 @@ public class WorldContactListener implements ContactListener {
                 break;
             case JavaGame.ENEMY_HEAD_BIT | JavaGame.PLAYER_BIT:
                 if(fixA.getFilterData().categoryBits == JavaGame.ENEMY_HEAD_BIT)
-                    ((Enemy)fixA.getUserData()).hitOnHead();
+                    ((Enemy)fixA.getUserData()).hitOnHead((Java) fixB.getUserData());
                 else
-                    ((Enemy)fixB.getUserData()).hitOnHead();
+                    ((Enemy)fixB.getUserData()).hitOnHead((Java) fixA.getUserData());
                 break;
             case JavaGame.ENEMY_BIT | JavaGame.OBJECT_BIT:
                 if(fixA.getFilterData().categoryBits == JavaGame.ENEMY_BIT)
@@ -49,9 +49,9 @@ public class WorldContactListener implements ContactListener {
                 break;
             case JavaGame.PLAYER_BIT | JavaGame.ENEMY_BIT:
                 if(fixA.getFilterData().categoryBits == JavaGame.PLAYER_BIT)
-                    ((Java) fixA.getUserData()).hit();
+                    ((Java) fixA.getUserData()).hit((Enemy)fixB.getUserData());
                 else
-                    ((Java) fixB.getUserData()).hit();
+                    ((Java) fixB.getUserData()).hit((Enemy)fixA.getUserData());
                 break;
             case JavaGame.ENEMY_BIT | JavaGame.ENEMY_BIT:
                 ((Enemy)fixA.getUserData()).reverseVelocity(true, false);
