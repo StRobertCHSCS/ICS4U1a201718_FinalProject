@@ -96,7 +96,7 @@ public class AjaxQuestionGetter implements QuestionGetterBase
         }
         catch(org.json.JSONException e)//handle exception
         {
-            Log.e("json", "AjaxQuestionGetter.createJsonObject(): exception: " + e.getMessage());
+            Log.e("json", "AjaxQuestionGetter.createJsonObjectToString(): exception: " + e.getMessage());
         }
 
         return requestBody.toString();
