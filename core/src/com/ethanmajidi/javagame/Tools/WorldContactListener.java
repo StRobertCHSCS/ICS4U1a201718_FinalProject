@@ -54,8 +54,8 @@ public class WorldContactListener implements ContactListener {
                     ((Java) fixB.getUserData()).hit((Enemy)fixA.getUserData());
                 break;
             case JavaGame.ENEMY_BIT | JavaGame.ENEMY_BIT:
-                ((Enemy)fixA.getUserData()).reverseVelocity(true, false);
-                ((Enemy)fixB.getUserData()).reverseVelocity(true, false);
+                ((Enemy)fixA.getUserData()).onEnemyHit((Enemy)fixB.getUserData());
+                ((Enemy)fixB.getUserData()).onEnemyHit((Enemy)fixA.getUserData());
                 break;
             case JavaGame.ITEM_BIT | JavaGame.OBJECT_BIT:
                 if(fixA.getFilterData().categoryBits == JavaGame.ITEM_BIT)

@@ -32,8 +32,10 @@ public abstract class Enemy extends Sprite {
         if(y)
             velocity.y = -velocity.y;
     }
-
     protected abstract void defineEnemy();
     public abstract void update(float dt);
     public abstract void hitOnHead(Java java);
+    public abstract void onEnemyHit(Enemy enemy);
+
+
 }
