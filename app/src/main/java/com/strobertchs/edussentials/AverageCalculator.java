@@ -48,7 +48,7 @@ public class AverageCalculator extends AppCompatActivity implements ExampleDialo
     }
 
     @Override
-    
+
 
 
 }

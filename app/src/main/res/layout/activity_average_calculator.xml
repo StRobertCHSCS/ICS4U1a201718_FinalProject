@@ -31,10 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textview_weightfactor"
         android:layout_centerHorizontal="true"
-<<<<<<< HEAD
         android:text="Open Dialog" />
-=======
-        />
 
     <EditText
         android:id="@+id/TotalMarkID"
@@ -45,5 +42,5 @@
         android:ems="10"
         android:inputType="numberDecimal"
         android:text="Your Mark in Course" />
->>>>>>> da275d461854952a3b42b0780315a42db914d7bd
+
 </RelativeLayout>
