@@ -1,13 +1,14 @@
 package com.ethanmajidi.javagame.Screens;
 
-import com.badlogic.gdx.Game;
+
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
+import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
@@ -50,6 +51,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class PlayScreen  implements Screen {
     //Reference to our game for setting screens
+    public static SpriteBatch batch;
     private JavaGame game;
     private TextureAtlas atlas;
 
@@ -73,6 +75,7 @@ public class PlayScreen  implements Screen {
 
     private Array<Item> items;
     private LinkedBlockingQueue<ItemDef> itemsToSpawn;
+    Controller controller;
 
     //audio.music
     //private Music music;
@@ -85,6 +88,7 @@ public class PlayScreen  implements Screen {
         this.game = game;
         //Creates camera to follow mario
         gamecam = new OrthographicCamera();
+        batch = new SpriteBatch();
 
         //creates the fitviewport so that the game always fits the screen
         gamePort = new FitViewport(JavaGame.V_WIDTH /JavaGame.PPM,JavaGame.V_HEIGHT/JavaGame.PPM, gamecam);
@@ -106,6 +110,7 @@ public class PlayScreen  implements Screen {
         world = new World(new Vector2(0, -10), true);
         //allows debug lines in our world
         b2dr = new Box2DDebugRenderer();
+        controller = new Controller();
 
         creator = new B2WorldCreator(this);
         //Creates our player in the game world
@@ -146,17 +151,18 @@ public class PlayScreen  implements Screen {
 
     }
     //maybe use double instead of float
-    public void handleInput(float dt){
+    public void handleInput(){
+        if(controller.isRightpressed())
+            player.b2body.setLinearVelocity(new Vector2(1, player.b2body.getLinearVelocity().y));
+        else if(controller.isLeftPressed())
+            player.b2body.setLinearVelocity(new Vector2(-1, player.b2body.getLinearVelocity().y));
+        else
+            player.b2body.setLinearVelocity(new Vector2(0, player.b2body.getLinearVelocity().y));
+        if (controller.isUpPressed() && player.b2body.getLinearVelocity().y ==0)
+            player.b2body.applyLinearImpulse(new Vector2(0,5f), player.b2body.getWorldCenter(), true);
 
-        if(player.currentState != Java.State.DEAD) {
-           if (Gdx.input.isKeyJustPressed(Input.Keys.UP))
-                player.b2body.applyLinearImpulse(new Vector2(0, 4f), player.b2body.getWorldCenter(), true);
-           if (Gdx.input.isKeyPressed(Input.Keys.RIGHT) && player.b2body.getLinearVelocity().x <= 2)
-                player.b2body.applyLinearImpulse(new Vector2(0.1f, 0), player.b2body.getWorldCenter(), true);
-           if (Gdx.input.isKeyPressed(Input.Keys.LEFT) && player.b2body.getLinearVelocity().x >= -2)
-                player.b2body.applyLinearImpulse(new Vector2(-0.1f, 0), player.b2body.getWorldCenter(), true);
-           }
-        }
+    }
+
 
     public void checkGameOver(){
 
@@ -169,7 +175,7 @@ public class PlayScreen  implements Screen {
 
     public void update(float dt){
         //handle user input
-        handleInput(dt);
+        handleInput();
         handleSpawningItems();
         //takes 1 step in the physics simulation (60 times per second)
         world.step(1/60f, 6, 2);
@@ -212,6 +218,7 @@ public class PlayScreen  implements Screen {
 
         //renderer our Box2DDebugLines
         b2dr.render(world,gamecam.combined);
+        controller.draw();
 
         game.batch.setProjectionMatrix(gamecam.combined);
         game.batch.begin();
@@ -245,6 +252,7 @@ public class PlayScreen  implements Screen {
     @Override
     public void resize(int width, int height) {
         gamePort.update(width,height);
+        controller.resize(width, height);
     }
 
     public TiledMap getMap(){

@@ -21,6 +21,7 @@ import com.ethanmajidi.javagame.Screens.PlayScreen;
  */
 
 public class Java extends Sprite {
+
     public enum State { FALLING, JUMPING, STANDING, RUNNING, GROWING, DEAD};
     public State currentState;
     public State previousState;
@@ -283,4 +284,5 @@ public class Java extends Sprite {
 
         b2body.createFixture(fdef).setUserData(this);
     }
+
 }
