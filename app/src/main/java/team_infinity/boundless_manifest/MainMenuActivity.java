@@ -2,6 +2,7 @@ package team_infinity.boundless_manifest;
 
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.media.Image;
 import android.support.v4.app.DialogFragment;
@@ -28,6 +29,7 @@ public class MainMenuActivity extends AppCompatActivity
     private PopupWindow pop1;
     FragmentManager fm = getSupportFragmentManager();
     FragmentTransaction ft = getFragmentManager().beginTransaction();
+    AppDatabase db;
 
 
     @Override
@@ -65,5 +67,7 @@ public class MainMenuActivity extends AppCompatActivity
                 GlobalAttributes.questionGetter2.getQuestion(4274997763828313469l);
             }
         });
+
+        db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "user_info").build();
     }
 }
