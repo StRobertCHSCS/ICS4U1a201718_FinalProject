@@ -26,6 +26,7 @@ public class Controller {
         cam = new OrthographicCamera();
         viewport = new FitViewport(800, 400 ,cam);
         stage = new Stage(viewport, PlayScreen.batch);
+
         Gdx.input.setInputProcessor(stage);
 
         Table table = new Table();

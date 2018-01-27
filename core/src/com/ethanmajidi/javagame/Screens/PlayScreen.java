@@ -1,6 +1,7 @@
 package com.ethanmajidi.javagame.Screens;
 
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
@@ -218,6 +219,7 @@ public class PlayScreen  implements Screen {
 
         //renderer our Box2DDebugLines
         b2dr.render(world,gamecam.combined);
+
         controller.draw();
 
         game.batch.setProjectionMatrix(gamecam.combined);

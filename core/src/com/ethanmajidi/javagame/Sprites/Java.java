@@ -22,7 +22,7 @@ import com.ethanmajidi.javagame.Screens.PlayScreen;
 
 public class Java extends Sprite {
 
-    public enum State { FALLING, JUMPING, STANDING, RUNNING, GROWING, DEAD};
+    public enum State { FALLING, JUMPING, STANDING, RUNNING, GROWING, DEAD, WON};
     public State currentState;
     public State previousState;
 
@@ -33,6 +33,7 @@ public class Java extends Sprite {
     private Animation <TextureRegion> playerRun;
     private TextureRegion playerJump;
     private TextureRegion playerDead;
+
     private TextureRegion bigPlayerStand;
     private TextureRegion bigPlayerJump;
     private Animation <TextureRegion> bigPlayerRun;
@@ -82,6 +83,8 @@ public class Java extends Sprite {
 
         //create dead player texture region
         playerDead = new TextureRegion(screen.getAtlas().findRegion("little_mario"), 96, 0, 16, 16);
+
+
 
         defineMario();
         setBounds(0, 0, 16 / JavaGame.PPM, 16 / JavaGame.PPM);
@@ -186,7 +189,10 @@ public class Java extends Sprite {
                 playerIsBig = false;
                 timeToRedefinePlayer = true;
                 setBounds(getX(), getY(), getWidth(), getHeight() / 2);
-            } else {
+            }
+
+
+            else {
                 playerIsDead = true;
                 Filter filter = new Filter();
                 filter.maskBits = JavaGame.NOTHING_BIT;
