@@ -5,14 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="team_infinity.boundless_manifest.QuestionActivity"
-    tools:layout_editor_absoluteY="25dp"
-    android:background="@drawable/question_bg"
-    android:scaleType="centerCrop">
+    tools:layout_editor_absoluteY="25dp">
 
     <Button
         android:id="@+id/Choice1"
-        style="@style/QuestionButtonTheme"
-        android:layout_width="0dp"
+        android:layout_width="105dp"
         android:layout_height="64dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -25,8 +22,7 @@
 
     <Button
         android:id="@+id/Choice2"
-        style="@style/QuestionButtonTheme"
-        android:layout_width="0dp"
+        android:layout_width="105dp"
         android:layout_height="64dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -38,8 +34,7 @@
 
     <Button
         android:id="@+id/Choice3"
-        style="@style/QuestionButtonTheme"
-        android:layout_width="0dp"
+        android:layout_width="105dp"
         android:layout_height="64dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -51,8 +46,7 @@
 
     <Button
         android:id="@+id/Choice4"
-        style="@style/QuestionButtonTheme"
-        android:layout_width="0dp"
+        android:layout_width="105dp"
         android:layout_height="64dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -69,7 +63,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
-        android:text="Question"
+        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
