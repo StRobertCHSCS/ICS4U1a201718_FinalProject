@@ -17,7 +17,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/edit_markinput"
-        android:hint="Input Weight"
-        android:inputType="numberPassword" />
+        android:hint="Input Weight as Decimal"
+        android:inputType="numberDecimal" />
 
 </RelativeLayout>
