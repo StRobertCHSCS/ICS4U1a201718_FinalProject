@@ -42,15 +42,15 @@ public class FieldScoutingSheet extends Fragment{
                         String nameTeam = teamName.getText().toString();
                         String colourAlliance = allianceColour.getText().toString();
                         String numberMatch = matchNumber.getText().toString();
-                        if (nameTeam.equals("") || nameTeam.equals("Example Team #4001")) {
+                        if (nameTeam.equals("")) {
                             Toast.makeText(getContext(), "You did not enter a team name", 10).show();
                             break;
                         }
-                        else if (colourAlliance.equals("") || colourAlliance.equals("Insert Alliance Colour")) {
+                        else if (colourAlliance.equals("")) {
                             Toast.makeText(getContext(), "You did not enter an alliance colour", 10).show();
                             break;
                         }
-                        else if (numberMatch.equals("") || colourAlliance.equals("Insert Match #")) {
+                        else if (numberMatch.equals("")) {
                             Toast.makeText(getContext(), "You did not enter a match number", 10).show();
                             break;
                         }
