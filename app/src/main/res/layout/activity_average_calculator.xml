@@ -31,10 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textview_weightfactor"
         android:layout_centerHorizontal="true"
-<<<<<<< HEAD
-        android:text="Open Dialog" />
-=======
-        />
+        android:text="Dialog Button" />
 
     <EditText
         android:id="@+id/TotalMarkID"
