@@ -10,4 +10,11 @@ public class mathematicalCalculator {
     private double current_mark;
     private double current_weight;
 
+    public mathematicalCalculator(){
+        grade = 0;
+        total_weight = 0;
+        current_mark = 0;
+        current_weight = 0;
+    }
+
 }
