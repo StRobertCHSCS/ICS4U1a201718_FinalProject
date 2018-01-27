@@ -25,7 +25,7 @@ public class FieldScoutingSheet extends Fragment{
 
         //Initializes edit texts
         final EditText teamName = (EditText) view.findViewById(R.id.exampleTeam);
-        final EditText allianceColour = (EditText) view.findViewById(R.id.allianceColour);
+        final EditText allianceColour = (EditText) view.findViewById(R.id.insertAllianceColour);
         final EditText matchNumber = (EditText) view.findViewById(R.id.insertMatchNum);
 
         //Initializes finalization button
