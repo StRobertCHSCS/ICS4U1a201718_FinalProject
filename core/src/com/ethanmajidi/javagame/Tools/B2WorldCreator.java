@@ -9,13 +9,14 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.utils.Array;
 import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Screens.PlayScreen;
 import com.ethanmajidi.javagame.Sprites.Brick;
 import com.ethanmajidi.javagame.Sprites.Coin;
+import com.ethanmajidi.javagame.Sprites.Enemy;
 import com.ethanmajidi.javagame.Sprites.Goomba;
-
-import java.lang.reflect.Array;
+import com.ethanmajidi.javagame.Sprites.Turtle;
 
 /**
  * Created by EthanMajidi on 2018-01-21.
@@ -23,6 +24,8 @@ import java.lang.reflect.Array;
 
 public class B2WorldCreator {
     private com.badlogic.gdx.utils.Array<Goomba> goombas;
+    private com.badlogic.gdx.utils.Array<Turtle> turtles;
+
 
     public B2WorldCreator(PlayScreen screen){
         World world = screen.getWorld();
@@ -79,10 +82,24 @@ public class B2WorldCreator {
             goombas.add(new Goomba(screen, rect.getX() / JavaGame.PPM, rect.getY() / JavaGame.PPM));
 
         }
+        //create
+        turtles = new com.badlogic.gdx.utils.Array<Turtle>();
+        for(MapObject object : map.getLayers().get(7).getObjects().getByType(RectangleMapObject.class)){
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+            turtles.add(new Turtle(screen, rect.getX() / JavaGame.PPM, rect.getY() / JavaGame.PPM));
+        }
 
     }
     public com.badlogic.gdx.utils.Array<Goomba> getGoombas() {
         return goombas;
     }
+    public com.badlogic.gdx.utils.Array<Enemy> getEnemies() {
+        Array<Enemy> enemies = new Array<Enemy>();
+        enemies.addAll(goombas);
+        enemies.addAll(turtles);
+        return enemies;
+    }
+
+
 
 }
