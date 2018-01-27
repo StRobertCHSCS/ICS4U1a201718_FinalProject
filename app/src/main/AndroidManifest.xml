@@ -22,6 +22,9 @@
             android:label="@string/title_activity_settings" />
         <activity android:name=".QuestionActivity"></activity>
     </application>
+    <uses-sdk android:minSdkVersion="27" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
 
     <!-- request premission from user to access internet -->
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
