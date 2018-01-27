@@ -11,7 +11,9 @@ import java.util.List;
  */
 
 @Dao
-public interface UserInfoDao {
+
+public interface UserInfoDao
+{
 
     @Query("SELECT * FROM userInfo")
     List<UserInfoRoom>  getAll();

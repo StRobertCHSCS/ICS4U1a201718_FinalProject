@@ -22,30 +22,33 @@ import java.net.URL;
  * not yet in use
  */
 
-public class JSONAsyncTask extends AsyncTask<Long, String, String>
+public class JSONAsyncTask extends AsyncTask<String, String, String>
 {
     private String progress = "";
     private String resulte;
 
     /**
      * feeding a long as id and use it to fetch question from server
-     * @param ids the id
+     * @param cont the id
      * @return result JSON object as string
      */
     @Override
-    protected String doInBackground(Long... ids)
+    protected String doInBackground(String... cont)
     {
         Log.d("qst", "JSONAsyncTask.doInBackground(): called");
         this.changeProgress("started");
-        long id = ids[0];
-        InputStream inputS = null;
-        String result = "";
+
+        //the response body (which is a JSON is a String form)
+        String requestBody = cont[0];
+        //the url extension (the part after the slash)
+        String urlExtension = cont[1];
+        String urlString = GlobalAttributes.ServerFullUrl + urlExtension;
 
         try
         {
             HttpURLConnection con = null;
             //create url
-            URL url = new URL(GlobalAttributes.ServerFullUrl);
+            URL url = new URL(urlString);
             //start connection
             con = (HttpURLConnection) url.openConnection();
 
@@ -56,10 +59,10 @@ public class JSONAsyncTask extends AsyncTask<Long, String, String>
             con.setRequestProperty("Accept", "application/json");
 
             Writer write = new BufferedWriter(new OutputStreamWriter(con.getOutputStream()));
-            String jsonStr = this.createJsonObjectToString(id);
+            //String jsonStr = this.createJsonObjectToString(id);
 
             //write and flust the json to send it to server
-            write.write(jsonStr);
+            write.write(requestBody);
             write.close();
 
             this.changeProgress("request sent");
@@ -118,28 +121,4 @@ public class JSONAsyncTask extends AsyncTask<Long, String, String>
     public synchronized String getResulte(){return this.resulte;}
 
     private synchronized void changeProgress(String s){this.progress = s;}
-
-    /**
-     * method for creating a JSONObject object
-     * @param id the id of the session
-     * @return the json object
-     */
-    public String createJsonObjectToString(long id)
-    {
-        JSONObject requestBody = new JSONObject();
-
-        try
-        {
-            //only id matters
-            requestBody.accumulate("subject", "");
-            requestBody.accumulate("level", 0);
-            requestBody.accumulate("sessionId", id);
-        }
-        catch(org.json.JSONException e)//handle exception
-        {
-            Log.e("json", "AjaxQuestionGetter.createJsonObject(): exception: " + e.getMessage());
-        }
-
-        return requestBody.toString();
-    }
 }
