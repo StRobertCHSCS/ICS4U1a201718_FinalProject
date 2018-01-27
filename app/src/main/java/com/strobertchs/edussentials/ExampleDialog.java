@@ -17,6 +17,7 @@ import android.widget.EditText;
 public class ExampleDialog extends AppCompatDialogFragment {
     private EditText editTextMark;
     private EditText editTextWeight;
+    private EditText editTextDesired;
     private ExampleDialogListener listener;
 
     @Override
@@ -39,11 +40,13 @@ public class ExampleDialog extends AppCompatDialogFragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String mark = editTextMark.getText().toString();
                         String weight = editTextWeight.getText().toString();
-                        listener.applyTexts(mark, weight    );
+                        String grade = editTextDesired.getText().toString();
+                        listener.applyTexts(mark, weight,grade);
                     }
                 });
         editTextMark = view.findViewById(R.id.edit_markinput);
         editTextWeight = view.findViewById(R.id.edit_weightinput);
+        editTextDesired = view.findViewById(R.id.edit_desiredgrade);
 
         return builder.create();
     }
@@ -59,6 +62,6 @@ public class ExampleDialog extends AppCompatDialogFragment {
     }
 
     public interface ExampleDialogListener{
-        void applyTexts(String mark, String weight);
+        void applyTexts(String mark, String weight,String grade);
     }
 }

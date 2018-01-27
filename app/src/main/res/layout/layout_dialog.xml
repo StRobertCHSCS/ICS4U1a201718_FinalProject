@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Input Grade"
-        />
+        android:inputType="numberDecimal"/>
 
     <EditText
         android:id="@+id/edit_weightinput"
@@ -19,5 +19,15 @@
         android:layout_below="@+id/edit_markinput"
         android:hint="Input Weight as Decimal"
         android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/edit_desiredgrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/edit_weightinput"
+        android:hint="Input Desired Grade"
+        android:inputType="numberDecimal"/>
 
 </RelativeLayout>

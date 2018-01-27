@@ -10,7 +10,7 @@ public class AverageCalculator extends AppCompatActivity implements ExampleDialo
     private TextView textviewMarkinput;
     private TextView textviewWeightFactor;
     private Button button;
-    private TextView textviewGrade;
+    private TextView textviewDesiredGrade;
 
 
     @Override
@@ -20,7 +20,7 @@ public class AverageCalculator extends AppCompatActivity implements ExampleDialo
 
         textviewMarkinput = (TextView) findViewById(R.id.textview_markinput);
         textviewWeightFactor = (TextView) findViewById(R.id.textview_weightfactor);
-        textviewGrade = (TextView) findViewById(R.id.TotalMarkID);
+        textviewDesiredGrade = (TextView) findViewById(R.id.textview_desiregrade);
         button = (Button) findViewById(R.id.dialogbutton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,9 +36,10 @@ public class AverageCalculator extends AppCompatActivity implements ExampleDialo
     }
 
     @Override
-    public void applyTexts(String mark, String weight) {
+    public void applyTexts(String mark, String weight, String grade) {
         textviewMarkinput.setText(mark);
         textviewWeightFactor.setText(weight);
+        textviewDesiredGrade.setText(grade);
     }
 
 }
