@@ -30,7 +30,6 @@ public class TutorialSlides extends AppIntro2 {
 
     @Override
     public void onDonePressed(Fragment fragment){
-        ContinueQuest continueQ = new ContinueQuest();
-        continueQ.show(fm, "First Pop-up");
+        finish();
     }
 }

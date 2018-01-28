@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -80,6 +81,17 @@ public class StatisticsPopUp extends android.support.v4.app.DialogFragment {
         currGameGraph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
 
 
+
+        //the ok button
+        ImageButton okButton = (ImageButton)dialogView.findViewById(R.id.imageButton_ok2);
+        okButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                dismiss();
+            }
+        });
 
             builder.setView(dialogView).setMessage("");
             return builder.create();

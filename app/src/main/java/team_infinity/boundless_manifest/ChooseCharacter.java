@@ -52,7 +52,7 @@ public class ChooseCharacter extends android.app.DialogFragment
     {
         //get the layout from the scroll view
         //TableLayout table = (TableLayout) diaView.findViewById(R.id.tableLayout_heros);
-        RelativeLayout charaSpace = (RelativeLayout)diaView.findViewById(R.id.characterScrollViewLayout);
+        //RelativeLayout charaSpace = (RelativeLayout)diaView.findViewById(R.id.characterScrollViewLayout);
 
         //get the set of all available characters
         Set<Integer> keySet = GlobalAttributes.characters.keySet();

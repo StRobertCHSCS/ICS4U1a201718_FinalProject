@@ -30,6 +30,7 @@ public class MainMenuActivity extends AppCompatActivity
 {
     ImageButton mode;
     ImageButton playGame;
+    ImageButton tutorial;
     private PopupWindow pop1;
     FragmentTransaction ft = getFragmentManager().beginTransaction();
     FragmentManager statsFm = getSupportFragmentManager();
@@ -54,17 +55,31 @@ public class MainMenuActivity extends AppCompatActivity
 
         //the 'play' button
         playGame = (ImageButton) findViewById(R.id.playButton);
-        playGame.setOnClickListener(new View.OnClickListener() {
+        playGame.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-            Intent openTutorial = new Intent(getApplicationContext(), TutorialSlides.class);
-            startActivity(openTutorial);
+            public void onClick(View view)
+            {
+                ContinueQuest continueQ = new ContinueQuest();
+                continueQ.show(statsFm, "First Pop-up");
             }
         });
 
         //the 'mode' button
         mode = (ImageButton) findViewById(R.id.imageButton_mode);
         mode.setOnClickListener(new OnModeClickListener2(this));
+        
+        //the 'tutorial' button
+        tutorial = (ImageButton)findViewById(R.id.imageButton_tutorial);
+        tutorial.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent openTutorial = new Intent(getApplicationContext(), TutorialSlides.class);
+                startActivity(openTutorial);
+            }
+        });
 
         //for testing purposes
         //this is the compass image button at the downleft corner
