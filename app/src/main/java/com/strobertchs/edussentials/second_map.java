@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.widget.ImageView;
 
-public class map extends AppCompatActivity {
+public class second_map extends AppCompatActivity {
 
     ImageView imageView;
     Matrix matrix = new Matrix();

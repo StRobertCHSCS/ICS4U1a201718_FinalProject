@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.strobertchs.edussentials">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/app_icon"
@@ -24,9 +26,8 @@
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ResetSchedule" />
         <activity android:name=".Todolist" />
-        <activity android:name=".AverageCalculator"></activity>
-
-
+        <activity android:name=".AverageCalculator" />
+        <activity android:name=".second_map"></activity>
     </application>
 
 </manifest>
