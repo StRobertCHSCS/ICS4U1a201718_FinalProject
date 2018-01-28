@@ -26,6 +26,8 @@ public class second_map extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.secondMapView);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://justinchan45.wixsite.com/schoolmaptwo");
+        webView.getSettings().setBuiltInZoomControls(true);
+
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);

@@ -22,6 +22,8 @@ public class map extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+        webView.getSettings().setBuiltInZoomControls(true);
+
 
         webView = (WebView) findViewById(R.id.firstMapView);
         webView.setWebViewClient(new WebViewClient());
