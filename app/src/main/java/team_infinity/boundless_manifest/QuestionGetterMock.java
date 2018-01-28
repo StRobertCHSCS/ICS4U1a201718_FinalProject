@@ -11,7 +11,7 @@ public class QuestionGetterMock implements QuestionGetterBase
     public Question getQuestion(long id)
     {
         String[] answers = {"sava", "pa", "pap", "despacito"};
-        return new Question("apa", answers, 1, 0);
+        return new Question("apa", answers, 1, 0, "thinking");
     }
 }
 */
