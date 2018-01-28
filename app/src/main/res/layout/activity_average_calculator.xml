@@ -68,7 +68,7 @@
         android:layout_above="@+id/textview_markneeded"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="You need the mark below to achieve the desired mark"
+        android:text="You need the mark below to achieve the desired grade"
         android:textSize="30sp" />
 
 </RelativeLayout>

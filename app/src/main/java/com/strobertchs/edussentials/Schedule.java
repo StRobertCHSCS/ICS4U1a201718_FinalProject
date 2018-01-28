@@ -12,19 +12,18 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Schedule extends AppCompatActivity {
-    String[] periodArray = {"Computer Science","Physics","Morality","Business Leadership","Lunch"};
-    String[] timeArray = {"8:30-9:50","9:53-11:09","11:53-1:13","1:13-2:30","11:10-11:53"};
-
+    String[] periodArray = {"Period 1","Period 2","Period 3","Period 4","Lunch"};
+    String[] timeArray = {"Time Slot 1","Time Slot 2","Time Slot 3","Time Slot 4","LunchTime"};
     ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         CustomListAdapter array1 = new CustomListAdapter(this, periodArray,timeArray);
         listView = (ListView) findViewById(R.id.ListViewID);
         listView.setAdapter(array1);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
@@ -34,7 +33,7 @@ public class Schedule extends AppCompatActivity {
                 startActivity(intent);
 
             }
-        });
+       });
     }
 
 }
