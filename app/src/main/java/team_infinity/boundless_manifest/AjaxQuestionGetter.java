@@ -29,6 +29,7 @@ public class AjaxQuestionGetter implements QuestionGetterBase
     @Override
     public Question getQuestion(long id)
     {
+        Log.d("qst", "AjaxQuestionGetter.getQuestion(): called, id: " + id);
         String request = this.createJsonObjectToString(id);
 
         //create an AsyncTask and execute it
@@ -109,6 +110,7 @@ public class AjaxQuestionGetter implements QuestionGetterBase
      */
     public Question convert(String s)
     {
+        Log.d("json", "AjaxQuestionGetter.convert(): called, string: " + s);
         Question result = null;
 
         try

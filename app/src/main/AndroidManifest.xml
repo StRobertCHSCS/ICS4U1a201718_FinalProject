@@ -21,6 +21,7 @@
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity android:name=".QuestionActivity"></activity>
+        <activity android:name=".FinishActivity"/>
     </application>
 
     <!-- request premission from user to access internet -->

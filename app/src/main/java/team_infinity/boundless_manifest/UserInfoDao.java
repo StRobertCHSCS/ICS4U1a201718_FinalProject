@@ -12,19 +12,19 @@ import java.util.List;
  * Created by Vallyath on 2018-01-26.
  */
 
-@Dao
+//@Dao
 public interface UserInfoDao
 {
 
-    @Query("SELECT * FROM userInfo")
+    //@Query("SELECT * FROM userInfo")
     List<UserInfoRoom>  getAll();
 
-    @Insert
+    //@Insert
     public void insertAll(UserInfoRoom data);
 
-    @Update
+    //@Update
     public void updateAll(UserInfoRoom data);
 
-    @Delete
+    //@Delete
     public void deleteAll(UserInfoRoom data);
 }

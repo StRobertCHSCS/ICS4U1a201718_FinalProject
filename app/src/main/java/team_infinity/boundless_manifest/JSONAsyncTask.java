@@ -78,6 +78,7 @@ public class JSONAsyncTask extends AsyncTask<String, String, String>
             //read result line by line
             while((inputLine = read.readLine()) != null)
             {
+                Log.d("json", "JSONAsyncTask.doInBackground(): inputline value: " + inputLine);
                 buffer.append(inputLine + "\n");
             }
 
@@ -120,5 +121,5 @@ public class JSONAsyncTask extends AsyncTask<String, String, String>
      */
     public synchronized String getResulte(){return this.resulte;}
 
-    private synchronized void changeProgress(String s){this.progress = s;}
+    private synchronized void changeProgress(String s){this.progress = s; Log.d("json", "JSONAsyncTask.changeProgress(): called: value: " + s);}
 }

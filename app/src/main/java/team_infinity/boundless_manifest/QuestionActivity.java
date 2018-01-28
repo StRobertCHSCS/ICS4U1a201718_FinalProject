@@ -1,7 +1,9 @@
 package team_infinity.boundless_manifest;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -9,14 +11,16 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import static team_infinity.boundless_manifest.GlobalAttributes.numQuestionAnswered;
-
 public class QuestionActivity extends AppCompatActivity
 {
     TextView questionText;
     Button[] choices;
     int numChoices = 4;
     Question currentQuestion;
+    int currentScore = 0;
+    int numQuestionAnswered = 0;
+    //should be 5, but changed to 2 for testing purposes
+    final int numTotalQuestions = 2;
     ArrayList buttonRandom = new ArrayList<Button>();
     ProgressBar questProgress;
 
@@ -40,7 +44,7 @@ public class QuestionActivity extends AppCompatActivity
         buttonRandom.add(this.choices[2]);
         buttonRandom.add(this.choices[3]);
 
-        Collections.shuffle(buttonRandom);
+        //Collections.shuffle(buttonRandom);
 
         //handlers
         for(int ct=0; ct<this.numChoices; ct++)
@@ -58,7 +62,8 @@ public class QuestionActivity extends AppCompatActivity
      */
     private void fetchQuestion()
     {
-        Question q = GlobalAttributes.questionGetter.getQuestion(0);
+        //fetch question from server
+        Question q = GlobalAttributes.questionGetter2.getQuestion(GlobalAttributes.currentSessionId);
         this.currentQuestion = q;
         this.showQuestion(q);
     }
@@ -74,8 +79,8 @@ public class QuestionActivity extends AppCompatActivity
         //answer choices
         for(int ct=0; ct<this.numChoices; ct++)
         {
-            //this.choices[ct].setText(q.getAnswers()[ct]);
-            ((Button)buttonRandom.get(ct)).setText(q.getAnswers()[ct]);
+            this.choices[ct].setText(q.getAnswers()[ct]);
+            //((Button)buttonRandom.get(ct)).setText(q.getAnswers()[ct]);
         }
     }
 
@@ -85,7 +90,38 @@ public class QuestionActivity extends AppCompatActivity
      */
     public void answerClicked(int choice)
     {
+        Log.d("qst", "QuestionActivity.answerClicked(): called, numQuestionAnswered: " + numQuestionAnswered);
         numQuestionAnswered++;
         questProgress.setProgress(numQuestionAnswered);
+
+        //if answer is right
+        if(choice == this.currentQuestion.getCorrectAnswer())
+        {
+            this.currentScore++;
+        }
+
+        //if session is done
+        if(numQuestionAnswered >= numTotalQuestions)
+        {
+            this.sessionFinish();
+        }
+        else
+        {
+            this.fetchQuestion();
+        }
+    }
+
+    /**
+     * method for finishing a session
+     * when the number of answered question reaches number of total question
+     */
+    public void sessionFinish()
+    {
+        GlobalAttributes.currentScore = this.currentScore;
+
+        //end this question activity and start the result screen
+        Intent intent = new Intent(this, FinishActivity.class);
+        this.finish();
+        startActivity(intent);
     }
 }

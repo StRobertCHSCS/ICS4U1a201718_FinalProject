@@ -13,6 +13,7 @@ public class QuestStartRequest
 {
     public long startRequest(String subject)
     {
+        Log.d("qst", "QuestStartRequest.startRequest(): called");
         //create the request json string
         String request = this.createJsonObjectToString(subject);
 
@@ -58,9 +59,9 @@ public class QuestStartRequest
         String res = jsonAsyncTask.getResulte();
         Log.d("json", "QuestStartRequest.startRequest(): result string: " +  res);
 
-        long r;
+        long r = convert(res);
 
-        return 0;
+        return r;
     }
 
     /**
@@ -106,6 +107,8 @@ public class QuestStartRequest
         {
             Log.e("json", "QuestStartRequest.convert(): JSONException: " + jsone.getLocalizedMessage());
         }
-        return 0;
+        Log.d("json" , "");
+
+        return result;
     }
 }
