@@ -16,6 +16,6 @@ public class Calendar extends AppCompatActivity {
 
         webView = (WebView) findViewById(R.id.calendarWeb);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("http://http://stro.ycdsb.ca/our-school/calendar");
+        webView.loadUrl("stro.ycdsb.ca/our-school/calendar");
     }
 }

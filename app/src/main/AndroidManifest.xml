@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Schedule" />
+        <activity android:name=".Calendar" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".MainMenu" />
         <activity android:name=".map" />
