@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.strobertchs.edussentials.AverageCalculator">
+
+    <TextView
+        android:id="@+id/textview_markinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:hint="Your Grade"/>
+
+    <TextView
+        android:id="@+id/textview_weightfactor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textview_markinput"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:inputType="numberDecimal"
+        android:hint="Weight of Assessment"/>
+
+    <TextView
+        android:id="@+id/textview_desiregrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textview_weightfactor"
+        android:gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        android:textSize="30sp"
+        android:hint="Desired Grade"/>
+
+    <TextView
+        android:id="@+id/textview_markneeded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="130dp"
+        android:gravity="center_horizontal"
+        android:hint="Required Mark"
+        android:inputType="numberDecimal"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/dialogbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_weightfactor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:inputType="numberDecimal"
+        android:text="Open Dialog" />
+
+    <TextView
+        android:id="@+id/textview_statement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textview_markneeded"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="You need the mark below to achieve the desired grade"
+        android:textSize="30sp" />
+
+</RelativeLayout>

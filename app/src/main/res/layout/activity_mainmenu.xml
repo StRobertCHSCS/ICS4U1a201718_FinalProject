@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.strobertchs.edussentials.MainMenu">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:background="@color/darkblue"
+        android:fontFamily="casual"
+        android:text="EDUssentials"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/yello"
+        android:textSize="55sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/schedulebutton"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignLeft="@+id/title"
+        android:layout_alignStart="@+id/title"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@android:color/transparent"
+        android:text="Schedule" />
+
+    <Button
+        android:id="@+id/averagecalculator"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/schedulebutton"
+        android:layout_toRightOf="@+id/schedulebutton"
+        android:background="@android:color/transparent"
+        android:text="Assessment Tracker" />
+
+    <Button
+        android:id="@+id/SchoolMap"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignLeft="@+id/schedulebutton"
+        android:layout_alignStart="@+id/schedulebutton"
+        android:layout_below="@+id/schedulebutton"
+        android:background="@android:color/transparent"
+        android:text="School Map" />
+
+    <Button
+        android:id="@+id/ToDoList"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignLeft="@+id/averagecalculator"
+        android:layout_alignStart="@+id/averagecalculator"
+        android:layout_below="@+id/averagecalculator"
+        android:background="@android:color/transparent"
+        android:text="To Do List" />
+
+    <Button
+        android:id="@+id/calendarB"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/SchoolMap"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:text="Calendar" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/ToDoList"
+        android:layout_alignStart="@+id/ToDoList"
+        android:layout_below="@+id/averagecalculator"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_check_circle_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignEnd="@+id/SchoolMap"
+        android:layout_alignRight="@+id/SchoolMap"
+        android:layout_alignTop="@+id/imageView8"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        app:srcCompat="@drawable/ic_map_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/imageView9"
+        android:layout_alignStart="@+id/imageView9"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_schedule_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/imageView8"
+        android:layout_alignStart="@+id/imageView8"
+        android:layout_alignTop="@+id/imageView10"
+        app:srcCompat="@drawable/ic_filter_1_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/SchoolMap"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/ic_event_note_black_24dp" />
+
+</RelativeLayout>
