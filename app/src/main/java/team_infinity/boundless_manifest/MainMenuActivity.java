@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.PopupWindow;
@@ -36,6 +38,11 @@ public class MainMenuActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //added for testing, since app crashes
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         setContentView(R.layout.activity_main_menu);
 
         final Context context = this;
@@ -73,7 +80,7 @@ public class MainMenuActivity extends AppCompatActivity
             }
         });
 
-        db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "user_info").build();
+        //db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "user_info").build();
 
     }
 }

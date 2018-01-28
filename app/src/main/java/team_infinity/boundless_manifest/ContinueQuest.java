@@ -6,12 +6,15 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+
+import javax.microedition.khronos.opengles.GL;
 
 /**
  * Created by Vallyath on 2017-12-21.
@@ -33,6 +36,11 @@ public class ContinueQuest extends android.support.v4.app.DialogFragment {
         newGameBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //request a session id from server and plug it into the global variable
+                QuestStartRequest qsr = new QuestStartRequest();
+                GlobalAttributes.currentSessionId = qsr.startRequest(GlobalAttributes.currentSelectedSubject);
+
+                Log.d("qst", "ContinueQuest.onCreateDialog(): currentSessionId: " + GlobalAttributes.currentSessionId);
                 Intent playGame = new Intent(view.getContext(), QuestionActivity.class);
                 startActivity(playGame);
             }
