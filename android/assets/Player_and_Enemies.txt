@@ -1,0 +1,48 @@
+
+Player_and_Enemies.png
+size: 512,64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+big_mario
+  rotate: false
+  xy: 2, 28
+  size: 336, 32
+  orig: 336, 32
+  offset: 0, 0
+  index: -1
+goomba
+  rotate: false
+  xy: 340, 26
+  size: 48, 16
+  orig: 48, 16
+  offset: 0, 0
+  index: -1
+little_mario
+  rotate: false
+  xy: 2, 10
+  size: 224, 16
+  orig: 224, 16
+  offset: 0, 0
+  index: -1
+mushroom
+  rotate: false
+  xy: 470, 44
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+pole
+  rotate: false
+  xy: 340, 44
+  size: 128, 16
+  orig: 128, 16
+  offset: 0, 0
+  index: -1
+turtle
+  rotate: false
+  xy: 228, 2
+  size: 96, 24
+  orig: 96, 24
+  offset: 0, 0
+  index: -1
