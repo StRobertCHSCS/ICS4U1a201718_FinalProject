@@ -4,6 +4,7 @@ package team_infinity.boundless_manifest;
  * Created by Acer on 2018-01-08.
  * mock object implementation of QuestionGetterBase
  */
+/*
 public class QuestionGetterMock implements QuestionGetterBase
 {
     @Override
@@ -13,3 +14,4 @@ public class QuestionGetterMock implements QuestionGetterBase
         return new Question("apa", answers, 1, 0, "thinking");
     }
 }
+*/

@@ -39,7 +39,7 @@ public class GlobalAttributes
     //public static final String ServerFullUrl = "http://Default-Environment.ivpytmi2wg.us-east-1.elasticbeanstalk.com/";
 
     //the question getter in use
-    public static QuestionGetterBase questionGetter = new QuestionGetterMock();
+    //public static QuestionGetterBase questionGetter = new QuestionGetterMock();
     public static QuestionGetterBase questionGetter2 = new AjaxQuestionGetter();
 
     //the map for all characters

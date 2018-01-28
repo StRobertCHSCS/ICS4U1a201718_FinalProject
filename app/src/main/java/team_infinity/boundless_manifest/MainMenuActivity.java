@@ -33,7 +33,7 @@ public class MainMenuActivity extends AppCompatActivity
     private PopupWindow pop1;
     FragmentManager fm = getSupportFragmentManager();
     FragmentTransaction ft = getFragmentManager().beginTransaction();
-    FragmentManager statsFm;
+    FragmentManager statsFm = getSupportFragmentManager();
     AppDatabase db;
 
 
