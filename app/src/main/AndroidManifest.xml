@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.strobertchs.finalproject">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Cafeteria App"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".FinalProject">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StudentSignIn"
+            android:label="@string/title_activity_student_sign_in"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- <activity android:name=".Cart1" /> -->
+        <activity android:name=".CartPage" />
+        <activity
+            android:name=".SelectedMenu"
+            android:label="SelectedMenu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CafeteriaSignIn"
+            android:label="_sign_in"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ServerOrder"
+            android:label="ServerOrder" />
+        <activity android:name=".ServerOrderLay" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SignUpOrSignIn"></activity>
+    </application>
+
+</manifest>
