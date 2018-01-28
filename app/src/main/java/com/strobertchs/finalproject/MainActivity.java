@@ -27,30 +27,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Calendar calendar = Calendar.getInstance();
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = pref.edit();
-
-//        int count = 1;
-//        while (count <= 2)
-//        {
-//            if (calendar.get(Calendar.HOUR_OF_DAY))== 12 && calendar.get((Calendar.AM_PM) == Calendar.AM)
-//            {
-//                count = pref.getInt("count", 1);
-//                textView = (TextView)findViewById(R.id.DayText);
-//                textView.setText(count);
-//                count++;
-//            }
-//
-//            if(this.isFinishing())
-//            {
-//                editor.putInt("count ", count);
-//                editor.commit();
-//            }
-//        }
-
-
-
         buttonObjectChoice1 =
                 (Button) findViewById(R.id.TeacherButton);
 
