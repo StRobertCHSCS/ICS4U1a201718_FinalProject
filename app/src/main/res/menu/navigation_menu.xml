@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home_screen"
+        android:title="Home" />
+
+    <item android:id="@+id/nav_fieldscouting"
+        android:title="Field Scouting"/>
+
+    <item android:id="@+id/nav_pitscouting"
+        android:title="Pit Scouting"/>
+
+</menu>
