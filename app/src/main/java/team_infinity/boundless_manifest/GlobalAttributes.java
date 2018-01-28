@@ -30,6 +30,9 @@ public class GlobalAttributes
     //the current score at the end of a session
     public static int currentScore = -1;
 
+    //the attribute count for the session
+    public static SessionAttributes sessionAttributes = null;
+
     //this url is temporary, 10.0.2.2 let emulator access the mother system(my laptop)'s localhost ip
     //public static final String ServerFullUrl = "http://Default-Environment.ivpytmi2wg.us-east-1.elasticbeanstalk.com/";
     public static final String ServerFullUrl = "http://10.0.2.2:8080/BM_server/";

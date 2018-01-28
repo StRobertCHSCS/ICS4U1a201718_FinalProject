@@ -13,13 +13,15 @@ public class Question
     int correctAnswer;
 
     long id;
+    String attribute;
 
-    public Question(String q, String[] a, long i, int c)
+    public Question(String q, String[] a, long i, int c, String t)
     {
         this.question = q;
         this.answers = a;
         this.id = i;
         this.correctAnswer = c;
+        this.attribute = t;
     }
 
     //getters

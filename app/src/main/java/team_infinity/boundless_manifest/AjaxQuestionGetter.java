@@ -131,9 +131,10 @@ public class AjaxQuestionGetter implements QuestionGetterBase
             //id and correct answer
             int correctAnswer = qstn.getInt("correctAnswer");
             long id = qstn.getLong("id");
+            String attribute = qstn.getString("attribute");
 
             //put them all together into one object
-            result = new Question(questionTitle, answers, id, correctAnswer);
+            result = new Question(questionTitle, answers, id, correctAnswer, attribute);
         }
         catch(JSONException jsone)
         {
