@@ -29,4 +29,5 @@ public class Question
     public String[] getAnswers(){return this.answers;}
     public long getId(){return this.id;}
     public int getCorrectAnswer(){return this.correctAnswer;}
+    public String getAttribute(){return this.attribute;}
 }

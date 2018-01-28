@@ -20,6 +20,11 @@ public class FinishActivity extends AppCompatActivity
         TextView score = (TextView)findViewById(R.id.textView_score);
         score.setText("Score: " + GlobalAttributes.currentScore + "/5");
 
+        /*
+        you can access the session attributes by using GlobalAttributes.sessionAttributes
+        and access it's value
+         */
+
         //button to return to main screen
         Button buttonReturn = (Button) findViewById(R.id.button_return);
         buttonReturn.setOnClickListener(new ReturnButtonListener(this));

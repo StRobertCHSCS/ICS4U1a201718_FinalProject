@@ -25,6 +25,7 @@ public class ReturnButtonListener implements View.OnClickListener
     {
         //reset
         GlobalAttributes.currentScore = -1;
+        GlobalAttributes.sessionAttributes = null;
 
         //end the finish activity
         parent.finish();

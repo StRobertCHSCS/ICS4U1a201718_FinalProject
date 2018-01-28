@@ -54,6 +54,8 @@ public class QuestionActivity extends AppCompatActivity
 
         questProgress = (ProgressBar)findViewById(R.id.questProgress);
         questProgress.setMax(0);
+        //create new session attributes object
+        GlobalAttributes.sessionAttributes = new SessionAttributes();
         fetchQuestion();
     }
 
@@ -94,11 +96,16 @@ public class QuestionActivity extends AppCompatActivity
         numQuestionAnswered++;
         questProgress.setProgress(numQuestionAnswered);
 
+        boolean correct = false;
         //if answer is right
         if(choice == this.currentQuestion.getCorrectAnswer())
         {
             this.currentScore++;
+            correct = true;
         }
+
+        //put value into session attributes
+        GlobalAttributes.sessionAttributes.addAttributeScore(this.currentQuestion.getAttribute(), correct);
 
         //if session is done
         if(numQuestionAnswered >= numTotalQuestions)
