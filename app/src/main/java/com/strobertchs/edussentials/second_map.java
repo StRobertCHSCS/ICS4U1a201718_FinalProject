@@ -26,11 +26,11 @@ public class second_map extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.secondMapView);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://justinchan45.wixsite.com/schoolmaptwo");
-        webView.getSettings().setBuiltInZoomControls(true);
-        webView.getSettings().setDisplayZoomControls(false);
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(false);
 
         changeFirst = (Button) findViewById(R.id.firstMapChange);
         changeFirst.setOnClickListener(new View.OnClickListener() {

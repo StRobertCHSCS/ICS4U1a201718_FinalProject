@@ -22,8 +22,6 @@ public class map extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-        webView.getSettings().setBuiltInZoomControls(true);
-        webView.getSettings().setDisplayZoomControls(false);
 
         webView = (WebView) findViewById(R.id.firstMapView);
         webView.setWebViewClient(new WebViewClient());
@@ -31,6 +29,8 @@ public class map extends AppCompatActivity {
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(false);
 
         changeSecond = (Button) findViewById(R.id.secondMapChange);
         changeSecond.setOnClickListener(new View.OnClickListener() {
