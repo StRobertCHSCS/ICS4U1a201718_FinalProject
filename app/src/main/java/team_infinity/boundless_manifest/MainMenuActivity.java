@@ -57,7 +57,7 @@ public class MainMenuActivity extends AppCompatActivity
 
         //for testing purposes
         //this is the compass image button at the downleft corner
-        ImageButton stats = (ImageButton) findViewById(R.id.imageButton);
+        ImageButton stats = (ImageButton) findViewById(R.id.statsButton);
         stats.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -74,5 +74,6 @@ public class MainMenuActivity extends AppCompatActivity
         });
 
         db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "user_info").build();
+
     }
 }
