@@ -91,7 +91,7 @@
 
     <TextView
         android:id="@+id/SocialJusticeInstagramLink"
-        android:layout_width="265dp"
+        android:layout_width="248dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -126,7 +126,7 @@
 
     <TextView
         android:id="@+id/SocialJusticeTwitterLink"
-        android:layout_width="235dp"
+        android:layout_width="218dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"

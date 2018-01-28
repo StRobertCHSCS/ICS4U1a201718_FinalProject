@@ -57,7 +57,7 @@
 
     <TextView
         android:id="@+id/PhysicsFacebookLink"
-        android:layout_width="287dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -72,5 +72,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
+        app:layout_constraintVertical_bias="0.978" />
 </android.support.constraint.ConstraintLayout>

@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/EnvironmentalClubTextView"
-        android:layout_width="371dp"
-        android:layout_height="48dp"
+        android:layout_width="347dp"
+        android:layout_height="63dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
@@ -37,7 +37,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106"
+        app:layout_constraintVertical_bias="0.366"
         app:srcCompat="@drawable/environment1" />
 
     <ImageView
@@ -53,7 +53,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.417"
+        app:layout_constraintVertical_bias="0.341"
         app:srcCompat="@drawable/environment2" />
 
     <ImageView
@@ -90,7 +90,7 @@
 
     <TextView
         android:id="@+id/EnvironmentalClubFacebookLink"
-        android:layout_width="265dp"
+        android:layout_width="248dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -109,7 +109,7 @@
 
     <TextView
         android:id="@+id/EnvironmentalClubTwitterLink"
-        android:layout_width="265dp"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"

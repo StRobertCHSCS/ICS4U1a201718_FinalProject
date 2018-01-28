@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.017" />
 
     <ImageView
-        android:id="@+id/MoralClub1"
+        android:id="@+id/MuralClub1"
         android:layout_width="370dp"
         android:layout_height="509dp"
         android:layout_marginBottom="8dp"
@@ -56,7 +56,7 @@
 
     <TextView
         android:id="@+id/MuralClubFacebookLink"
-        android:layout_width="287dp"
+        android:layout_width="262dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -71,5 +71,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
+        app:layout_constraintVertical_bias="0.949" />
 </android.support.constraint.ConstraintLayout>

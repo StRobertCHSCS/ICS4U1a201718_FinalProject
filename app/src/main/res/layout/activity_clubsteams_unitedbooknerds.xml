@@ -15,7 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/alfa_slab_one"
-        android:text="St Robert United       Book Nerds"
+        android:text="St Robert United Book Nerds"
         android:textColor="@android:color/darker_gray"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

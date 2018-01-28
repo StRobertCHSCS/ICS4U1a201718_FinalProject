@@ -7,7 +7,7 @@
     tools:context="com.strobertchs.finalproject.clubsteams_tabletennis">
 
     <TextView
-        android:id="@+id/TableTennisTextView1"
+        android:id="@+id/TableTennisTextView"
         android:layout_width="385dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

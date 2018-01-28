@@ -58,7 +58,7 @@
 
     <TextView
         android:id="@+id/DECAFacebookLink"
-        android:layout_width="262dp"
+        android:layout_width="246dp"
         android:layout_height="73dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -69,22 +69,30 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.639" />
+        app:layout_constraintVertical_bias="0.651" />
 
     <ImageView
         android:id="@+id/DECAInstagram"
         android:layout_width="76dp"
         android:layout_height="69dp"
-        app:srcCompat="@drawable/instagram_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="361dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/DECATwitter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82"
+        app:srcCompat="@drawable/instagram_icon" />
 
     <TextView
         android:id="@+id/DECAInstagramLink"
-        android:layout_width="265dp"
+        android:layout_width="252dp"
         android:layout_height="68dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -96,22 +104,30 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.922"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.826" />
+        app:layout_constraintVertical_bias="0.824" />
 
     <ImageView
         android:id="@+id/DECATwitter"
         android:layout_width="86dp"
         android:layout_height="102dp"
-        app:srcCompat="@drawable/twitter_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="414dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/twitter_icon" />
 
     <TextView
         android:id="@+id/DECATwitterLink"
-        android:layout_width="wrap_content"
+        android:layout_width="248dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -126,5 +142,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.952" />
+        app:layout_constraintVertical_bias="0.981" />
 </android.support.constraint.ConstraintLayout>

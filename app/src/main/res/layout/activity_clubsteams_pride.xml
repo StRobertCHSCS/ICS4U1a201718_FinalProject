@@ -43,7 +43,7 @@
 
     <TextView
         android:id="@+id/PrideClubTextView1"
-        android:layout_width="367dp"
+        android:layout_width="344dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
