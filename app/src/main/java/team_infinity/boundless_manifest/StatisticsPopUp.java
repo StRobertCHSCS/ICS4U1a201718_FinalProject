@@ -61,7 +61,6 @@ public class StatisticsPopUp extends android.support.v4.app.DialogFragment {
         BarGraphSeries<DataPoint> knowledge = new BarGraphSeries<>(new DataPoint[] {
                 new DataPoint(0.2, GlobalAttributes.knowledgeAtt)
         });
-        currGameGraph.addSeries(knowledge);
         knowledge.setTitle("Knowledge");
         currGameGraph.addSeries(knowledge);
 
@@ -74,7 +73,7 @@ public class StatisticsPopUp extends android.support.v4.app.DialogFragment {
         BarGraphSeries<DataPoint> understanding = new BarGraphSeries<>(new DataPoint[] {
                 new DataPoint(0.8, GlobalAttributes.understandingAtt)
         });
-        thinking.setTitle("Understanding");
+        understanding.setTitle("Understanding");
         currGameGraph.addSeries(understanding);
 
         currGameGraph.getLegendRenderer().setVisible(true);

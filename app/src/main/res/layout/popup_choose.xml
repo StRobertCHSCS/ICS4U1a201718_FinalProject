@@ -62,7 +62,7 @@
                 android:layout_width="120dip"
                 android:layout_height="120dip"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="46dp"
                 android:layout_toEndOf="@+id/imageButton"
                 app:srcCompat="@drawable/game_gambler" />
         </RelativeLayout>

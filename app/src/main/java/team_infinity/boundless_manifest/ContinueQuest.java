@@ -30,7 +30,6 @@ public class ContinueQuest extends android.support.v4.app.DialogFragment {
         View dialogView = inflater.inflate(R.layout.continuequest, null);
 
         //finds the buttons in the layout
-        Button continueBtn = (Button) dialogView.findViewById(R.id.ContinueGame);
         Button newGameBtn = (Button) dialogView.findViewById(R.id.NewGame);
         Button exitBtn = (Button) dialogView.findViewById(R.id.Exit);
         TextView continueQuestion = (TextView) dialogView.findViewById(R.id.Question);
@@ -58,9 +57,15 @@ public class ContinueQuest extends android.support.v4.app.DialogFragment {
         });
 
         //sets the text to buttons
-        continueBtn.setText("Continue Game");
+        //continueBtn.setText("Continue Game");
         newGameBtn.setText("New Game");
         exitBtn.setText("Exit");
+        exitBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                dismiss();
+            }
+        });
 
         builder.setView(dialogView).setMessage("");
         return builder.create();
