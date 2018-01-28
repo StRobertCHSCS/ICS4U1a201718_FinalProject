@@ -1,9 +1,7 @@
 package com.strobertchs.frcscoutingapp;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
@@ -13,10 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class FieldScoutingSheet extends Fragment{
     @Override
@@ -56,6 +50,7 @@ public class FieldScoutingSheet extends Fragment{
                         }
                         else {
                             fragmentClass = FieldScoutingSheet2.class;
+                            FileHelper.saveToFile("Team Name: " + nameTeam + "Alliance Colour: " + colourAlliance + "Match Number: " + numberMatch, nameTeam);
                         }
                     }
                     try {
