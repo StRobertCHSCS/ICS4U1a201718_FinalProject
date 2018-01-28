@@ -47,13 +47,5 @@ public class map extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @Override
-    public void onBackPressed() {
-        if (webView.canGoBack()) {
-            webView.goBack();
-        } else {
-            super.onBackPressed();
-        }
-    }
 }
 
