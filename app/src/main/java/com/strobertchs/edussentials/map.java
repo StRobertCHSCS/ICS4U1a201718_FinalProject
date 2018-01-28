@@ -23,7 +23,7 @@ public class map extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
         webView.getSettings().setBuiltInZoomControls(true);
-
+        webView.getSettings().setDisplayZoomControls(false);
 
         webView = (WebView) findViewById(R.id.firstMapView);
         webView.setWebViewClient(new WebViewClient());
