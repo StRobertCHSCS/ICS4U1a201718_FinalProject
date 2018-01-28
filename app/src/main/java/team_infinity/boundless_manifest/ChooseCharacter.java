@@ -3,6 +3,7 @@ package team_infinity.boundless_manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -62,6 +63,10 @@ public class ChooseCharacter extends android.app.DialogFragment
         //counter for the loop below
         int ct = 0;
 
+        //the two buttons for the two characters
+        buttons[0] = (ImageButton)diaView.findViewById(R.id.imageButton);
+        buttons[1] = (ImageButton)diaView.findViewById(R.id.imageButton2);
+
         //get all the sprites of characters
         for(Integer i : keySet)
         {
@@ -93,12 +98,25 @@ public class ChooseCharacter extends android.app.DialogFragment
         //length of the button array
         int len = buttons.length;
 
+        /*
         for(int ctt=0; ctt<len; ctt++)
         {
             buttons[ctt].setTop(0);
             buttons[ctt].setLeft(30 * ctt + 2);
             charaSpace.addView(buttons[ctt]);
         }
+        */
+
+        //the ok button
+        ImageButton okButton = (ImageButton)diaView.findViewById(R.id.imageButton_ok);
+        okButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                dismiss();
+            }
+        });
 
         Log.d("tag", "ChooseCharacter.setup() finished");
     }
