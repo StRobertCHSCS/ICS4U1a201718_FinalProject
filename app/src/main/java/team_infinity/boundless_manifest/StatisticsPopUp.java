@@ -50,20 +50,20 @@ public class StatisticsPopUp extends android.support.v4.app.DialogFragment {
         GraphView currGameGraph = (GraphView) dialogView.findViewById(R.id.currGameGraph);
             currGameGraph.setTitle("Current Attribute Statistics");
         BarGraphSeries<DataPoint> knowledge = new BarGraphSeries<>(new DataPoint[] {
-                new DataPoint(0, GlobalAttributes.knowledgeAtt)
+                new DataPoint(0.2, GlobalAttributes.knowledgeAtt)
         });
         currGameGraph.addSeries(knowledge);
         knowledge.setTitle("Knowledge");
         currGameGraph.addSeries(knowledge);
 
         BarGraphSeries<DataPoint> thinking = new BarGraphSeries<>(new DataPoint[] {
-                new DataPoint(1, GlobalAttributes.thinkingAtt)
+                new DataPoint(0.5, GlobalAttributes.thinkingAtt)
         });
         thinking.setTitle("Thinking");
         currGameGraph.addSeries(thinking);
 
         BarGraphSeries<DataPoint> understanding = new BarGraphSeries<>(new DataPoint[] {
-                new DataPoint(2, GlobalAttributes.knowledgeAtt)
+                new DataPoint(0.8, GlobalAttributes.understandingAtt)
         });
 
         thinking.setTitle("Understanding");
