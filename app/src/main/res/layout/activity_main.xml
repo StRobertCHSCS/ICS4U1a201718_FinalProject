@@ -17,7 +17,6 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/architects_daughter"
         android:text="St. Roberts StudentDex"
-        android:textColor="@android:color/black"
         android:textSize="30sp"
         android:textColor="@android:color/holo_green_dark"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,15 +46,10 @@
         app:layout_constraintVertical_bias="0.288" />
 
     <Button
-<<<<<<< HEAD
-        android:id="@+id/EventsButton"
+
         android:layout_width="150dp"
         android:layout_height="50dp"
-=======
         android:id="@+id/CalendarButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
->>>>>>> e40fbf79f332e7cfef3047b39d849c4536e9a0b6
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -175,25 +169,13 @@
         android:id="@+id/imageView"
         android:layout_width="372dp"
         android:layout_height="163dp"
-        app:srcCompat="@drawable/zerams"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="425dp" />
-
-    <TextView
-        android:id="@+id/DayText"
-        android:layout_width="68dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="1"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="400dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/CurrentDay"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:srcCompat="@drawable/zerams" />
+
 
 </android.support.constraint.ConstraintLayout>
