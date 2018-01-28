@@ -1,6 +1,7 @@
 package team_infinity.boundless_manifest;
 
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,16 +12,20 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static team_infinity.boundless_manifest.GlobalAttributes.numQuestionAnswered;
+
 public class QuestionActivity extends AppCompatActivity
 {
+    //attributes to the question activity
     TextView questionText;
     Button[] choices;
     int numChoices = 4;
     Question currentQuestion;
     int currentScore = 0;
-    int numQuestionAnswered = 0;
     //should be 5, but changed to 2 for testing purposes
     final int numTotalQuestions = 5;
+
+    //create an array list that takes in buttons
     ArrayList buttonRandom = new ArrayList<Button>();
     ProgressBar questProgress;
 
@@ -34,16 +39,19 @@ public class QuestionActivity extends AppCompatActivity
         this.questionText = findViewById(R.id.Question);
         this.choices = new Button[4];
 
+        //finds the button corresponding to each choice
         this.choices[0] = findViewById(R.id.Choice1);
         this.choices[1] = findViewById(R.id.Choice2);
         this.choices[2] = findViewById(R.id.Choice3);
         this.choices[3] = findViewById(R.id.Choice4);
 
+        //adds each button to arraylist
         buttonRandom.add(this.choices[0]);
         buttonRandom.add(this.choices[1]);
         buttonRandom.add(this.choices[2]);
         buttonRandom.add(this.choices[3]);
 
+        //would have been used to shuffle the
         //Collections.shuffle(buttonRandom);
 
         //handlers
@@ -52,8 +60,10 @@ public class QuestionActivity extends AppCompatActivity
             this.choices[ct].setOnClickListener(new OnChoiceClickListener(this, ct));
         }
 
+        //looks for the progress bar to give it values
         questProgress = (ProgressBar)findViewById(R.id.questProgress);
-        questProgress.setMax(0);
+       //sets the max to the number of questions per quest
+        questProgress.setMax(numTotalQuestions);
         //create new session attributes object
         GlobalAttributes.sessionAttributes = new SessionAttributes();
         fetchQuestion();

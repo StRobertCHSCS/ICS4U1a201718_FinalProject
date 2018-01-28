@@ -26,13 +26,15 @@ public class ContinueQuest extends android.support.v4.app.DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
+        //looks at which layout to get data from
         View dialogView = inflater.inflate(R.layout.continuequest, null);
 
-        Button continueBtn = (Button) dialogView.findViewById(R.id.ContinueGame);
+        //finds the buttons in the layout
         Button newGameBtn = (Button) dialogView.findViewById(R.id.NewGame);
         Button exitBtn = (Button) dialogView.findViewById(R.id.Exit);
         TextView continueQuestion = (TextView) dialogView.findViewById(R.id.Question);
 
+        // sets what would happen if newGameBtn was pressed
         newGameBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,6 +43,7 @@ public class ContinueQuest extends android.support.v4.app.DialogFragment {
                 GlobalAttributes.currentSessionId = qsr.startRequest(GlobalAttributes.currentSelectedSubject);
 
                 Log.d("qst", "ContinueQuest.onCreateDialog(): currentSessionId: " + GlobalAttributes.currentSessionId);
+                //if pressed, intent makes it jump to the question activity class
                 Intent playGame = new Intent(view.getContext(), QuestionActivity.class);
                 startActivity(playGame);
             }
@@ -53,14 +56,27 @@ public class ContinueQuest extends android.support.v4.app.DialogFragment {
             }
         });
 
-        continueBtn.setText("Continue Game");
+        //sets the text to buttons
+        //continueBtn.setText("Continue Game");
         newGameBtn.setText("New Game");
         exitBtn.setText("Exit");
+        exitBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                dismiss();
+            }
+        });
 
         builder.setView(dialogView).setMessage("");
         return builder.create();
     }
 
+    /**
+     * if view is not null, then display this pop-up, otherwise inflate it
+     * @param view
+     * @param viewGroup
+     * @return View
+     */
     public View getView(View view, ViewGroup viewGroup){
 
         if(view == null){

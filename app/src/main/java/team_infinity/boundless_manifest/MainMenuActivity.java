@@ -31,7 +31,6 @@ public class MainMenuActivity extends AppCompatActivity
     ImageButton mode;
     ImageButton playGame;
     private PopupWindow pop1;
-    FragmentManager fm = getSupportFragmentManager();
     FragmentTransaction ft = getFragmentManager().beginTransaction();
     FragmentManager statsFm = getSupportFragmentManager();
     AppDatabase db;
@@ -58,9 +57,8 @@ public class MainMenuActivity extends AppCompatActivity
         playGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                ContinueQuest continueQ = new ContinueQuest();
-                continueQ.show(fm, "First Pop-up");
+            Intent openTutorial = new Intent(getApplicationContext(), TutorialSlides.class);
+            startActivity(openTutorial);
             }
         });
 
@@ -95,7 +93,6 @@ public class MainMenuActivity extends AppCompatActivity
             }
                                     });
                                     */
-
 
         //db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "user_info").build(); code is no longer working
 

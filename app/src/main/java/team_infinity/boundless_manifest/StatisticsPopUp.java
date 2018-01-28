@@ -30,6 +30,11 @@ import static team_infinity.boundless_manifest.GlobalAttributes.numQuestionAnswe
 
 public class StatisticsPopUp extends android.support.v4.app.DialogFragment {
 
+    /**
+     * This creates the pop-up and is the constructor to what should happen when called
+     * @param savedInstanceState
+     * @return Dialog (pop-up)
+     */
     public Dialog onCreateDialog (Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
@@ -37,6 +42,7 @@ public class StatisticsPopUp extends android.support.v4.app.DialogFragment {
         View dialogView = inflater.inflate(R.layout.stats_popup, null);
         ImageView currChar = (ImageView)dialogView.findViewById(R.id.currChar);
 
+        // checks to see which is the currently selected character and displays an image based on character selection
         if(currentSelectedSubject.equals("data")) {
             currChar.setImageResource(R.drawable.game_gambler);
         }
@@ -47,12 +53,14 @@ public class StatisticsPopUp extends android.support.v4.app.DialogFragment {
             currChar.setImageResource(R.drawable.ic_launcher_background);
         }
 
+        /* This line of code right here shows the graph portion of the code, and how it is updated by
+         * the static attributes set in GlobalAttributes.java
+         */
         GraphView currGameGraph = (GraphView) dialogView.findViewById(R.id.currGameGraph);
             currGameGraph.setTitle("Current Attribute Statistics");
         BarGraphSeries<DataPoint> knowledge = new BarGraphSeries<>(new DataPoint[] {
                 new DataPoint(0.2, GlobalAttributes.knowledgeAtt)
         });
-        currGameGraph.addSeries(knowledge);
         knowledge.setTitle("Knowledge");
         currGameGraph.addSeries(knowledge);
 
@@ -65,7 +73,7 @@ public class StatisticsPopUp extends android.support.v4.app.DialogFragment {
         BarGraphSeries<DataPoint> understanding = new BarGraphSeries<>(new DataPoint[] {
                 new DataPoint(0.8, GlobalAttributes.understandingAtt)
         });
-        thinking.setTitle("Understanding");
+        understanding.setTitle("Understanding");
         currGameGraph.addSeries(understanding);
 
         currGameGraph.getLegendRenderer().setVisible(true);
@@ -77,6 +85,13 @@ public class StatisticsPopUp extends android.support.v4.app.DialogFragment {
             return builder.create();
         }
 
+    /**
+     * When the user is done with viewing this pop-up it will be set to null and then the pop-up is inflated
+     * otherwise, View displays the pop-up.
+     * @param view
+     * @param viewGroup
+     * @return View
+     */
         public View getView(View view, ViewGroup viewGroup){
 
             if(view == null){

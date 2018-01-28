@@ -12,7 +12,7 @@ import java.util.List;
  * Created by Vallyath on 2018-01-26.
  */
 
-//@Dao
+//@Dao, scrapped and not in use
 public interface UserInfoDao
 {
 
