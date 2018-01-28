@@ -21,7 +21,7 @@ public class second_map extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_second_map);
 
         webView = (WebView) findViewById(R.id.secondMapView);
         webView.setWebViewClient(new WebViewClient());

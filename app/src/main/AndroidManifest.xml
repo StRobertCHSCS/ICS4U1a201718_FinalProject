@@ -24,7 +24,6 @@
         <activity android:name=".MainMenu" />
         <activity android:name=".map" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".ResetSchedule" />
         <activity android:name=".Todolist" />
         <activity android:name=".AverageCalculator" />
         <activity android:name=".second_map"></activity>
