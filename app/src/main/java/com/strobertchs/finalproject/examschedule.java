@@ -14,7 +14,6 @@ public class examschedule extends AppCompatActivity {
 
         WebView mWebView= findViewById(R.id.webView);
         mWebView.getSettings().setJavaScriptEnabled(true);
-        // mWebView.getSettings().setPluginState(WebSettings.PluginState.ON);
         mWebView.loadUrl("http://docs.google.com/viewer?url=http://stro.ycdsb.ca/wp-content/uploads/sites/104/2017/12/Exam-Schedule-29Nov17.pdf");
     }
 }

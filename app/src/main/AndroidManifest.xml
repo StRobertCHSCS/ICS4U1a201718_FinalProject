@@ -10,6 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -19,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".teachers" />
-        <activity android:name=".tips" />
+        <activity android:name=".calendar" />
         <activity android:name=".maps" />
         <activity android:name=".links" />
         <activity android:name=".clubsteams" />
@@ -146,8 +147,53 @@
         <activity android:name=".teachers_yeghiaian" />
         <activity android:name=".teachers_zasowski" />
         <activity android:name=".teachers_zmak" />
-        <activity android:name=".teachers_zucchetto"></activity>
-        <activity android:name=".clubsteams_artcouncil"></activity>
+        <activity android:name=".teachers_zucchetto" />
+        <activity android:name=".clubsteams_artcouncil" />
+        <activity android:name=".clubsteams_athleticcouncil" />
+        <activity android:name=".clubsteams_band" />
+        <activity android:name=".clubsteams_chessclub" />
+        <activity android:name=".clubsteams_choir" />
+        <activity android:name=".clubsteams_christianfellowship" />
+        <activity android:name=".clubsteams_crosscountry" />
+        <activity android:name=".clubsteams_danceclub" />
+        <activity android:name=".clubsteams_debatingclub" />
+        <activity android:name=".clubsteams_deca" />
+        <activity android:name=".clubsteams_designclub" />
+        <activity android:name=".clubsteams_eslwriting" />
+        <activity android:name=".clubsteams_esp" />
+        <activity android:name=".clubsteams_environmentalclub" />
+        <activity android:name=".clubsteams_frenchcouncil" />
+        <activity android:name=".clubsteams_frenchdrama" />
+        <activity android:name=".clubsteams_french_hwclub" />
+        <activity android:name=".clubsteams_frenchnewspaper" />
+        <activity android:name=".clubsteams_healthsciences" />
+        <activity android:name=".clubsteams_ibclub" />
+        <activity android:name=".clubsteams_interfaithclub" />
+        <activity android:name=".clubsteams_jazzband" />
+        <activity android:name=".clubsteams_mach1aviation" />
+        <activity android:name=".clubsteams_mathclub" />
+        <activity android:name=".clubsteams_newspaper" />
+        <activity android:name=".clubsteams_nightflyers" />
+        <activity android:name=".clubsteams_orchestra" />
+        <activity android:name=".clubsteams_outreachclub" />
+        <activity android:name=".clubsteams_muralclub" />
+        <activity android:name=".clubsteams_photographyclub" />
+        <activity android:name=".clubsteams_physicsclub" />
+        <activity android:name=".clubsteams_pride" />
+        <activity android:name=".clubsteams_reachforthetop" />
+        <activity android:name=".clubsteams_robotics" />
+        <activity android:name=".clubsteams_scienceclub" />
+        <activity android:name=".clubsteams_socialjustice" />
+        <activity android:name=".clubsteams_stuco" />
+        <activity android:name=".clubsteams_tabletennis" />
+        <activity android:name=".clubsteams_unitedbooknerds" />
+        <activity android:name=".clubsteams_unitednations" />
+        <activity android:name=".clubsteams_yearbookclub"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
     </application>
 
 </manifest>
