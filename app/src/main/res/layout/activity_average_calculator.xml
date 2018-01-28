@@ -42,10 +42,10 @@
         android:id="@+id/textview_markneeded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/dialogbutton"
-        android:layout_marginTop="89dp"
+        android:layout_marginBottom="130dp"
         android:gravity="center_horizontal"
         android:hint="Required Mark"
         android:inputType="numberDecimal"
@@ -60,5 +60,15 @@
         android:layout_marginTop="47dp"
         android:inputType="numberDecimal"
         android:text="Open Dialog" />
+
+    <TextView
+        android:id="@+id/textview_statement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textview_markneeded"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="You need the mark below to achieve the desired mark"
+        android:textSize="30sp" />
 
 </RelativeLayout>

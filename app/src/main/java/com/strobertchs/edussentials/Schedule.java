@@ -19,21 +19,6 @@ public class Schedule extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Scanner scan = new Scanner(System.in);
-        //System.out.println("Enter the array size: ");
-        //int size = scan.nextInt();
-        //String[] periodArray = {};
-        //Arrays.fill(periodArray,-1);
-        //super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_schedule);
-
-        //Scanner scan1 = new Scanner(System.in);
-        //System.out.println("Enter the array size: ");
-        //int size1 = scan1.nextInt();
-        //int[] timeArray = {};
-        //Arrays.fill(timeArray,-1);
-        //super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_schedule);
 
         CustomListAdapter array1 = new CustomListAdapter(this, periodArray,timeArray);
         listView = (ListView) findViewById(R.id.ListViewID);
