@@ -11,6 +11,7 @@ public class AverageCalculator extends AppCompatActivity implements ExampleDialo
     private TextView textviewWeightFactor;
     private Button button;
     private TextView textviewDesiredGrade;
+    private TextView textviewReqMark;
 
 
     @Override
@@ -21,6 +22,7 @@ public class AverageCalculator extends AppCompatActivity implements ExampleDialo
         textviewMarkinput = (TextView) findViewById(R.id.textview_markinput);
         textviewWeightFactor = (TextView) findViewById(R.id.textview_weightfactor);
         textviewDesiredGrade = (TextView) findViewById(R.id.textview_desiregrade);
+        textviewReqMark = (TextView) findViewById(R.id.textview_markneeded);
         button = (Button) findViewById(R.id.dialogbutton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,25 +42,15 @@ public class AverageCalculator extends AppCompatActivity implements ExampleDialo
         textviewMarkinput.setText(mark);
         textviewWeightFactor.setText(weight);
         textviewDesiredGrade.setText(grade);
+        double mymark = Double.parseDouble(textviewMarkinput.getText().toString());
+        double myweight = Double.parseDouble(textviewWeightFactor.getText().toString());
+        double desiredmark = Double.parseDouble(textviewDesiredGrade.getText().toString());
+        double value1 = mymark * (1-myweight);
+        double value2 = desiredmark - value1;
+        double markneeded = value2/(myweight);
+        String markneeded_string = String.valueOf(markneeded);
+        textviewReqMark.setText(markneeded_string);
     }
-
-    public double getStringMarkInput(){
-        String markinput = textviewMarkinput.getText().toString();
-        double double_markinput = Double.parseDouble(markinput);
-        return double_markinput;
-    }
-
-    public double getWeightFactor(){
-        String weightfactor = textviewWeightFactor.getText().toString();
-        double double_weightfactor = Double.parseDouble(weightfactor);
-        return double_weightfactor;
-    }
-
-    public double getDesiredGrade(){
-        String desiredgrade = textviewDesiredGrade.getText().toString();
-        double double_desiredgrade = Double.parseDouble(desiredgrade);
-        return double_desiredgrade;
-    }
-
+    
 
 }
