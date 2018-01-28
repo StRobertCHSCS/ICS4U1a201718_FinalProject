@@ -42,4 +42,23 @@ public class AverageCalculator extends AppCompatActivity implements ExampleDialo
         textviewDesiredGrade.setText(grade);
     }
 
+    public double getStringMarkInput(){
+        String markinput = textviewMarkinput.getText().toString();
+        double double_markinput = Double.parseDouble(markinput);
+        return double_markinput;
+    }
+
+    public double getWeightFactor(){
+        String weightfactor = textviewWeightFactor.getText().toString();
+        double double_weightfactor = Double.parseDouble(weightfactor);
+        return double_weightfactor;
+    }
+
+    public double getDesiredGrade(){
+        String desiredgrade = textviewDesiredGrade.getText().toString();
+        double double_desiredgrade = Double.parseDouble(desiredgrade);
+        return double_desiredgrade;
+    }
+
+
 }
