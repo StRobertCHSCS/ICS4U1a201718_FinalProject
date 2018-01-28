@@ -1,33 +1,20 @@
 package com.ethanmajidi.javagame.Screens;
 
 
-import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.maps.MapObject;
-import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
-import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
-import com.badlogic.gdx.physics.box2d.FixtureDef;
-import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.badlogic.gdx.utils.viewport.ScreenViewport;
-import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.ethanmajidi.javagame.Items.Item;
 import com.ethanmajidi.javagame.Items.ItemDef;
@@ -35,9 +22,7 @@ import com.ethanmajidi.javagame.Items.Mushroom;
 import com.ethanmajidi.javagame.JavaGame;
 import com.ethanmajidi.javagame.Scenes.Hud;
 import com.ethanmajidi.javagame.Sprites.Enemy;
-import com.ethanmajidi.javagame.Sprites.Goomba;
 import com.ethanmajidi.javagame.Sprites.Java;
-import com.ethanmajidi.javagame.Sprites.Mario;
 import com.ethanmajidi.javagame.Tools.B2WorldCreator;
 
 
@@ -73,6 +58,7 @@ public class PlayScreen  implements Screen {
 
     //Sprites
     private Java player;
+
 
     private Array<Item> items;
     private LinkedBlockingQueue<ItemDef> itemsToSpawn;
@@ -126,6 +112,8 @@ public class PlayScreen  implements Screen {
         //music.setLooping(true);
         //music.play();
 
+
+
         items = new Array<Item>();
         itemsToSpawn = new LinkedBlockingQueue<ItemDef>();
 
@@ -173,6 +161,13 @@ public class PlayScreen  implements Screen {
             }
         }
 
+    public void checkWinGameScreen(){
+        if (player.currentState == Java.State.WON){
+            dispose();
+            game.setScreen(new WinGameScreen(game));
+        }
+    }
+
 
     public void update(float dt){
         //handle user input
@@ -183,6 +178,9 @@ public class PlayScreen  implements Screen {
 
         //connecting hud to timer
         player.update(dt);
+
+           
+
         for(Enemy enemy : creator.getEnemies()) {
             enemy.update(dt);
             if(enemy.getX()< player.getX() + 224 / JavaGame.PPM)
@@ -234,6 +232,7 @@ public class PlayScreen  implements Screen {
         game.batch.setProjectionMatrix(gamecam.combined);
         game.batch.begin();
         player.draw(game.batch);
+
         for(Enemy enemy : creator.getEnemies())
             enemy.draw(game.batch);
         for(Item item : items)
@@ -250,11 +249,22 @@ public class PlayScreen  implements Screen {
             dispose();
         }
 
+        if(WonGame()){
+            game.setScreen(new WinGameScreen(game));
+            dispose();
+        }
+
 
     }
 
     public boolean gameOver() {
         if(player.currentState == Java.State.DEAD && player.getStateTimer() > 3) {
+            return true;
+        }
+        return false;
+    }
+    public boolean WonGame() {
+        if(player.currentState == Java.State.WON) {
             return true;
         }
         return false;
@@ -296,6 +306,7 @@ public class PlayScreen  implements Screen {
         world.dispose();
         b2dr.dispose();
         hud.dispose();
+
     }
 }
 

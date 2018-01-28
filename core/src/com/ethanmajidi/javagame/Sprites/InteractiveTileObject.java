@@ -43,7 +43,11 @@ public abstract class InteractiveTileObject {
 
     protected Fixture fixture;
 
-
+    /**
+     * @param screen takes playscreen class
+     * @param object takes in the map
+     * @return is updating the player
+     */
     public InteractiveTileObject(PlayScreen screen, MapObject object){
         this.object = object;
         this.screen = screen;
@@ -65,14 +69,24 @@ public abstract class InteractiveTileObject {
         fixture = body.createFixture(fdef);
 
     }
-
+    /**
+     * @param java takes in the java class
+     * @return nothing
+     */
     public abstract void onHeadHit(Java java);
+    /**
+     * @param filterBit filtering
+     * @return is used for textures and collison
+     */
     public void setCategoryFilter(short filterBit){
         Filter filter = new Filter();
         filter.categoryBits = filterBit;
         fixture.setFilterData(filter);
     }
-
+    /**
+     * takes in nothing
+     * @return is responsible for the map layers
+     */
     public TiledMapTileLayer.Cell getCell(){
         TiledMapTileLayer layer = (TiledMapTileLayer) map.getLayers().get(1);
         return layer.getCell((int)(body.getPosition().x * JavaGame.PPM / 16),

@@ -16,6 +16,7 @@ import com.ethanmajidi.javagame.Sprites.Brick;
 import com.ethanmajidi.javagame.Sprites.Coin;
 import com.ethanmajidi.javagame.Sprites.Enemy;
 import com.ethanmajidi.javagame.Sprites.Goomba;
+import com.ethanmajidi.javagame.Sprites.Pole;
 import com.ethanmajidi.javagame.Sprites.Turtle;
 
 /**
@@ -84,14 +85,20 @@ public class B2WorldCreator {
             goombas.add(new Goomba(screen, rect.getX() / JavaGame.PPM, rect.getY() / JavaGame.PPM));
 
         }
-        //create
+        //create turtles
         turtles = new com.badlogic.gdx.utils.Array<Turtle>();
         for(MapObject object : map.getLayers().get(7).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
             turtles.add(new Turtle(screen, rect.getX() / JavaGame.PPM, rect.getY() / JavaGame.PPM));
         }
+        //create pole
+        for(MapObject object : map.getLayers().get(7).getObjects().getByType(RectangleMapObject.class)) {
+
+            new Pole(screen, object);
+        }
 
     }
+
     public com.badlogic.gdx.utils.Array<Goomba> getGoombas() {
         return goombas;
     }
@@ -99,6 +106,7 @@ public class B2WorldCreator {
         Array<Enemy> enemies = new Array<Enemy>();
         enemies.addAll(goombas);
         enemies.addAll(turtles);
+
         return enemies;
     }
 
