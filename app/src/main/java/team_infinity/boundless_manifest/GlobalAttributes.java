@@ -36,6 +36,7 @@ public class GlobalAttributes
     //this url is temporary, 10.0.2.2 let emulator access the mother system(my laptop)'s localhost ip
     //public static final String ServerFullUrl = "http://Default-Environment.ivpytmi2wg.us-east-1.elasticbeanstalk.com/";
     public static final String ServerFullUrl = "http://10.0.2.2:8080/BM_server/";
+    //public static final String ServerFullUrl = "http://Default-Environment.ivpytmi2wg.us-east-1.elasticbeanstalk.com/";
 
     //the question getter in use
     public static QuestionGetterBase questionGetter = new QuestionGetterMock();

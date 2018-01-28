@@ -86,7 +86,7 @@ public class MainMenuActivity extends AppCompatActivity
             }
         });
 
-        ImageButton calendar = (ImageButton)findViewById(R.id.calendarButton);
+        ImageButton calendar = (ImageButton)findViewById(R.id.imageButton_calendar);
         calendar.setOnClickListener(new View.OnClickListener(){
             public void onClick(View views){
                 Intent openCalendar = new Intent(views.getContext(), Calendar.class);
