@@ -86,6 +86,7 @@ public class MainMenuActivity extends AppCompatActivity
             }
         });
 
+        /*
         ImageButton calendar = (ImageButton)findViewById(R.id.imageButton_calendar);
         calendar.setOnClickListener(new View.OnClickListener(){
             public void onClick(View views){
@@ -94,7 +95,7 @@ public class MainMenuActivity extends AppCompatActivity
             }
                                     });
 
-
+        */
         //db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "user_info").build(); code is no longer working
 
     }
