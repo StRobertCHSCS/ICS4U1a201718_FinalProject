@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 (Button) findViewById(R.id.TeacherButton);
 
         buttonObjectChoice2 =
-                (Button) findViewById(R.id.EventsButton);
+                (Button) findViewById(R.id.CalendarButton);
 
         buttonObjectChoice3 =
                 (Button) findViewById(R.id.MapButton);
@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     startActivity(i);
                 break;
 
-            case R.id.EventsButton:
-                i = new Intent(this, tips.class);
+            case R.id.CalendarButton:
+                i = new Intent(this, calendar.class);
                     startActivity(i);
                 break;
 
