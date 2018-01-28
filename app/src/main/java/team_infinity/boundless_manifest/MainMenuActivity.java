@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.app.FragmentTransaction;
 import android.arch.persistence.room.Room;
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
@@ -85,7 +86,16 @@ public class MainMenuActivity extends AppCompatActivity
             }
         });
 
-        //db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "user_info").build();
+        ImageButton calendar = (ImageButton)findViewById(R.id.calendarButton);
+        calendar.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View views){
+                Intent openCalendar = new Intent(views.getContext(), Calendar.class);
+                startActivity(openCalendar);
+            }
+                                    });
+
+
+        //db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "user_info").build(); code is no longer working
 
     }
 }
