@@ -8,17 +8,32 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Schedule extends AppCompatActivity {
     String[] periodArray = {"Computer Science","Physics","Morality","Business Leadership","Lunch"};
     String[] timeArray = {"8:30-9:50","9:53-11:09","11:53-1:13","1:13-2:30","11:10-11:53"};
 
     ListView listView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_schedule);
+        //Scanner scan = new Scanner(System.in);
+        //System.out.println("Enter the array size: ");
+        //int size = scan.nextInt();
+        //String[] periodArray = {};
+        //Arrays.fill(periodArray,-1);
+        //super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_schedule);
+
+        //Scanner scan1 = new Scanner(System.in);
+        //System.out.println("Enter the array size: ");
+        //int size1 = scan1.nextInt();
+        //int[] timeArray = {};
+        //Arrays.fill(timeArray,-1);
+        //super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_schedule);
 
         CustomListAdapter array1 = new CustomListAdapter(this, periodArray,timeArray);
         listView = (ListView) findViewById(R.id.ListViewID);
