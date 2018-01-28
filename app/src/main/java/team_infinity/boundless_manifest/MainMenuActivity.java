@@ -22,6 +22,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 
 public class MainMenuActivity extends AppCompatActivity
@@ -46,6 +47,10 @@ public class MainMenuActivity extends AppCompatActivity
         setContentView(R.layout.activity_main_menu);
 
         final Context context = this;
+
+        //the username at the top right
+        TextView un = (TextView)findViewById(R.id.textView_usrnam);
+        un.setText("Hello, " + android.os.Build.MODEL + "!");
 
         //the 'play' button
         playGame = (ImageButton) findViewById(R.id.playButton);
