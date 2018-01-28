@@ -8,7 +8,7 @@
 
 
     <Button
-        android:id="@+id/createCalendar"
+        android:id="@+id/createEvent"
         android:layout_width="236dp"
         android:layout_height="91dp"
         android:layout_marginEnd="8dp"
@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createCalendar"
+        app:layout_constraintTop_toBottomOf="@+id/createEvent"
         app:layout_constraintVertical_bias="0.176" />
 
     <TextView
