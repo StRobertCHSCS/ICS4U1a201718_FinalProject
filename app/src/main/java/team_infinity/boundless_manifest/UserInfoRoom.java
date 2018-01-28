@@ -102,6 +102,7 @@ public class UserInfoRoom {
     public void setAnswer3(String answer){
         this.answer3 = answer;
     }
+
     public void setAnswer4(String answer){
         this.answer4 = answer;
     }

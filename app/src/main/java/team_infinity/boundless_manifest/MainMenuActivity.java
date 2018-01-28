@@ -86,5 +86,6 @@ public class MainMenuActivity extends AppCompatActivity
         });
 
         //db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "user_info").build();
+
     }
 }
