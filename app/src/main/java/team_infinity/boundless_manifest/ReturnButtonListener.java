@@ -1,6 +1,7 @@
 package team_infinity.boundless_manifest;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 
 /**
@@ -23,6 +24,11 @@ public class ReturnButtonListener implements View.OnClickListener
     @Override
     public void onClick(View v)
     {
+        Log.d("qst", "ReturnButtonListener.onClick(): called, values " + GlobalAttributes.sessionAttributes.getKnowledge() + " " + GlobalAttributes.sessionAttributes.getThinking() + " " + GlobalAttributes.sessionAttributes.getUnderstanding());
+        GlobalAttributes.knowledgeAtt += GlobalAttributes.sessionAttributes.getKnowledge();
+        GlobalAttributes.thinkingAtt += GlobalAttributes.sessionAttributes.getThinking();
+        GlobalAttributes.understandingAtt += GlobalAttributes.sessionAttributes.getUnderstanding();
+
         //reset
         GlobalAttributes.currentScore = -1;
         GlobalAttributes.sessionAttributes = null;

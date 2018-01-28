@@ -22,7 +22,7 @@ public class SessionAttributes
     {
         Log.d("qst", "SesssionAttributes.addAttributeScore(): called: attribute: " + attri);
 
-        if(attri == "thinking")
+        if(attri.equals("thinking"))
         {
             thinking++;
             if(correct)
@@ -30,7 +30,7 @@ public class SessionAttributes
                 thinkingCorrect++;
             }
         }
-        else if(attri == "knowledge")
+        else if(attri.equals("knowledge"))
         {
             knowledge++;
             if(correct)
@@ -38,7 +38,7 @@ public class SessionAttributes
                 knowledgeCorrect++;
             }
         }
-        else if(attri == "understanding")
+        else if(attri.equals("understanding"))
         {
             understanding++;
             if(correct)

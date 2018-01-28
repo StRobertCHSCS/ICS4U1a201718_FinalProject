@@ -24,6 +24,7 @@ public class QuestionActivity extends AppCompatActivity
     int currentScore = 0;
     //should be 5, but changed to 2 for testing purposes
     final int numTotalQuestions = 5;
+
     //create an array list that takes in buttons
     ArrayList buttonRandom = new ArrayList<Button>();
     ProgressBar questProgress;

@@ -94,6 +94,7 @@ public class MainMenuActivity extends AppCompatActivity
                 startActivity(openCalendar);
             }
                                     });
+                                    */
 
         */
         //db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "user_info").build(); code is no longer working
