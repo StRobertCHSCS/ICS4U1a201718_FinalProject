@@ -11,7 +11,7 @@ public class MainMenu extends AppCompatActivity {
     private Button scheduleOpen;
     private Button mapOpen;
     private Button toDoOpen;
-    private Button meetingOpen;
+    private Button calendarOpen;
     private Button calcOpen;
 
     @Override
@@ -43,11 +43,11 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        meetingOpen = (Button) findViewById(R.id.calendar);
-        meetingOpen.setOnClickListener(new View.OnClickListener() {
+        calendarOpen = (Button) findViewById(R.id.calendarB);
+        calendarOpen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMeeting();
+                openCalendar();
             }
         });
 
@@ -75,9 +75,9 @@ public class MainMenu extends AppCompatActivity {
         startActivity(toDoOp);
     }
 
-    public void openMeeting() {
-        Intent opMeet = new Intent(this, ClubMeeting.class);
-        startActivity(opMeet);
+    public void openCalendar() {
+        Intent opCalen = new Intent(this, Calendar.class);
+        startActivity(opCalen);
     }
 
     public void openCalc() {

@@ -68,7 +68,7 @@
         android:text="To Do List" />
 
     <Button
-        android:id="@+id/calendar"
+        android:id="@+id/calendarB"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_below="@+id/SchoolMap"
@@ -124,7 +124,6 @@
         android:layout_height="50dp"
         android:layout_below="@+id/SchoolMap"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="7dp"
         app:srcCompat="@drawable/ic_event_note_black_24dp" />
 
 </RelativeLayout>
