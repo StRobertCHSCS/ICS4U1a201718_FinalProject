@@ -70,7 +70,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton_calendar"
+        android:id="@+id/calendarButton"
         style="@style/selectionButtonTheme"
         android:layout_width="170dp"
         android:layout_height="85dp"

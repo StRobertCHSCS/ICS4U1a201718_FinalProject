@@ -38,7 +38,7 @@ public class GlobalAttributes
     public static final String ServerFullUrl = "http://10.0.2.2:8080/BM_server/";
 
     //the question getter in use
-    public static QuestionGetterBase questionGetter = new QuestionGetterMock();
+    //public static QuestionGetterBase questionGetter = new QuestionGetterMock();
     public static QuestionGetterBase questionGetter2 = new AjaxQuestionGetter();
 
     //the map for all characters

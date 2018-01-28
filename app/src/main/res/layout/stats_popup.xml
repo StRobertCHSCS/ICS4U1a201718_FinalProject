@@ -8,32 +8,58 @@
 
     <TextView
         android:id="@+id/header"
-        android:layout_width="154dp"
-        android:layout_height="37dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="25dp" />
+        android:layout_width="203dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Currently Selected Character:"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        app:layout_constraintBottom_toTopOf="@+id/currChar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/currChar"
         android:layout_width="112dp"
         android:layout_height="94dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/ic_launcher_round"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="74dp" />
+        tools:layout_editor_absoluteY="126dp" />
 
     <TextView
         android:id="@+id/currentStat"
-        android:layout_width="146dp"
-        android:layout_height="46dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="207dp" />
+        android:layout_width="316dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Statistics for Attributes"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currChar" />
 
     <com.jjoe64.graphview.GraphView
         android:id="@+id/currGameGraph"
-        android:layout_width="335dp"
-        android:layout_height="198dp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="280dp" />
+        android:layout_width="265dp"
+        android:layout_height="162dp"
+        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentStat" />
 </android.support.constraint.ConstraintLayout>

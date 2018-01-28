@@ -21,6 +21,9 @@ import com.jjoe64.graphview.series.DataPoint;
 
 import org.w3c.dom.Text;
 
+import static team_infinity.boundless_manifest.GlobalAttributes.currentSelectedSubject;
+import static team_infinity.boundless_manifest.GlobalAttributes.numQuestionAnswered;
+
 /**
  * Created by Vallyath on 2018-01-27.
  */
@@ -34,47 +37,43 @@ public class StatisticsPopUp extends android.support.v4.app.DialogFragment {
         View dialogView = inflater.inflate(R.layout.stats_popup, null);
         ImageView currChar = (ImageView)dialogView.findViewById(R.id.currChar);
 
-        /*
-       not yet in place
-        if(currentCharacter == "Dexter"){
-         currChar.setImageResource(R.drawable-xxhdpi.game_gambler);
-        else if(currentCharacter == "Paulline"){
-         currChar.setImageResource(R.drawable-xxhdpi.game_alchemist);
+        if(currentSelectedSubject.equals("data")) {
+            currChar.setImageResource(R.drawable.game_gambler);
+        }
+        else if (currentSelectedSubject.equals("chemistry")) {
+            currChar.setImageResource(R.drawable.game_alchemist3);
         }
         else{
-        set to a blank image or that android image
+            currChar.setImageResource(R.drawable.ic_launcher_background);
         }
-        */
 
-        GraphView currGameGraph = (GraphView)dialogView.findViewById(R.id.currGameGraph);
-        currGameGraph.setTitle("Current Attribute Statistics");
-
-        /* working on adding graph but waiting on global attributes to be updated with attributes
-        BarGraphSeries<DataPoint> knowledge = new BarGraphSeries<>(new DataPoint[]){
-            new DataPoint(0, knowledgeAtt);
+        GraphView currGameGraph = (GraphView) dialogView.findViewById(R.id.currGameGraph);
+            currGameGraph.setTitle("Current Attribute Statistics");
+        BarGraphSeries<DataPoint> knowledge = new BarGraphSeries<>(new DataPoint[] {
+                new DataPoint(0, GlobalAttributes.knowledgeAtt)
         });
+        currGameGraph.addSeries(knowledge);
         knowledge.setTitle("Knowledge");
-        knowledge.setValueDependentColor();
         currGameGraph.addSeries(knowledge);
 
-        BarGraphSeries<DataPoint> thinking = new BarGraphSeries<>(new DataPoint[]){
-            new DataPoint(1, thinkingAtt);
+        BarGraphSeries<DataPoint> thinking = new BarGraphSeries<>(new DataPoint[] {
+                new DataPoint(1, GlobalAttributes.thinkingAtt)
         });
         thinking.setTitle("Thinking");
-        thinking.setValueDependentColor();
         currGameGraph.addSeries(thinking);
 
-        BarGraphSeries<DataPoint> understanding = new BarGraphSeries<>(new DataPoint[]){
-            new DataPoint(2, understandingAtt);
+        BarGraphSeries<DataPoint> understanding = new BarGraphSeries<>(new DataPoint[] {
+                new DataPoint(2, GlobalAttributes.knowledgeAtt)
         });
-        thinking.setTitle("Understanding");
-        thinking.setValueDependentColor();
-        currGameGraph.addSeries(thinking);
 
-        BarGraphSeries<DataPoint> total = new BarGraphSeries<>(new DataPoint[]){
-            new DataPoint(0, numOfQuestions);
-            new DataPoint(1, numOfQuestions);
-            new DataPoint(2, numOfQuestions);
+        thinking.setTitle("Understanding");
+        currGameGraph.addSeries(understanding);
+
+        BarGraphSeries<DataPoint> total = new BarGraphSeries<>(new DataPoint[] {
+                new DataPoint(0, numQuestionAnswered),
+                new DataPoint(1, numQuestionAnswered),
+                new DataPoint(2, numQuestionAnswered)
+
         });
         total.setTitle("Total");
         currGameGraph.addSeries(total);
@@ -82,11 +81,10 @@ public class StatisticsPopUp extends android.support.v4.app.DialogFragment {
         currGameGraph.getLegendRenderer().setVisible(true);
         currGameGraph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
 
-    */
 
 
-        builder.setView(dialogView).setMessage("");
-        return builder.create();
+            builder.setView(dialogView).setMessage("");
+            return builder.create();
         }
 
         public View getView(View view, ViewGroup viewGroup){
