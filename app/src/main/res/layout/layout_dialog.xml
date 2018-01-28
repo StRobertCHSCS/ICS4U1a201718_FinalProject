@@ -7,7 +7,7 @@
         android:id="@+id/edit_markinput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Input Grade"
+        android:hint="Input Current Grade"
         android:inputType="numberDecimal"/>
 
     <EditText
@@ -17,7 +17,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/edit_markinput"
-        android:hint="Input Weight as Decimal"
+        android:hint="Input Assessment Weight as Decimal"
         android:inputType="numberDecimal" />
 
     <EditText

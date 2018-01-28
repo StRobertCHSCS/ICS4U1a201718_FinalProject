@@ -51,6 +51,6 @@ public class AverageCalculator extends AppCompatActivity implements ExampleDialo
         String markneeded_string = String.valueOf(markneeded);
         textviewReqMark.setText(markneeded_string);
     }
-    
+
 
 }
