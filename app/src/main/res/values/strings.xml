@@ -1,0 +1,175 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+    <string name="title_activity_teachers">teachers</string>
+    <string-array name="array_teachers">
+        <item>Al-Shaikh</item>
+        <item>Albi</item>
+        <item>Ashworth</item>
+        <item>Battaglia</item>
+        <item>Bianchi</item>
+        <item>Boccia</item>
+        <item>Bottiglione</item>
+        <item>Brockest</item>
+        <item>Buchignani</item>
+        <item>Buckley</item>
+        <item>Bumbaca</item>
+        <item>Cappelli</item>
+        <item>Capuccinello</item>
+        <item>Cara</item>
+        <item>Carone</item>
+        <item>Catenaro</item>
+        <item>Chan</item>
+        <item>Chirrey</item>
+        <item>Ciarallo</item>
+        <item>Ciobanu</item>
+        <item>Cisternino</item>
+        <item>Civiero</item>
+        <item>Coda</item>
+        <item>Cooney</item>
+        <item>Covre</item>
+        <item>Cruz</item>
+        <item>Curik</item>
+        <item>D Elia</item>
+        <item>Damphouse</item>
+        <item>De Gregorio-Boichevski</item>
+        <item>Defina</item>
+        <item>Devine</item>
+        <item>Di Carlo</item>
+        <item>DiGirolamo</item>
+        <item>DiNunzio</item>
+        <item>Do</item>
+        <item>Durrant</item>
+        <item>Fabroa</item>
+        <item>Facchini</item>
+        <item>Ferrari</item>
+        <item>Galatianos</item>
+        <item>Gallo</item>
+        <item>Gallucci</item>
+        <item>Garofalo</item>
+        <item>Giang</item>
+        <item>Grah</item>
+        <item>Gueli</item>
+        <item>Guerrisi, A</item>
+        <item>Guerrisi, J</item>
+        <item>Gurunlian</item>
+        <item>Hall, J</item>
+        <item>Hall, M</item>
+        <item>Hasiuk</item>
+        <item>Holding</item>
+        <item>Hord</item>
+        <item>Jorge</item>
+        <item>Karges</item>
+        <item>Klobucar</item>
+        <item>Koon</item>
+        <item>Kotulski</item>
+        <item>Kurtz</item>
+        <item>Lam</item>
+        <item>Laviolette</item>
+        <item>Lecce</item>
+        <item>Leduc</item>
+        <item>Loffredi</item>
+        <item>Lothian</item>
+        <item>MacDonald</item>
+        <item>Mak</item>
+        <item>Martin</item>
+        <item>Mastrangelo</item>
+        <item>Mastroianni</item>
+        <item>Matchett</item>
+        <item>Mazzacca</item>
+        <item>McMahon</item>
+        <item>Meloche</item>
+        <item>Merlin</item>
+        <item>Milucci</item>
+        <item>Molnar</item>
+        <item>Morale</item>
+        <item>Morra</item>
+        <item>Muto</item>
+        <item>Nagy-Bakos</item>
+        <item>Nardi</item>
+        <item>Nelson</item>
+        <item>Nesci</item>
+        <item>Palma</item>
+        <item>Palumbo</item>
+        <item>Parravani</item>
+        <item>Pasquali</item>
+        <item>Pellew</item>
+        <item>Perry</item>
+        <item>Power</item>
+        <item>Pulla</item>
+        <item>Purdon</item>
+        <item>Ricupero</item>
+        <item>Roccari</item>
+        <item>Rovere</item>
+        <item>Sarracini</item>
+        <item>Scarcello</item>
+        <item>Schiavone</item>
+        <item>Scuglia</item>
+        <item>Servidio</item>
+        <item>Sguoros</item>
+        <item>Simone-Naccarato</item>
+        <item>Sirianni</item>
+        <item>Steele</item>
+        <item>Stilo</item>
+        <item>Sun</item>
+        <item>Thome</item>
+        <item>Torresan</item>
+        <item>Totino</item>
+        <item>Turrin</item>
+        <item>U</item>
+        <item>Villani</item>
+        <item>Wood, R</item>
+        <item>Wood, S</item>
+        <item>Yeghiaian</item>
+        <item>Zasowski</item>
+        <item>Zmak</item>
+        <item>Zucchetto</item>
+    </string-array>
+    <string name="large_text">
+    </string>
+
+    <string name="title_activity_clubsteams">clubsteams</string>
+    <string-array name="array_clubsteams">
+        <item>Arts Council</item>
+        <item>Athletic Council</item>
+        <item>Band</item>
+        <item>Chess Club</item>
+        <item>Choir</item>
+        <item>Christian Fellowship</item>
+        <item>Cross Country</item>
+        <item>Dance Club</item>
+        <item>Debating Club</item>
+        <item>DECA Chapter</item>
+        <item>Design Club</item>
+        <item>ESL Writing Bootcamp</item>
+        <item>Empowered Student Partnerships (ESP)</item>
+        <item>Environmental Club</item>
+        <item>French Council</item>
+        <item>French Drama Club</item>
+        <item>French Homework Club</item>
+        <item>French Newspaper "La Silhouette"</item>
+        <item>Health Sciences (HOSA)</item>
+        <item>IB Club</item>
+        <item>Interfaith Club</item>
+        <item>Jazz Band</item>
+        <item>Mach 1 Aviation Club</item>
+        <item>Math Club</item>
+        <item>Mural Club</item>
+        <item>Newspaper "The Axiom"</item>
+        <item>Night Flyers Ski Club</item>
+        <item>Orchestra</item>
+        <item>Outreach Club</item>
+        <item>Photography Club</item>
+        <item>Physics Club</item>
+        <item>Pride</item>
+        <item>Reach for the Top</item>
+        <item>Robotics Club</item>
+        <item>Science and Research Innovation Club</item>
+        <item>Social Justice</item>
+        <item>Student Council</item>
+        <item>Table Tennis</item>
+        <item>United Book Nerds</item>
+        <item>United Nations York Catholic Assembly</item>
+        <item>Yearbook Club</item>
+    </string-array>
+    <string name="action_settings">Settings</string>
+</resources>
